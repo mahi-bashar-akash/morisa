@@ -5,7 +5,9 @@
             <div class="py-4 px-2">
                 <div class="row align-items-center">
                     <div class="col-lg-4 d-none d-lg-inline mb-3 mb-md-0">
-                        <img :src="'/images/logo.webp'" class="img-fluid" alt="logo">
+                        <router-link :to="{name: 'home'}" class="text-decoration-none">
+                            <img :src="'/images/logo.webp'" class="img-fluid" alt="logo">
+                        </router-link>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-3 mb-md-0">
                         <div class="position-relative w-100">
@@ -31,9 +33,9 @@
 
     <nav class="navbar navbar-expand-lg fw-medium bg-light p-3 sticky-top">
         <div class="container">
-            <a class="navbar-brand d-lg-none" href="javascript:void(0)" @click="collapse()">
+            <router-link :to="{name: 'home'}" class="navbar-brand d-lg-none">
                 <img :src="'/images/logo.webp'" class="img-fluid" alt="logo">
-            </a>
+            </router-link>
             <button class="navbar-toggler shadow-none px-4 py-2" type="button" @click="collapse()">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,14 +45,14 @@
                         <button type="button" class="btn btn-close border-0 p-3 icon-close" @click="collapse()"></button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" @click="collapse()">
+                        <router-link :to="{name: 'home'}" class="nav-link" @click="collapse()">
                             Home
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" @click="collapse()">
+                        <router-link :to="{name: 'about'}" class="nav-link" @click="collapse()">
                             About
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" @click="collapse()">

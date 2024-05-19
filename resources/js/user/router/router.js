@@ -4,6 +4,8 @@ import layout from "../layout/layout.vue";
 
 import home from "../page/home.vue";
 
+import about from "../page/about.vue";
+
 const TITLE = window.core.APP_NAME
 
 const ROOT_URL = "/user/";
@@ -16,6 +18,8 @@ const routes = [
         children: [
 
             { path: ROOT_URL + 'home', name: 'home', component: home, meta: { title: TITLE + ' - Home' } },
+
+            { path: ROOT_URL + 'about', name: 'about', component: about, meta: { title: TITLE + ' - About' } },
 
         ]
 
