@@ -1255,8 +1255,10 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <div class="position-relative w-100 background-effect overflow-hidden">
-                        <img :src="`/images/banner/banner-6.jpg`" class="img-fluid object-fit-cover w-100 height-320 image-effect" alt="">
-                        <div class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center">
+                        <div class="overflow-hidden before-effect">
+                            <img :src="`/images/banner/banner-6.jpg`" class="img-fluid object-fit-cover w-100 height-320 image-effect extra-effect" alt="">
+                        </div>
+                        <div class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-3">
                             <div class="p-3 col-md-8">
                                 <div class="fw-bold small mb-3"> New Arrivals </div>
                                 <div class="fw-medium fs-3 mb-3 line-height-2"> White Sneakers For Men’s </div>
@@ -1271,8 +1273,10 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="position-relative w-100 background-effect overflow-hidden">
-                        <img :src="`/images/banner/banner-7.jpg`" class="img-fluid object-fit-cover w-100 height-320 image-effect" alt="">
-                        <div class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center">
+                        <div class="overflow-hidden before-effect">
+                            <img :src="`/images/banner/banner-7.jpg`" class="img-fluid object-fit-cover w-100 height-320 image-effect extra-effect" alt="">
+                        </div>
+                        <div class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-3">
                             <div class="p-3 col-md-8">
                                 <div class="fw-bold small mb-3">Products amazing!</div>
                                 <div class="fw-medium fs-3 mb-3 line-height-2"> Short T-Shirts For Women’s </div>
