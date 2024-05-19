@@ -4,16 +4,17 @@
     <section class="w-100 py-5">
         <div class="container">
             <div class="position-relative">
-                <img :src="`/images/breadcrumb.webp`" class="img-fluid object-fit-cover height-320 w-100"
-                     alt="breadcrumb">
-                <div
-                    class="position-absolute start-0 top-0 w-100 h-100 text-center d-flex justify-content-center align-items-center flex-column">
+                <img :src="`/images/breadcrumb.webp`" class="img-fluid object-fit-cover height-320 w-100" alt="breadcrumb">
+                <div class="position-absolute start-0 top-0 w-100 h-100 text-center d-flex justify-content-center align-items-center flex-column">
                     <div class="fs-1">About</div>
                     <div class="d-flex justify-content-center align-items-center">
-                        <router-link :to="{name: 'home'}" class="text-decoration-none text-secondary"> Home
+                        <router-link :to="{name: 'home'}" class="text-decoration-none text-secondary">
+                            Home
                         </router-link>
                         <div class="mx-3"> -</div>
-                        <router-link :to="{name: 'about'}" class="text-decoration-none text-theme"> About</router-link>
+                        <router-link :to="{name: 'about'}" class="text-decoration-none text-theme">
+                            About
+                        </router-link>
                     </div>
                 </div>
             </div>
