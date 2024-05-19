@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <nav class="navbar navbar-expand-lg fw-medium bg-light p-3 sticky-top">
+    <nav class="navbar navbar-expand-lg fw-medium bg-light p-3 sticky-top z-3">
         <div class="container">
             <router-link :to="{name: 'home'}" class="navbar-brand d-lg-none">
                 <img :src="'/images/logo.webp'" class="img-fluid" alt="logo">
@@ -60,9 +60,9 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" @click="collapse()">
+                        <router-link :to="{name: 'blog'}" class="nav-link" @click="collapse()">
                             Blog
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" @click="collapse()">

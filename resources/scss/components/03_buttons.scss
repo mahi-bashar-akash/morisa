@@ -1,0 +1,12 @@
+.btn-light-theme {
+    background-color: var(--bs-secondary-bg-subtle) !important;
+    color: var(--bs-black) !important;
+    transition: 0.3s all ease-in-out !important;
+
+    &:hover {
+        background-color: var(--theme) !important;
+        color: var(--bs-white) !important;
+        transition: 0.3s all ease-in-out !important;
+    }
+
+}

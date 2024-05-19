@@ -43,3 +43,44 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+.front-pagination {
+
+    .disabled {
+        background-color: transparent !important;
+    }
+
+    .page-item {
+        transition: 0.3s all ease-in-out;
+
+        &.active .page-link {
+            transition: 0.3s all ease-in-out;
+            background-color: transparent !important;
+            border: 1px solid transparent !important;
+            color: var(--theme) !important;
+        }
+
+        .page-link {
+            width: 20px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-gray) !important;
+            border: 1px solid transparent !important;
+            margin: 0 5px;
+            border-radius: 0 !important;
+            box-shadow: 0 0 0 0 !important;
+
+            &:hover, &:active, &:focus {
+                transition: 0.3s all ease-in-out !important;
+                background-color: transparent !important;
+                border: 1px solid transparent !important;
+                color: var(--theme) !important;
+            }
+
+        }
+
+    }
+
+}
