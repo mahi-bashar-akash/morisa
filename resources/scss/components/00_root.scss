@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 14px !important;
+}
+
+:root {
+    --theme: #ff2660;
+    --light-gray: #6c757d;
+}
+
+.scrollbar {
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 5px !important;
+        height: 5px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--light-gray);
+        height: 5px !important;
+    }
+}
+
+$iteration: 2560;
+$base-value: 1px;
+@for $i from 1 through $iteration {
+    .width-#{$i} { width: $base-value * $i !important; }
+    .height-#{$i} { height: $base-value * $i !important; }
+    .height-calc-#{$i} { height: calc(100vh - $base-value * $i) !important; }
+}

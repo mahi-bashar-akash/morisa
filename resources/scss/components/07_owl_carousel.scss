@@ -1,0 +1,49 @@
+.banner-owl-carousel {
+
+    .owl-stage-outer {
+
+        .owl-stage {
+
+            .owl-item {
+
+                .item {
+                    border: 1px solid var(--bs-border-color);
+
+                    img {
+                        height: 600px;
+                        background-size: cover;
+                        object-fit: cover;
+
+                        @media screen and (max-width: 991px) {
+                            width: 100%;
+                            height: 450px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .owl-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+
+        .owl-dot {
+
+            span {
+                width: 40px;
+                height: 5px;
+            }
+
+        }
+
+    }
+
+}
