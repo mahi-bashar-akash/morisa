@@ -34,11 +34,14 @@
                         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
 
                             <!-- blog list -->
-                            <div class="p-3">
+                            <div class="p-3 background-effect">
                                 <div class="border w-100 rounded-3 overflow-hidden">
-                                    <img :src="`/images/blog/blog-1.jpg`"
-                                         class="img-fluid object-fit-cover height-250 w-100" alt="blog ">
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-1.jpg`"
+                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
+                                    </div>
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
+                                        August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -69,11 +72,14 @@
                                 </div>
                             </div>
 
-                            <div class="p-3">
+                            <div class="p-3 background-effect">
                                 <div class="border w-100 rounded-3 overflow-hidden">
-                                    <img :src="`/images/blog/blog-2.jpg`"
-                                         class="img-fluid object-fit-cover height-250 w-100" alt="blog ">
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-2.jpg`"
+                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
+                                    </div>
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
+                                        August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -104,11 +110,14 @@
                                 </div>
                             </div>
 
-                            <div class="p-3">
+                            <div class="p-3 background-effect">
                                 <div class="border w-100 rounded-3 overflow-hidden">
-                                    <img :src="`/images/blog/blog-3.jpg`"
-                                         class="img-fluid object-fit-cover height-250 w-100" alt="blog ">
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-3.jpg`"
+                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
+                                    </div>
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
+                                        August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -139,11 +148,14 @@
                                 </div>
                             </div>
 
-                            <div class="p-3">
+                            <div class="p-3 background-effect">
                                 <div class="border w-100 rounded-3 overflow-hidden">
-                                    <img :src="`/images/blog/blog-1.jpg`"
-                                         class="img-fluid object-fit-cover height-250 w-100" alt="blog ">
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-1.jpg`"
+                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
+                                    </div>
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
+                                        August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -174,11 +186,14 @@
                                 </div>
                             </div>
 
-                            <div class="p-3">
+                            <div class="p-3 background-effect">
                                 <div class="border w-100 rounded-3 overflow-hidden">
-                                    <img :src="`/images/blog/blog-2.jpg`"
-                                         class="img-fluid object-fit-cover height-250 w-100" alt="blog ">
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-2.jpg`"
+                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
+                                    </div>
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
+                                        August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -209,11 +224,14 @@
                                 </div>
                             </div>
 
-                            <div class="p-3">
+                            <div class="p-3 background-effect">
                                 <div class="border w-100 rounded-3 overflow-hidden">
-                                    <img :src="`/images/blog/blog-3.jpg`"
-                                         class="img-fluid object-fit-cover height-250 w-100" alt="blog ">
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-3.jpg`"
+                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
+                                    </div>
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
+                                        August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
