@@ -72,9 +72,9 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" @click="collapse()">
+                        <router-link :to="{name: 'login'}" class="nav-link" @click="collapse()">
                             Login
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" @click="collapse()">

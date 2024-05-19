@@ -1349,8 +1349,8 @@
                 </div>
             </div>
             <div class="blog-owl-carousel owl-carousel owl-theme">
-                <div class="item p-3">
-                    <div class="position-relative background-effect overflow-hidden">
+                <div class="item p-3 background-effect">
+                    <div class="position-relative overflow-hidden">
                         <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover height-350 image-effect" alt="blog 1">
                         <div class="position-absolute top-0 end-0 p-3">
                             <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center"> <div class="text-light-gray"> AUG </div> <div class="fs-4"> 12 </div> </div>
@@ -1367,8 +1367,8 @@
                         Read more . . .
                     </a>
                 </div>
-                <div class="item p-3">
-                    <div class="position-relative background-effect overflow-hidden">
+                <div class="item p-3 background-effect">
+                    <div class="position-relative overflow-hidden">
                         <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover height-350 image-effect" alt="blog 2">
                         <div class="position-absolute top-0 end-0 p-3">
                             <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center"> <div class="text-light-gray"> AUG </div> <div class="fs-4"> 12 </div> </div>
@@ -1385,8 +1385,8 @@
                         Read more . . .
                     </a>
                 </div>
-                <div class="item p-3">
-                    <div class="position-relative background-effect overflow-hidden">
+                <div class="item p-3 background-effect">
+                    <div class="position-relative overflow-hidden">
                         <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover height-350 image-effect" alt="blog 3">
                         <div class="position-absolute top-0 end-0 p-3">
                             <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center"> <div class="text-light-gray"> AUG </div> <div class="fs-4"> 12 </div> </div>

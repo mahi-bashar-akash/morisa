@@ -12,6 +12,8 @@ import blog from "../page/blog.vue";
 
 import shop from "../page/shop.vue";
 
+import login from "../page/login.vue";
+
 const TITLE = window.core.APP_NAME
 
 const ROOT_URL = "/user/";
@@ -32,6 +34,8 @@ const routes = [
             { path: ROOT_URL + 'blog', name: 'blog', component: blog, meta: { title: TITLE + ' - Blog' } },
 
             { path: ROOT_URL + 'shop', name: 'shop', component: shop, meta: { title: TITLE + ' - Shop' } },
+
+            { path: ROOT_URL + 'login', name: 'login', component: login, meta: { title: TITLE + ' - Login' } },
 
         ]
 
