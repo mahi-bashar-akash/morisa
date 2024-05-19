@@ -15,7 +15,7 @@
                     Subscribe to our newsletters now and stay up to date with new collections, the latest lookbooks and exclusive offers.
                 </div>
                 <form class="row justify-content-center py-4">
-                    <div class="col-md-6 d-flex justify-content-between">
+                    <div class="col-lg-6 d-flex justify-content-between">
                         <input type="text" name="subscribe" placeholder="Enter your email address here..." class="form-control rounded-0 shadow-none border p-3 ps-4" required autocomplete="new-subscribe">
                         <button type="submit" class="btn bg-light border rounded-0 border-start-0 py-3 px-5">
                             Subscribe
@@ -28,7 +28,7 @@
     <footer class="w-100 bg-light px-4 py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-5">
+                <div class="col-12 col-xl-5 mb-4">
                     <div class="mb-3">
                         <img :src="'/images/logo.webp'" class="img-fluid" alt="logo">
                     </div>
@@ -36,7 +36,7 @@
                         Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-8 col-lg-7">
+                <div class="col-12 col-xl-7 mb-4">
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
                         <div>
                             <div class="fw-bold fs-4 mb-3"> Opening Time </div>

@@ -1524,13 +1524,13 @@ export default {
                         items: 1
                     },
                     576: {
-                        items: 2
+                        items: 1
                     },
                     768: {
                         items: 2
                     },
                     991: {
-                        items: 3
+                        items: 2
                     },
                     1200: {
                         items: 3
