@@ -55,9 +55,9 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" @click="collapse()">
+                        <router-link :to="{name: 'contact'}" class="nav-link" @click="collapse()">
                             Contact
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" @click="collapse()">
