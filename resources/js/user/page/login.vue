@@ -26,7 +26,7 @@
         <div class="container">
             <div class="row justify-content-center p-3">
 
-                <div class="authentication p-5 border">
+                <form class="authentication p-5 border">
                     <div class="form-group mb-3">
                         <label for="email" class="form-label">Email or Username</label>
                         <input type="email" name="email" id="email" class="form-control border shadow-none p-3" required autocomplete="new-email">
@@ -42,7 +42,7 @@
                         </label>
                     </div>
                     <div class="col mb-3">
-                        <button type="submit" class="btn btn-outline-theme py-3 width-96">
+                        <button type="submit" class="btn btn-outline-theme py-3 width-96 rounded-0">
                             Login
                         </button>
                     </div>
@@ -51,7 +51,7 @@
                             Lost your password?
                         </a>
                     </div>
-                </div>
+                </form>
 
             </div>
         </div>

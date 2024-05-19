@@ -77,9 +77,9 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" @click="collapse()">
+                        <router-link :to="{name: 'registration'}" class="nav-link" @click="collapse()">
                             Registration
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" @click="collapse()">
