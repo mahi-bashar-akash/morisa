@@ -33,6 +33,7 @@
                     <div class="col-lg-8">
                         <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2">
 
+                            <!-- blog list -->
                             <div class="p-3">
                                 <div class="border w-100 rounded-3 overflow-hidden">
                                     <img :src="`/images/blog/blog-1.jpg`"
@@ -245,47 +246,42 @@
 
                         </div>
 
-                        <div class="my-4">
-                            <nav aria-label="Page navigation example" class="front-pagination">
-                                <ul class="pagination">
-                                    <li class="page-item">
+                        <!-- pagination -->
+                        <div class="d-flex justify-content-between align-items-center border-top border-bottom my-4 py-3">
+                            <div aria-label="Page navigation example" class="front-pagination">
+                                <div class="pagination">
+                                    <div class="page-item">
                                         <a class="page-link disabled" href="javascript:void(0)">
                                             <i class="bi bi-chevron-left"></i>
                                         </a>
-                                    </li>
-                                    <li class="page-item active">
+                                    </div>
+                                    <div class="page-item active">
                                         <a class="page-link" href="javascript:void(0)">
                                             1
                                         </a>
-                                    </li>
-                                    <li class="page-item">
+                                    </div>
+                                    <div class="page-item">
                                         <a class="page-link" href="javascript:void(0)">
                                             2
                                         </a>
-                                    </li>
-                                    <li class="page-item">
+                                    </div>
+                                    <div class="page-item">
                                         <a class="page-link" href="javascript:void(0)">
                                             3
                                         </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="javascript:void(0)">
-                                            4
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="javascript:void(0)">
-                                            5
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
+                                    </div>
+                                    <div class="page-item">
                                         <a class="page-link" href="javascript:void(0)">
                                             <i class="bi bi-chevron-right"></i>
                                         </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-light-gray">
+                                Showing 1 - 12 of 13 items
+                            </div>
                         </div>
+
                     </div>
                     <div class="col-lg-4">
                         <!-- search and sidebar -->

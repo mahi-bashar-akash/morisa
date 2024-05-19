@@ -10,6 +10,8 @@ import contact from "../page/contact.vue";
 
 import blog from "../page/blog.vue";
 
+import shop from "../page/shop.vue";
+
 const TITLE = window.core.APP_NAME
 
 const ROOT_URL = "/user/";
@@ -28,6 +30,8 @@ const routes = [
             { path: ROOT_URL + 'contact', name: 'contact', component: contact, meta: { title: TITLE + ' - Contact' } },
 
             { path: ROOT_URL + 'blog', name: 'blog', component: blog, meta: { title: TITLE + ' - Blog' } },
+
+            { path: ROOT_URL + 'shop', name: 'shop', component: shop, meta: { title: TITLE + ' - Shop' } },
 
         ]
 
