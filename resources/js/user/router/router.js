@@ -10,6 +10,8 @@ import contact from "../page/contact.vue";
 
 import blog from "../page/blog.vue";
 
+import singleBlog from "../page/single/blog.vue";
+
 import shop from "../page/shop.vue";
 
 import login from "../page/login.vue";
@@ -36,6 +38,8 @@ const routes = [
             { path: ROOT_URL + 'contact', name: 'contact', component: contact, meta: { title: TITLE + ' - Contact' } },
 
             { path: ROOT_URL + 'blog', name: 'blog', component: blog, meta: { title: TITLE + ' - Blog' } },
+
+            { path: ROOT_URL + 'single-blog', name: 'singleBlog', component: singleBlog, meta: { title: TITLE + ' - Single Blog' } },
 
             { path: ROOT_URL + 'shop', name: 'shop', component: shop, meta: { title: TITLE + ' - Shop' } },
 

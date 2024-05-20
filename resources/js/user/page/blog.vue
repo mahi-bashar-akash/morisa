@@ -8,7 +8,7 @@
                      alt="breadcrumb">
                 <div
                     class="position-absolute start-0 top-0 w-100 h-100 text-center d-flex justify-content-center align-items-center flex-column">
-                    <div class="fs-1 mb-3">Blog</div>
+                    <div class="fs-1">Blog</div>
                     <div class="d-flex justify-content-center align-items-center">
                         <router-link :to="{name: 'home'}" class="text-decoration-none text-secondary">
                             Home
@@ -40,8 +40,7 @@
                                         <img :src="`/images/blog/blog-1.jpg`"
                                              class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
                                     </div>
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
-                                        August 10, 2022
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -54,10 +53,10 @@
                                         'Content here, content here'.
                                     </div>
                                     <div class="p-3">
-                                        <a href="javascript:void(0)"
+                                        <router-link :to="{name: 'singleBlog'}"
                                            class=" text-dark text-decoration-none">
                                             Read more . . .
-                                        </a>
+                                        </router-link>
                                     </div>
                                     <hr class="w-100 border p-0 m-0">
                                     <div
@@ -78,8 +77,7 @@
                                         <img :src="`/images/blog/blog-2.jpg`"
                                              class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
                                     </div>
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
-                                        August 10, 2022
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -92,10 +90,10 @@
                                         'Content here, content here'.
                                     </div>
                                     <div class="p-3">
-                                        <a href="javascript:void(0)"
+                                        <router-link :to="{name: 'singleBlog'}"
                                            class=" text-dark text-decoration-none">
                                             Read more . . .
-                                        </a>
+                                        </router-link>
                                     </div>
                                     <hr class="w-100 border p-0 m-0">
                                     <div
@@ -116,8 +114,7 @@
                                         <img :src="`/images/blog/blog-3.jpg`"
                                              class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
                                     </div>
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
-                                        August 10, 2022
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -130,10 +127,84 @@
                                         'Content here, content here'.
                                     </div>
                                     <div class="p-3">
-                                        <a href="javascript:void(0)"
+                                        <router-link :to="{name: 'singleBlog'}"
                                            class=" text-dark text-decoration-none">
                                             Read more . . .
-                                        </a>
+                                        </router-link>
+                                    </div>
+                                    <hr class="w-100 border p-0 m-0">
+                                    <div
+                                        class="p-3 d-flex justify-content-between align-items-center fw-bold text-secondary">
+                                        <div>
+                                            <i class="bi bi-person-fill"></i> Rang
+                                        </div>
+                                        <div>
+                                            <i class="bi bi-heart me-2"></i> 30 LIKES
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-3 background-effect">
+                                <div class="border w-100 rounded-3 overflow-hidden">
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-2.jpg`"
+                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
+                                    </div>
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    </div>
+                                    <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
+                                        Insitam.
+                                    </div>
+                                    <div class="px-3 text-secondary text-opacity-75 pb-3 small"> HasTech</div>
+                                    <div class="px-3 truncate-to-3-line">
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here'.
+                                    </div>
+                                    <div class="p-3">
+                                        <router-link :to="{name: 'singleBlog'}"
+                                           class=" text-dark text-decoration-none">
+                                            Read more . . .
+                                        </router-link>
+                                    </div>
+                                    <hr class="w-100 border p-0 m-0">
+                                    <div
+                                        class="p-3 d-flex justify-content-between align-items-center fw-bold text-secondary">
+                                        <div>
+                                            <i class="bi bi-person-fill"></i> Rang
+                                        </div>
+                                        <div>
+                                            <i class="bi bi-heart me-2"></i> 30 LIKES
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-3 background-effect">
+                                <div class="border w-100 rounded-3 overflow-hidden">
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-3.jpg`"
+                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
+                                    </div>
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    </div>
+                                    <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
+                                        Insitam.
+                                    </div>
+                                    <div class="px-3 text-secondary text-opacity-75 pb-3 small"> HasTech</div>
+                                    <div class="px-3 truncate-to-3-line">
+                                        It is a long established fact that a reader will be distracted by the readable
+                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                        that it has a more-or-less normal distribution of letters, as opposed to using
+                                        'Content here, content here'.
+                                    </div>
+                                    <div class="p-3">
+                                        <router-link :to="{name: 'singleBlog'}"
+                                           class=" text-dark text-decoration-none">
+                                            Read more . . .
+                                        </router-link>
                                     </div>
                                     <hr class="w-100 border p-0 m-0">
                                     <div
@@ -154,8 +225,7 @@
                                         <img :src="`/images/blog/blog-1.jpg`"
                                              class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
                                     </div>
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
-                                        August 10, 2022
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
                                         Insitam.
@@ -168,86 +238,10 @@
                                         'Content here, content here'.
                                     </div>
                                     <div class="p-3">
-                                        <a href="javascript:void(0)"
+                                        <router-link :to="{name: 'singleBlog'}"
                                            class=" text-dark text-decoration-none">
                                             Read more . . .
-                                        </a>
-                                    </div>
-                                    <hr class="w-100 border p-0 m-0">
-                                    <div
-                                        class="p-3 d-flex justify-content-between align-items-center fw-bold text-secondary">
-                                        <div>
-                                            <i class="bi bi-person-fill"></i> Rang
-                                        </div>
-                                        <div>
-                                            <i class="bi bi-heart me-2"></i> 30 LIKES
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="p-3 background-effect">
-                                <div class="border w-100 rounded-3 overflow-hidden">
-                                    <div class="overflow-hidden">
-                                        <img :src="`/images/blog/blog-2.jpg`"
-                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
-                                    </div>
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
-                                        August 10, 2022
-                                    </div>
-                                    <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
-                                        Insitam.
-                                    </div>
-                                    <div class="px-3 text-secondary text-opacity-75 pb-3 small"> HasTech</div>
-                                    <div class="px-3 truncate-to-3-line">
-                                        It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                        that it has a more-or-less normal distribution of letters, as opposed to using
-                                        'Content here, content here'.
-                                    </div>
-                                    <div class="p-3">
-                                        <a href="javascript:void(0)"
-                                           class=" text-dark text-decoration-none">
-                                            Read more . . .
-                                        </a>
-                                    </div>
-                                    <hr class="w-100 border p-0 m-0">
-                                    <div
-                                        class="p-3 d-flex justify-content-between align-items-center fw-bold text-secondary">
-                                        <div>
-                                            <i class="bi bi-person-fill"></i> Rang
-                                        </div>
-                                        <div>
-                                            <i class="bi bi-heart me-2"></i> 30 LIKES
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="p-3 background-effect">
-                                <div class="border w-100 rounded-3 overflow-hidden">
-                                    <div class="overflow-hidden">
-                                        <img :src="`/images/blog/blog-3.jpg`"
-                                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
-                                    </div>
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
-                                        August 10, 2022
-                                    </div>
-                                    <div class="px-3 mb-3 truncate-to-1-line fs-5"> Aypi Non Habent Claritatem
-                                        Insitam.
-                                    </div>
-                                    <div class="px-3 text-secondary text-opacity-75 pb-3 small"> HasTech</div>
-                                    <div class="px-3 truncate-to-3-line">
-                                        It is a long established fact that a reader will be distracted by the readable
-                                        content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                        that it has a more-or-less normal distribution of letters, as opposed to using
-                                        'Content here, content here'.
-                                    </div>
-                                    <div class="p-3">
-                                        <a href="javascript:void(0)"
-                                           class=" text-dark text-decoration-none">
-                                            Read more . . .
-                                        </a>
+                                        </router-link>
                                     </div>
                                     <hr class="w-100 border p-0 m-0">
                                     <div
