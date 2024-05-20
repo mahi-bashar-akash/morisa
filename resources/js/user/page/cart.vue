@@ -30,21 +30,57 @@
                 <table class="table table-bordered align-middle text-center">
                     <thead>
                     <tr>
-                        <th class="width-250"> IMAGE </th>
-                        <th class="width-250"> PRODUCT </th>
-                        <th class="width-250"> PRICE </th>
-                        <th class="width-250"> QUANTITY </th>
-                        <th class="width-250"> TOTAL </th>
-                        <th class="width-250"> REMOVE </th>
+                        <th>
+                            <div class="min-min-width-150">
+                                IMAGE
+                            </div>
+                        </th>
+                        <th>
+                            <div class="min-width-150">
+                                PRODUCT
+                            </div>
+                        </th>
+                        <th>
+                            <div class="min-width-150">
+                                PRICE
+                            </div>
+                        </th>
+                        <th>
+                            <div class="min-width-150">
+                                QUANTITY
+                            </div>
+                        </th>
+                        <th>
+                            <div class="min-width-150">
+                                TOTAL
+                            </div>
+                        </th>
+                        <th>
+                            <div class="min-width-150">
+                                REMOVE
+                            </div>
+                        </th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td class="width-250"> <img :src="`/images/product/product-01.jpg`" class="img-fluid object-fit-cover width-120" alt="product"> </td>
-                        <td class="width-250"> <div class="text-secondary fw-medium">Vestibulum suscipit</div> </td>
-                        <td class="width-250"> $120.00 </td>
-                        <td class="width-250">
-                            <div class="d-flex align-items-center justify-content-center">
+                    <tr v-for="each in [1,2,3]">
+                        <td>
+                            <div class="min-width-150 height-150 d-flex justify-content-center align-items-center">
+                                <img :src="`/images/product/product-01.jpg`" class="img-fluid width-100" alt="product">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="min-width-150 height-150 d-flex justify-content-center align-items-center">
+                                <div class="text-secondary fw-medium">Vestibulum suscipit</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="min-width-150 height-150 d-flex justify-content-center align-items-center">
+                                $120.00
+                            </div>
+                        </td>
+                        <td>
+                            <div class="min-width-150 height-150 d-flex align-items-center justify-content-center">
                                 <button type="button" class="btn bg-secondary-subtle p-3 border-0 mx-1">
                                     <i class="bi bi-dash-lg"></i>
                                 </button>
@@ -54,44 +90,16 @@
                                 </button>
                             </div>
                         </td>
-                        <td class="width-250"> $120.00 </td>
-                        <td class="width-250"> <i class="bi bi-x-lg"></i> </td>
-                    </tr>
-                    <tr>
-                        <td class="width-250"> <img :src="`/images/product/product-01.jpg`" class="img-fluid object-fit-cover width-120" alt="product"> </td>
-                        <td class="width-250"> <div class="text-secondary fw-medium">Vestibulum suscipit</div> </td>
-                        <td class="width-250"> $120.00 </td>
-                        <td class="width-250">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <button type="button" class="btn bg-secondary-subtle p-3 border-0 mx-1">
-                                    <i class="bi bi-dash-lg"></i>
-                                </button>
-                                <input type="text" name="quantity" class="form-control border shadow-none p-3 text-center width-60" disabled value="1">
-                                <button type="button" class="btn bg-secondary-subtle p-3 border-0 mx-1">
-                                    <i class="bi bi-plus-lg"></i>
-                                </button>
+                        <td>
+                            <div class="min-width-150 height-150 d-flex justify-content-center align-items-center">
+                                $120.00
                             </div>
                         </td>
-                        <td class="width-250"> $120.00 </td>
-                        <td class="width-250"> <i class="bi bi-x-lg"></i> </td>
-                    </tr>
-                    <tr>
-                        <td class="width-250"> <img :src="`/images/product/product-01.jpg`" class="img-fluid object-fit-cover width-120" alt="product"> </td>
-                        <td class="width-250"> <div class="text-secondary fw-medium">Vestibulum suscipit</div> </td>
-                        <td class="width-250"> $120.00 </td>
-                        <td class="width-250">
-                            <div class="d-flex align-items-center justify-content-center">
-                                <button type="button" class="btn bg-secondary-subtle p-3 border-0 mx-1">
-                                    <i class="bi bi-dash-lg"></i>
-                                </button>
-                                <input type="text" name="quantity" class="form-control border shadow-none p-3 text-center width-60" disabled value="1">
-                                <button type="button" class="btn bg-secondary-subtle p-3 border-0 mx-1">
-                                    <i class="bi bi-plus-lg"></i>
-                                </button>
+                        <td>
+                            <div class="min-width-150 height-150 d-flex justify-content-center align-items-center">
+                                <i class="bi bi-x-lg"></i>
                             </div>
                         </td>
-                        <td class="width-250"> $120.00 </td>
-                        <td class="width-250"> <i class="bi bi-x-lg"></i> </td>
                     </tr>
                     </tbody>
                 </table>
@@ -146,11 +154,11 @@
                                     <td>
                                         <div class="fw-medium w-100 text-end">
                                             <label for="flat-rate" class="form-check-label d-block mb-3">
-                                                <input type="radio" name="shippingType" id="flat-rate" class="form-radio">
+                                                <input type="radio" name="shippingType" id="flat-rate" class="form-radio me-2">
                                                 Flat Rate: <span class="text-theme"> £7.00 </span>
                                             </label>
                                             <label for="free-shipping" class="form-check-label d-block">
-                                                <input type="radio" name="shippingType" id="free-shipping" class="form-radio" checked>
+                                                <input type="radio" name="shippingType" id="free-shipping" class="form-radio me-2" checked>
                                                 Free Shipping
                                             </label>
                                         </div>
