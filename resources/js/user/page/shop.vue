@@ -8,7 +8,7 @@
                      alt="breadcrumb">
                 <div
                     class="position-absolute start-0 top-0 w-100 h-100 text-center d-flex justify-content-center align-items-center flex-column">
-                    <div class="fs-1">Shop</div>
+                    <div class="fs-1 mb-3">Shop</div>
                     <div class="d-flex justify-content-center align-items-center">
                         <router-link :to="{name: 'home'}" class="text-decoration-none text-secondary">
                             Home

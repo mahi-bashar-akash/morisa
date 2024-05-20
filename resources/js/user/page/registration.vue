@@ -6,7 +6,7 @@
             <div class="position-relative">
                 <img :src="`/images/breadcrumb.webp`" class="img-fluid object-fit-cover height-320 w-100" alt="breadcrumb">
                 <div class="position-absolute start-0 top-0 w-100 h-100 text-center d-flex justify-content-center align-items-center flex-column">
-                    <div class="fs-1">Registration</div>
+                    <div class="fs-1 mb-3">Registration</div>
                     <div class="d-flex justify-content-center align-items-center">
                         <router-link :to="{name: 'home'}" class="text-decoration-none text-secondary">
                             Home
