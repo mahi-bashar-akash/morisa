@@ -14,6 +14,8 @@ import singleBlog from "../page/single/blog.vue";
 
 import shop from "../page/shop.vue";
 
+import singleProduct from "../page/single/product.vue";
+
 import login from "../page/login.vue";
 
 import registration from "../page/registration.vue";
@@ -42,6 +44,8 @@ const routes = [
             { path: ROOT_URL + 'single-blog', name: 'singleBlog', component: singleBlog, meta: { title: TITLE + ' - Single Blog' } },
 
             { path: ROOT_URL + 'shop', name: 'shop', component: shop, meta: { title: TITLE + ' - Shop' } },
+
+            { path: ROOT_URL + 'single-product', name: 'singleProduct', component: singleProduct, meta: { title: TITLE + ' - Single Product' } },
 
             { path: ROOT_URL + 'login', name: 'login', component: login, meta: { title: TITLE + ' - Login' } },
 
