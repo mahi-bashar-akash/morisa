@@ -28,7 +28,7 @@
     </section>
 
     <!-- blog -->
-    <div class="w-100 py-5">
+    <div class="w-100 pb-5">
         <div class="container">
 
             <!-- blog -->
@@ -77,10 +77,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <img :src="`/images/44.webp`" class="img-fluid object-fit-cover" alt="blog">
+                                    <div class="overflow-hidden background-effect">
+                                        <img :src="`/images/44.webp`" class="img-fluid object-fit-cover image-effect" alt="blog">
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <img :src="`/images/45.webp`" class="img-fluid object-fit-cover" alt="blog">
+                                    <div class="overflow-hidden background-effect">
+                                        <img :src="`/images/45.webp`" class="img-fluid object-fit-cover image-effect" alt="blog">
+                                    </div>
                                 </div>
                             </div>
                             <div class="my-3 text-secondary">
@@ -175,29 +179,29 @@
                                     </button>
                                 </div>
                             </div>
-                            <form class="row mt-4">
+                            <form class="row mt-5">
                                 <div class="col-md-12 mb-3">
                                     <div class="form-group">
                                         <label for="message" class="form-label"> Message </label>
-                                        <textarea id="message" name="message" cols="30" rows="10" required autocomplete="new-message" class="form-textarea border p-3"></textarea>
+                                        <textarea id="message" name="message" cols="30" rows="10" placeholder="Types your comment *" required autocomplete="new-message" class="form-textarea border p-3"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <div class="form-group">
                                         <label for="name" class="form-label"> Your Name </label>
-                                        <input id="name" type="text" name="name" class="form-control border shadow-none p-3" required autocomplete="new-name">
+                                        <input id="name" type="text" name="name" class="form-control border shadow-none p-3" placeholder="Your Name" required autocomplete="new-name">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <div class="form-group">
                                         <label for="email" class="form-label"> Email </label>
-                                        <input id="email" type="email" name="email" class="form-control border shadow-none p-3" required autocomplete="new-email">
+                                        <input id="email" type="email" name="email" class="form-control border shadow-none p-3" placeholder="Your Email" required autocomplete="new-email">
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <div class="form-group">
                                         <label for="website-link" class="form-label"> Website Link </label>
-                                        <input id="website-link" type="url" name="website-link" class="form-control border shadow-none p-3" required autocomplete="new-website-link">
+                                        <input id="website-link" type="url" name="website-link" class="form-control border shadow-none p-3" placeholder="Your website link" required autocomplete="new-website-link">
                                     </div>
                                 </div>
                                 <div class="col-12">
