@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="p-3">
-                            <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100" alt="blog 1">
+                            <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog 1">
                             <div class="my-3 truncate-to-1-line fs-4 fw-medium">
                                 Aypi Non Habent Claritatem Insitam.
                             </div>
@@ -138,7 +138,7 @@
                                         mistaken explain to you how all this mistaken idea of denouncing pleas
                                         praising pain born and I will give you a complete account of the system
                                     </div>
-                                    <button type="button" class="btn btn-outline-theme py-3 width-96 rounded-4">
+                                    <button type="button" class="btn btn-outline-theme py-2 width-96 fw-medium rounded-pill">
                                         REPLY
                                     </button>
                                 </div>
@@ -156,7 +156,7 @@
                                         mistaken explain to you how all this mistaken idea of denouncing pleas
                                         praising pain born and I will give you a complete account of the system
                                     </div>
-                                    <button type="button" class="btn btn-outline-theme py-3 width-96 rounded-4">
+                                    <button type="button" class="btn btn-outline-theme py-2 width-96 fw-medium rounded-pill">
                                         REPLY
                                     </button>
                                 </div>
@@ -174,7 +174,7 @@
                                         mistaken explain to you how all this mistaken idea of denouncing pleas
                                         praising pain born and I will give you a complete account of the system
                                     </div>
-                                    <button type="button" class="btn btn-outline-theme py-3 width-96 rounded-4">
+                                    <button type="button" class="btn btn-outline-theme py-2 width-96 fw-medium rounded-pill">
                                         REPLY
                                     </button>
                                 </div>
@@ -227,50 +227,54 @@
                             <div class="fs-4 fw-medium mb-3">
                                 RECENT POST
                             </div>
-                            <div class="d-flex justify-content-start align-items-center py-3">
-                                <div class="col-3">
-                                    <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100"
-                                         alt="blog ">
-                                </div>
-                                <div class="col-9 ps-3">
-                                    <div class="truncate-to-1-line">
-                                        Aypi non habent claritatem insitam.
+                            <a href="javascript:void(0)" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
+                                <span class="col-3">
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog ">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-start align-items-center py-3">
-                                <div class="col-3">
-                                    <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover w-100 h-100"
-                                         alt="blog ">
-                                </div>
-                                <div class="col-9 ps-3">
-                                    <div class="truncate-to-1-line">
+                                </span>
+                                <span class="col-9 ps-3">
+                                    <span class="truncate-to-1-line">
                                         Aypi non habent claritatem insitam.
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
+                                <span class="col-3">
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog ">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-start align-items-center py-3">
-                                <div class="col-3">
-                                    <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover w-100 h-100"
-                                         alt="blog ">
-                                </div>
-                                <div class="col-9 ps-3">
-                                    <div class="truncate-to-1-line">
+                                </span>
+                                <span class="col-9 ps-3">
+                                    <span class="truncate-to-1-line">
                                         Aypi non habent claritatem insitam.
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
+                                <span class="col-3">
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog ">
                                     </div>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-start align-items-center py-3">
-                                <div class="col-3">
-                                    <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100"
-                                         alt="blog ">
-                                </div>
-                                <div class="col-9 ps-3">
-                                    <div class="truncate-to-1-line">
+                                </span>
+                                <span class="col-9 ps-3">
+                                    <span class="truncate-to-1-line">
                                         Aypi non habent claritatem insitam.
+                                    </span>
+                                </span>
+                            </a>
+                            <a href="javascript:void(0)" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
+                                <span class="col-3">
+                                    <div class="overflow-hidden">
+                                        <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog ">
                                     </div>
-                                </div>
-                            </div>
+                                </span>
+                                <span class="col-9 ps-3">
+                                    <span class="truncate-to-1-line">
+                                        Aypi non habent claritatem insitam.
+                                    </span>
+                                </span>
+                            </a>
                         </div>
                         <div class="px-2 mt-4">
                             <div class="fs-4 fw-medium mb-3">

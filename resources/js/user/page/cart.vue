@@ -147,17 +147,17 @@
                                 <tbody>
                                 <tr>
                                     <td> <div class="fw-medium"> SUBTOTAL </div> </td>
-                                    <td> <div class="text-theme fw-medium w-100 text-end"> £215.00 </div> </td>
+                                    <td> <div class="text-theme fw-medium w-100 text-end"> $215.00 </div> </td>
                                 </tr>
                                 <tr>
                                     <td> <div class="fw-medium"> SHIPPING </div> </td>
                                     <td>
                                         <div class="fw-medium w-100 text-end">
-                                            <label for="flat-rate" class="form-check-label d-block mb-3">
+                                            <label for="flat-rate" class="form-check-label d-block mb-3 cursor-pointer">
                                                 <input type="radio" name="shippingType" id="flat-rate" class="form-radio me-2">
-                                                Flat Rate: <span class="text-theme"> £7.00 </span>
+                                                Flat Rate: <span class="text-theme"> $7.00 </span>
                                             </label>
-                                            <label for="free-shipping" class="form-check-label d-block">
+                                            <label for="free-shipping" class="form-check-label d-block cursor-pointer">
                                                 <input type="radio" name="shippingType" id="free-shipping" class="form-radio me-2" checked>
                                                 Free Shipping
                                             </label>
@@ -165,8 +165,16 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td> <div class="fw-medium"> TOTAL </div> </td>
-                                    <td> <div class="text-theme fw-medium w-100 text-end"> £215.00 </div> </td>
+                                    <td>
+                                        <div class="fw-medium">
+                                            TOTAL
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="text-theme fw-medium w-100 text-end">
+                                            $215.00
+                                        </div>
+                                    </td>
                                 </tr>
                                 </tbody>
                             </table>
