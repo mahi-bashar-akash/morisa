@@ -83,7 +83,7 @@
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'cart'}" class="nav-link" @click="collapse()">
-                            Cart
+                            Cart (03)
                         </router-link>
                     </li>
                 </ul>

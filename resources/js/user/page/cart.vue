@@ -114,9 +114,9 @@
                 <div class="col-lg-6 mt-4">
                     <div class="row mb-4">
                         <div class="col-sm-6 mb-3">
-                            <a href="javascript:void(0)" class="btn btn-dark p-3 rounded-0 w-100">
+                            <router-link :to="{name: 'shop'}" class="btn btn-dark p-3 rounded-0 w-100">
                                 CONTINUE SHOPPING
-                            </a>
+                            </router-link>
                         </div>
                         <div class="col-sm-6 mb-3">
                             <a href="javascript:void(0)" class="btn btn-dark p-3 rounded-0 w-100">
