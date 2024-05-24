@@ -6,10 +6,8 @@
 
     @include('component.components')
 
-    @include('component.extra-source')
-
     {{-- app js --}}
-    @vite('resources/js/user/app.js')
+    @vite('resources/js/admin/app.js')
 
 </head>
 
