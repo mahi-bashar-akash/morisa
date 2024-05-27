@@ -32,9 +32,9 @@
                     <span class="ms-2"> Boxes </span>
                 </router-link>
 
-                <router-link :to="{name: 'category'}" class="admin-sidebar-body-link" @click="sidebarRemove()">
+                <router-link :to="{name: 'hierarchy'}" class="admin-sidebar-body-link" @click="sidebarRemove()">
                     <i class="bi bi-link-45deg"></i>
-                    <span class="ms-2"> Categories </span>
+                    <span class="ms-2"> Hierarchy </span>
                 </router-link>
 
                 <router-link :to="{name: 'product'}" class="admin-sidebar-body-link" @click="sidebarRemove()">
@@ -147,7 +147,7 @@
 
             </div>
 
-            <div class="admin-content-body">
+            <div class="admin-content-body overflow-y-scroll scrollbar">
 
                 <router-view/>
 
@@ -171,7 +171,7 @@
                     <div class="height-300 w-100 d-flex justify-content-center align-items-center flex-column box-inside-shadow rounded-3">
                         <div class="text-center">
                             <div class="mb-3">
-                                <i class="bi bi-server text-theme"></i>
+                                <i class="bi bi-server text-theme fs-3"></i>
                             </div>
                             <div class="text-secondary">
                                 There have no data !

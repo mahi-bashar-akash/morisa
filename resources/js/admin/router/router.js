@@ -10,7 +10,7 @@ import about from "../pages/about.vue";
 
 import contact from "../pages/contact.vue";
 
-import category from "../pages/category.vue";
+import hierarchy from "../pages/hierarchy.vue";
 
 import product from "../pages/product.vue";
 
@@ -45,7 +45,7 @@ const routes = [
 
             { path: ROOT_URL + 'box', name: 'box', component: box, meta: { title: TITLE + ' - Box' } },
 
-            { path: ROOT_URL + 'category', name: 'category', component: category, meta: { title: TITLE + ' - Category' } },
+            { path: ROOT_URL + 'hierarchy', name: 'hierarchy', component: hierarchy, meta: { title: TITLE + ' - Hierarchy' } },
 
             { path: ROOT_URL + 'product', name: 'product', component: product, meta: { title: TITLE + ' - Product' } },
 

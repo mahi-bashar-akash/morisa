@@ -4,9 +4,8 @@
 
 <head>
 
+    {{-- components --}}
     @include('component.components')
-
-    @include('component.extra-source')
 
     {{-- app js --}}
     @vite('resources/js/user/app.js')
@@ -15,10 +14,12 @@
 
 <body>
 
+    {{-- body --}}
     @include('component.body')
 
 </body>
 
+    {{-- script --}}
     @include('component.script')
 
 </html>

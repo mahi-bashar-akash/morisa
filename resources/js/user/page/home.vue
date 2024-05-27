@@ -16,7 +16,7 @@
                                     We crack for this purely rock style with stitched quills in relief and metallic
                                     hardware.
                                 </div>
-                                <button type="button" class="btn btn-outline-dark px-5 py-3 rounded-0"> READ MORE </button>
+                                <button type="button" class="btn btn-outline-dark px-4 px-md-5 py-2 py-md-3 rounded-0"> READ MORE </button>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                                     BlackBird collection of minimal, sleek and functional Carryalls were designed
                                     with creatives in mind.
                                 </div>
-                                <button type="button" class="btn btn-outline-dark px-5 py-3 rounded-0"> READ MORE </button>
+                                <button type="button" class="btn btn-outline-dark px-4 px-md-5 py-2 py-md-3 rounded-0"> READ MORE </button>
                             </div>
                         </div>
                     </div>

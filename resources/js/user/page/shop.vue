@@ -437,7 +437,7 @@
                         </div>
                         <div class="px-2 py-3">
                             <div class="fs-4 fw-medium mb-3">
-                                CATEGORIES
+                                Categories
                             </div>
                             <a href="javascript:void(0)"
                                class="ps-1 p-2 w-100 text-decoration-none text-light-gray-hover d-block">

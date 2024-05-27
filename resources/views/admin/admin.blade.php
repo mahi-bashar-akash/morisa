@@ -4,6 +4,7 @@
 
 <head>
 
+    {{-- components --}}
     @include('component.components')
 
     {{-- app js --}}
@@ -13,10 +14,12 @@
 
 <body>
 
+    {{-- body --}}
     @include('component.body')
 
 </body>
 
+    {{-- script --}}
     @include('component.script')
 
 </html>

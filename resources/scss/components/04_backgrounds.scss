@@ -59,3 +59,8 @@
     }
 
 }
+
+.bg-theme {
+    background-color: var(--theme) !important;
+    color: var(--bs-white) !important;
+}
