@@ -25,6 +25,34 @@
     }
 }
 
+.btn-theme {
+    background-color: var(--theme) !important;
+    color: var(--bs-white) !important;
+    transition: 0.3s all ease-in-out !important;
+    border: 1px solid var(--theme) !important;
+
+    &:hover {
+        background-color: var(--dark-theme) !important;
+        transition: 0.3s all ease-in-out;
+    }
+
+}
+
+.btn-cancel {
+    background-color: var(--bs-border-color) !important;
+    color: var(--bs-black) !important;
+    transition: 0.3s all ease-in-out !important;
+    border: 1px solid var(--bs-border-color) !important;
+
+    &:hover {
+        background-color: var(--bs-gray) !important;
+        color: var(--bs-white) !important;
+        transition: 0.3s all ease-in-out;
+        border: 1px solid var(--bs-gray) !important;
+    }
+
+}
+
 .btn-icon {
     width: 35px !important;
     height: 35px !important;
@@ -38,8 +66,9 @@
     padding: 0 !important;
 
     &:hover {
+        box-shadow: 0 0 12px 0 var(--bs-border-color) inset !important;
         transition: 0.3s all ease-in-out !important;
-        background-color: var(--bs-border-color) !important;
+        background-color: var(--bs-light) !important;
     }
 
 }

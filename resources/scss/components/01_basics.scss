@@ -1,6 +1,6 @@
 .dropdown {
     .dropdown-menu {
-        padding: 5px !important;
+        padding: 10px !important;
         border-radius: 5px !important;
         border: 1px solid var(--bs-border-color) !important;
         .dropdown-item {
@@ -10,7 +10,7 @@
             color: var(--bs-black) !important;
             transition: 0.3s all ease-in-out !important;
 
-            &:hover, &:active {
+            &:hover, &:active, &.router-link-active {
                 transition: 0.3s all ease-in-out !important;
                 background-color: var(--bs-light) !important;
                 box-shadow: 0 0 12px 0 var(--bs-border-color) inset !important;
@@ -83,4 +83,8 @@
 
     }
 
+}
+
+.box-inside-shadow {
+    box-shadow: 0 0 12px 0 var(--bs-border-color) inset !important;
 }
