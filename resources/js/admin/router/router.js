@@ -45,13 +45,13 @@ const routes = [
 
             { path: ROOT_URL + 'category', name: 'category', component: category, meta: { title: TITLE + ' - Category' } },
 
-            { path: ROOT_URL + 'about', name: 'about', component: about, meta: { title: TITLE + ' - About' } },
-
-            { path: ROOT_URL + 'contact', name: 'contact', component: contact, meta: { title: TITLE + ' - Contact' } },
-
             { path: ROOT_URL + 'product', name: 'product', component: product, meta: { title: TITLE + ' - Product' } },
 
             { path: ROOT_URL + 'blog', name: 'blog', component: blog, meta: { title: TITLE + ' - Blog' } },
+
+            { path: ROOT_URL + 'about', name: 'about', component: about, meta: { title: TITLE + ' - About' } },
+
+            { path: ROOT_URL + 'contact', name: 'contact', component: contact, meta: { title: TITLE + ' - Contact' } },
 
             { path: ROOT_URL + 'explore', name: 'explore', component: explore, meta: { title: TITLE + ' - Explore' } },
 

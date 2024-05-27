@@ -24,3 +24,22 @@
         border: 1px solid var(--theme) !important;
     }
 }
+
+.btn-icon {
+    width: 35px !important;
+    height: 35px !important;
+    outline: none !important;
+    border: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: transparent !important;
+    transition: 0.3s all ease-in-out !important;
+    padding: 0 !important;
+
+    &:hover {
+        transition: 0.3s all ease-in-out !important;
+        background-color: var(--bs-border-color) !important;
+    }
+
+}
