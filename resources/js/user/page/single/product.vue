@@ -94,15 +94,31 @@
                         </div>
                         <div class="px-3 pt-3">
                             <div class="py-3 px-4 border">
-                                <div class="form-group mb-3">
-                                    <label for="available-option" class="form-label fs-4 fw-medium"> Available Options </label>
-                                    <select name="available-option" id="available-option" class="form-select shadow-none border p-3" required autocomplete="new-available-options">
-                                        <option value="select-color"> Select Color </option>
-                                        <option value="red"> Red </option>
-                                        <option value="blue"> Blue </option>
-                                        <option value="green"> Green </option>
-                                        <option value="yellow"> Yellow </option>
-                                    </select>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="color-option" class="form-label fs-4 fw-medium"> Color Options </label>
+                                            <select name="color-option" id="color-option" class="form-select shadow-none border p-3" required autocomplete="new-color-options">
+                                                <option value="select-color"> Select Color </option>
+                                                <option value="red"> Red </option>
+                                                <option value="blue"> Blue </option>
+                                                <option value="green"> Green </option>
+                                                <option value="yellow"> Yellow </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-3">
+                                            <label for="size-option" class="form-label fs-4 fw-medium"> Size Options </label>
+                                            <select name="size-option" id="size-option" class="form-select shadow-none border p-3" required autocomplete="new-size-options">
+                                                <option value="select-color"> Select Size </option>
+                                                <option value="small"> Small </option>
+                                                <option value="medium"> Medium </option>
+                                                <option value="large"> Large </option>
+                                                <option value="extra-large"> Extra Large </option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -142,7 +142,7 @@
                         <div class="fs-1 text-sm-end">
                             Cart Details
                         </div>
-                        <div class="table-responsive">
+                        <div class="table-responsive mb-4">
                             <table class="table table-borderless">
                                 <tbody>
                                 <tr>
@@ -178,6 +178,11 @@
                                 </tr>
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="mb-4">
+                            <router-link :to="{name: 'checkout'}" class="btn btn-dark p-3 rounded-0 w-100">
+                                CHECKOUT
+                            </router-link>
                         </div>
                     </div>
                 </div>

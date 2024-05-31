@@ -11,6 +11,7 @@ import layout from "../layout/layout.vue";
     import login from "../page/login.vue";
     import registration from "../page/registration.vue";
     import cart from "../page/cart.vue";
+    import checkout from "../page/checkout.vue";
     import profileLayout from "../page/profile/layout/layout.vue";
         import details from "../page/profile/pages/details.vue";
 
@@ -30,6 +31,7 @@ const routes = [
             { path: ROOT_URL + 'login', name: 'login', component: login, meta: { title: TITLE + ' - Login' } },
             { path: ROOT_URL + 'registration', name: 'registration', component: registration, meta: { title: TITLE + ' - Registration' } },
             { path: ROOT_URL + 'cart', name: 'cart', component: cart, meta: { title: TITLE + ' - Cart' } },
+            { path: ROOT_URL + 'checkout', name: 'checkout', component: checkout, meta: { title: TITLE + ' - Checkout' } },
             {
                 path: ROOT_URL, name: 'profileLayout', component: profileLayout,
                 children: [
