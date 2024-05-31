@@ -165,13 +165,22 @@
                 <div class="fw-medium fs-3 my-3">
                     Your Rating
                 </div>
-                <div class="d-flex justify-content-start align-items-center">
-                    <i class="bi bi-star-fill mx-1"></i>
-                    <i class="bi bi-star-fill mx-1"></i>
-                    <i class="bi bi-star-fill mx-1"></i>
-                    <i class="bi bi-star-fill mx-1"></i>
-                    <i class="bi bi-star-fill mx-1"></i>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-start align-items-center">
+                        <input type="checkbox" id="star1" class="form-checkbox d-none" v-model="productReviewParam.rating" value="1" @click="updateRating(1)" />
+                        <label for="star1" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('1'), 'bi bi-star': !productReviewParam.rating.includes('1') }"></label>
+                        <input type="checkbox" id="star2" class="form-checkbox d-none" v-model="productReviewParam.rating" value="2" @click="updateRating(2)" />
+                        <label for="star2" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('2'), 'bi bi-star': !productReviewParam.rating.includes('2') }"></label>
+                        <input type="checkbox" id="star3" class="form-checkbox d-none" v-model="productReviewParam.rating" value="3" @click="updateRating(3)" />
+                        <label for="star3" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('3'), 'bi bi-star': !productReviewParam.rating.includes('3') }"></label>
+                        <input type="checkbox" id="star4" class="form-checkbox d-none" v-model="productReviewParam.rating" value="4" @click="updateRating(4)" />
+                        <label for="star4" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('4'), 'bi bi-star': !productReviewParam.rating.includes('4') }"></label>
+                        <input type="checkbox" id="star5" class="form-checkbox d-none" v-model="productReviewParam.rating" value="5" @click="updateRating(5)" />
+                        <label for="star5" class="me-2 cursor-pointer text-warning" :class="{ 'bi bi-star-fill': productReviewParam.rating.includes('5'), 'bi bi-star': !productReviewParam.rating.includes('5') }"></label>
+                    </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group mb-3">
@@ -429,13 +438,24 @@
 export default {
     data(){
         return {
-            tab: 'description'
+            tab: 'description',
+            productReviewParam: {
+                rating: [],
+            },
         }
     },
     mounted() {
         this.relatedProductOwlCarousel();
     },
     methods: {
+
+        /* Function of update rating of product review */
+        updateRating(selectedRating) {
+            this.productReviewParam.rating = [];
+            for (let i = 1; i <= selectedRating; i++) {
+                this.productReviewParam.rating.push(i.toString());
+            }
+        },
 
         /* Function to product description or review tab change */
         setTabChange(tab) {
