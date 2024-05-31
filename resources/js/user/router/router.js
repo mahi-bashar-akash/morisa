@@ -22,6 +22,10 @@ import registration from "../page/registration.vue";
 
 import cart from "../page/cart.vue";
 
+import profile from "../page/profile/layout/layout.vue";
+
+import details from "../page/profile/pages/details.vue";
+
 const TITLE = window.core.APP_NAME
 
 const ROOT_URL = "/user/";
@@ -52,6 +56,18 @@ const routes = [
             { path: ROOT_URL + 'registration', name: 'registration', component: registration, meta: { title: TITLE + ' - Registration' } },
 
             { path: ROOT_URL + 'cart', name: 'cart', component: cart, meta: { title: TITLE + ' - Cart' } },
+
+            {
+
+                path: ROOT_URL, name: 'profileLayout', component: profile,
+
+                children: [
+
+                    { path: ROOT_URL + 'details', name: 'details', component: details, meta: { title: TITLE + ' - Details ' } },
+
+                ]
+
+            }
 
         ]
 

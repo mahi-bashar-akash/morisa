@@ -72,13 +72,18 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <router-link :to="{name: 'login'}" class="nav-link" @click="collapse()">
+                        <router-link :to="{name: 'login'}" class="nav-link" @click="collapse()" v-if="!userInfo">
                             Login
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{name: 'registration'}" class="nav-link" @click="collapse()">
+                        <router-link :to="{name: 'registration'}" class="nav-link" @click="collapse()" v-if="!userInfo">
                             Registration
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link :to="{name: ''}" class="nav-link" @click="collapse()" v-if="userInfo">
+                            Profile
                         </router-link>
                     </li>
                     <li class="nav-item">
@@ -97,7 +102,9 @@
 
 export default {
     data() {
-        return {  }
+        return {
+            userInfo: null
+        }
     },
     mounted() {  },
     methods: {
