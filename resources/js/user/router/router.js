@@ -1,37 +1,22 @@
 import {createRouter, createWebHistory} from "vue-router";
 
 import layout from "../layout/layout.vue";
-
-import home from "../page/home.vue";
-
-import about from "../page/about.vue";
-
-import contact from "../page/contact.vue";
-
-import blog from "../page/blog.vue";
-
-import singleBlog from "../page/single/blog.vue";
-
-import shop from "../page/shop.vue";
-
-import singleProduct from "../page/single/product.vue";
-
-import login from "../page/login.vue";
-
-import registration from "../page/registration.vue";
-
-import cart from "../page/cart.vue";
-
-import profile from "../page/profile/layout/layout.vue";
-
-import details from "../page/profile/pages/details.vue";
+    import home from "../page/home.vue";
+    import about from "../page/about.vue";
+    import contact from "../page/contact.vue";
+    import blog from "../page/blog.vue";
+    import singleBlog from "../page/single/blog.vue";
+    import shop from "../page/shop.vue";
+    import singleProduct from "../page/single/product.vue";
+    import login from "../page/login.vue";
+    import registration from "../page/registration.vue";
+    import cart from "../page/cart.vue";
+    import profileLayout from "../page/profile/layout/layout.vue";
+        import details from "../page/profile/pages/details.vue";
 
 const TITLE = window.core.APP_NAME
-
 const ROOT_URL = "/user/";
-
 const routes = [
-
     {
         path: ROOT_URL, name: 'layout', component: layout,
 
@@ -59,7 +44,7 @@ const routes = [
 
             {
 
-                path: ROOT_URL, name: 'profileLayout', component: profile,
+                path: ROOT_URL, name: 'profileLayout', component: profileLayout,
 
                 children: [
 
