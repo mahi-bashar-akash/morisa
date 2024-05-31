@@ -6,7 +6,14 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
-class UserController extends BaseController
+class AppController extends BaseController
 {
-    public function index() { return view('app.user'); }
+    public function user() {
+        return view('app.user');
+    }
+
+    public function admin() {
+        return view('app.admin');
+    }
+
 }

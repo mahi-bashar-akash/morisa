@@ -19,45 +19,25 @@ const ROOT_URL = "/user/";
 const routes = [
     {
         path: ROOT_URL, name: 'layout', component: layout,
-
         children: [
-
             { path: ROOT_URL + 'home', name: 'home', component: home, meta: { title: TITLE + ' - Home' } },
-
             { path: ROOT_URL + 'about', name: 'about', component: about, meta: { title: TITLE + ' - About' } },
-
             { path: ROOT_URL + 'contact', name: 'contact', component: contact, meta: { title: TITLE + ' - Contact' } },
-
             { path: ROOT_URL + 'blog', name: 'blog', component: blog, meta: { title: TITLE + ' - Blog' } },
-
             { path: ROOT_URL + 'single-blog', name: 'singleBlog', component: singleBlog, meta: { title: TITLE + ' - Single Blog' } },
-
             { path: ROOT_URL + 'shop', name: 'shop', component: shop, meta: { title: TITLE + ' - Shop' } },
-
             { path: ROOT_URL + 'single-product', name: 'singleProduct', component: singleProduct, meta: { title: TITLE + ' - Single Product' } },
-
             { path: ROOT_URL + 'login', name: 'login', component: login, meta: { title: TITLE + ' - Login' } },
-
             { path: ROOT_URL + 'registration', name: 'registration', component: registration, meta: { title: TITLE + ' - Registration' } },
-
             { path: ROOT_URL + 'cart', name: 'cart', component: cart, meta: { title: TITLE + ' - Cart' } },
-
             {
-
                 path: ROOT_URL, name: 'profileLayout', component: profileLayout,
-
                 children: [
-
                     { path: ROOT_URL + 'details', name: 'details', component: details, meta: { title: TITLE + ' - Details ' } },
-
                 ]
-
             }
-
         ]
-
     },
-
 ];
 
 const router = createRouter({
