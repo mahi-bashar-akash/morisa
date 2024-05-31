@@ -1,20 +1,221 @@
 <template>
-    <router-view/>
+
+    <div class="admin-wrapper">
+
+        <!-- admin sidebar -->
+        <div class="admin-sidebar" :class="{'active' : isActiveSidebar}">
+
+            <!-- admin sidebar header -->
+            <div class="admin-sidebar-header">
+
+                <!-- admin sidebar logo -->
+                <router-link :to="{name: 'dashboard'}" class="admin-sidebar-logo" @click="sidebarClose()">
+                    A<span>dmin Panel</span>
+                </router-link>
+
+                <!-- admin sidebar close -->
+                <button type="button" class="admin-sidebar-close" @click="sidebarClose()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+            </div>
+
+            <!-- admin sidebar body -->
+            <div class="admin-sidebar-body">
+
+                <!-- admin sidebar link - dashboard -->
+                <router-link :to="{name: 'dashboard'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-speedometer"></i>
+                    <span class="ms-2"> dashboard </span>
+                </router-link>
+
+                <!-- admin sidebar link - sliders -->
+                <router-link :to="{name: 'sliders'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-sliders"></i>
+                    <span class="ms-2"> sliders </span>
+                </router-link>
+
+                <!-- admin sidebar link - boxes -->
+                <router-link :to="{name: 'boxes'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-boxes"></i>
+                    <span class="ms-2"> boxes </span>
+                </router-link>
+
+                <!-- admin sidebar link - categories -->
+                <router-link :to="{name: 'categories'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-link-45deg"></i>
+                    <span class="ms-2"> categories </span>
+                </router-link>
+
+                <!-- admin sidebar link - about -->
+                <router-link :to="{name: 'about'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-person"></i>
+                    <span class="ms-2"> about </span>
+                </router-link>
+
+                <!-- admin sidebar link - contact -->
+                <router-link :to="{name: 'contact'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-telephone"></i>
+                    <span class="ms-2"> contact </span>
+                </router-link>
+
+                <!-- admin sidebar link - blogs -->
+                <router-link :to="{name: 'blogs'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-card-text"></i>
+                    <span class="ms-2"> blogs </span>
+                </router-link>
+
+                <!-- admin sidebar link - products -->
+                <router-link :to="{name: 'products'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-bag"></i>
+                    <span class="ms-2"> products </span>
+                </router-link>
+
+                <!-- admin sidebar link - customers -->
+                <router-link :to="{name: 'customers'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-people"></i>
+                    <span class="ms-2"> customers </span>
+                </router-link>
+
+                <!-- admin sidebar link - orders -->
+                <router-link :to="{name: 'orders'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-cart"></i>
+                    <span class="ms-2"> orders </span>
+                </router-link>
+
+            </div>
+
+            <!-- admin sidebar footer -->
+            <div class="admin-sidebar-footer">
+
+                <!-- admin sidebar footer link -->
+                <button type="button" class="admin-sidebar-footer-link">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    <span class="ms-2"> Logout </span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- admin content -->
+        <div class="admin-content">
+
+            <!-- admin content header -->
+            <div class="admin-content-header">
+
+                <div class="d-flex align-items-center justify-content-start">
+
+                    <!-- admin sidebar toggle -->
+                    <button type="button" class="admin-sidebar-toggle" @click="sidebarOpen()">
+                        <i class="bi bi-justify-left"></i>
+                    </button>
+
+                    <!-- admin responsive search - mobile & tablet -->
+                    <div class="ms-3 d-lg-none">
+                        <button type="button" class="btn-icon rounded-3">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+
+                    <!-- admin responsive search - laptop & desktop -->
+                    <div class="d-none d-lg-inline">
+                        <div class="position-relative header">
+                            <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
+                                <i class="bi bi-search text-light-gray"></i>
+                            </div>
+                            <input type="text" name="keyword" class="form-control ps-5" placeholder="Search here anything" required autocomplete="new-keyword">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="d-flex justify-content-end align-items-center">
+
+                    <!-- admin full screen -->
+                    <button type="button" class="btn-icon rounded-3 me-3">
+                        <i class="bi bi-fullscreen"></i>
+                    </button>
+
+                    <!-- admin envelope -->
+                    <div class="dropdown">
+                        <button type="button" class="btn-icon rounded-3 me-3" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-envelope"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end width-340">
+                            <li>
+                                <span class="d-block dropdown-item-text px-3 mb-2 fw-medium">
+                                    John Smith
+                                </span>
+                                <span class="d-block dropdown-item-text px-3 text-secondary">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sequi?
+                                </span>
+                            </li>
+                            <li>
+                                <span class="d-block dropdown-item-text px-3 mb-2 fw-medium">
+                                    John Duo
+                                </span>
+                                <span class="d-block dropdown-item-text px-3 text-secondary">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sequi?
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- admin profile dropdown -->
+                    <div class="dropdown">
+                        <div class="cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img :src="`/images/teams/team-1.jpg`"
+                                 class="img-fluid object-fit-contain width-45 height-45 rounded-circle" alt="avatar">
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <router-link :to="{name: ''}" class="dropdown-item">
+                                    Profile
+                                </router-link>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item">
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- admin content body -->
+            <div class="admin-content-body">
+                <router-view/>
+            </div>
+
+        </div>
+
+    </div>
+
 </template>
 
 <script>
 
 export default {
-    data(){
-        return{
-
+    data() {
+        return {
+            isActiveSidebar: false,
         }
     },
     mounted() {
 
     },
     methods: {
+        sidebarOpen() {
+            this.isActiveSidebar = true;
+        },
 
+        sidebarClose() {
+            this.isActiveSidebar = false;
+        }
     }
 }
 

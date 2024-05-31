@@ -69,7 +69,7 @@
                 display: none;
 
                 @media screen and (max-width: 576px) {
-                    display: flex;
+                    display: flow;
                 }
 
                 &:hover {
@@ -216,6 +216,7 @@
                 &:hover {
                     transition: 0.3s all ease-in-out;
                     background-color: var(--bs-border-color);
+                    box-shadow: 0 0 12px 0 var(--bs-border-color) inset !important;
                 }
 
             }

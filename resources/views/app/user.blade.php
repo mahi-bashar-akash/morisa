@@ -7,6 +7,9 @@
     {{-- components --}}
     @include('component.components')
 
+    {{-- extra components --}}
+    @include('component.extra-components')
+
     {{-- app js --}}
     @vite('resources/js/user/app.js')
 
