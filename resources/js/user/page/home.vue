@@ -7,16 +7,20 @@
                 <div class="item">
                     <div class="position-relative">
                         <img :src="`/images/banner/banner-5.jpg`" class="img-fluid" alt="banner-1">
-                        <div class="position-absolute top-0 bottom-0 start-0 d-flex justify-content-center align-items-start flex-column">
+                        <div
+                            class="position-absolute top-0 bottom-0 start-0 d-flex justify-content-center align-items-start flex-column">
                             <div class="col-md-8 p-5">
-                                <div class="small mb-4 fw-bold"> CLOTHING <br> NEW COLLECTION </div>
-                                <div class="fs-3 mb-3"> NEW ARRIVALS! </div>
-                                <div class="fs-1 fw-bold mb-3"> SUMMER FASHION </div>
+                                <div class="small mb-4 fw-bold"> CLOTHING <br> NEW COLLECTION</div>
+                                <div class="fs-3 mb-3"> NEW ARRIVALS!</div>
+                                <div class="fs-1 fw-bold mb-3"> SUMMER FASHION</div>
                                 <div class="text-secondary mb-4 line-height-2">
                                     We crack for this purely rock style with stitched quills in relief and metallic
                                     hardware.
                                 </div>
-                                <button type="button" class="btn btn-outline-dark px-4 px-md-5 py-2 py-md-3 rounded-0"> READ MORE </button>
+                                <router-link :to="{name: 'shop'}"
+                                             class="btn btn-outline-dark px-4 px-md-5 py-2 py-md-3 rounded-0">
+                                    READ MORE
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -24,16 +28,20 @@
                 <div class="item">
                     <div class="position-relative">
                         <img :src="`/images/banner/banner-4.jpg`" class="img-fluid" alt="banner-2">
-                        <div class="position-absolute top-0 bottom-0 start-0 d-flex justify-content-center align-items-start flex-column">
+                        <div
+                            class="position-absolute top-0 bottom-0 start-0 d-flex justify-content-center align-items-start flex-column">
                             <div class="col-md-8 p-5">
-                                <div class="small mb-4 fw-bold"> T-SHIRT <br> NEW COLLECTION </div>
-                                <div class="fs-3 mb-3"> CLEAN & ELEGANT! </div>
-                                <div class="fs-1 fw-bold mb-3"> MODERN FASHION </div>
+                                <div class="small mb-4 fw-bold"> T-SHIRT <br> NEW COLLECTION</div>
+                                <div class="fs-3 mb-3"> CLEAN & ELEGANT!</div>
+                                <div class="fs-1 fw-bold mb-3"> MODERN FASHION</div>
                                 <div class="text-secondary mb-4 line-height-2">
                                     BlackBird collection of minimal, sleek and functional Carryalls were designed
                                     with creatives in mind.
                                 </div>
-                                <button type="button" class="btn btn-outline-dark px-4 px-md-5 py-2 py-md-3 rounded-0"> READ MORE </button>
+                                <router-link :to="{name: 'shop'}"
+                                             class="btn btn-outline-dark px-4 px-md-5 py-2 py-md-3 rounded-0">
+                                    READ MORE
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -56,8 +64,10 @@
                     <img :src="'/images/barrier.webp'" class="img-fluid" alt="barrier">
                 </div>
                 <div class="text-center text-light-gray md-3 my-md-5 line-height-2">
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
-                    at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+                    dolore eu feugiat nulla facilisis
+                    at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+                    duis dolore te feugait nulla
                     facilisi.
                 </div>
                 <div class="text-center">
@@ -76,29 +86,54 @@
                 </div>
                 <div class="collection-owl-carousel owl-carousel owl-theme">
                     <div class="item">
-                        <img :src="`/images/product/product-01.jpg`" class="img-fluid object-fit-contain" alt="product-01">
-                        <div class="text-center my-3 text-secondary text-opacity-75"> 03 products </div>
-                        <div class="text-center my-3"> Sweaters </div>
+                        <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                            <img :src="`/images/product/product-01.jpg`" class="img-fluid object-fit-contain"
+                                 alt="product-01">
+                            <div class="text-center my-3 text-secondary text-opacity-75"> 03 products</div>
+                            <div class="text-center my-3 text-dark">
+                                Sweaters
+                            </div>
+                        </router-link>
                     </div>
                     <div class="item">
-                        <img :src="`/images/product/product-02.jpg`" class="img-fluid object-fit-contain" alt="product-02">
-                        <div class="text-center my-3 text-secondary text-opacity-75"> 09 products </div>
-                        <div class="text-center my-3"> Jackets </div>
+                        <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                            <img :src="`/images/product/product-02.jpg`" class="img-fluid object-fit-contain"
+                                 alt="product-02">
+                            <div class="text-center my-3 text-secondary text-opacity-75"> 09 products</div>
+                            <div class="text-center my-3 text-dark">
+                                Jackets
+                            </div>
+                        </router-link>
                     </div>
                     <div class="item">
-                        <img :src="`/images/product/product-03.jpg`" class="img-fluid object-fit-contain" alt="product-03">
-                        <div class="text-center my-3 text-secondary text-opacity-75"> 01 products </div>
-                        <div class="text-center my-3"> Porridge </div>
+                        <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                            <img :src="`/images/product/product-03.jpg`" class="img-fluid object-fit-contain"
+                                 alt="product-03">
+                            <div class="text-center my-3 text-secondary text-opacity-75"> 01 products</div>
+                            <div class="text-center my-3 text-dark">
+                                Porridge
+                            </div>
+                        </router-link>
                     </div>
                     <div class="item">
-                        <img :src="`/images/product/product-04.jpg`" class="img-fluid object-fit-contain" alt="product-04">
-                        <div class="text-center my-3 text-secondary text-opacity-75"> 05 products </div>
-                        <div class="text-center my-3"> T-Shirt </div>
+                        <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                            <img :src="`/images/product/product-04.jpg`" class="img-fluid object-fit-contain"
+                                 alt="product-04">
+                            <div class="text-center my-3 text-secondary text-opacity-75"> 05 products</div>
+                            <div class="text-center my-3 text-dark">
+                                T-Shirt
+                            </div>
+                        </router-link>
                     </div>
                     <div class="item">
-                        <img :src="`/images/product/product-05.jpg`" class="img-fluid object-fit-contain" alt="product-05">
-                        <div class="text-center my-3 text-secondary text-opacity-75"> 07 products </div>
-                        <div class="text-center my-3"> Accessories </div>
+                        <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                            <img :src="`/images/product/product-05.jpg`" class="img-fluid object-fit-contain"
+                                 alt="product-05">
+                            <div class="text-center my-3 text-secondary text-opacity-75"> 07 products</div>
+                            <div class="text-center my-3 text-dark">
+                                Accessories
+                            </div>
+                        </router-link>
                     </div>
                 </div>
             </div>
@@ -114,7 +149,8 @@
                 </div>
                 <div class="text-secondary text-opacity-75 text-center d-flex justify-content-center my-4">
                     <div class="col-md-6 col-xl-5 mb-3 line-height-2">
-                        Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum formas.
+                        Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum
+                        formas.
                     </div>
                 </div>
                 <div class="gallery w-100">
@@ -137,212 +173,246 @@
 
                     <div class="feature-product-owl-carousel owl-carousel owl-theme">
                         <div class="p-1">
-                            <div class="position-relative">
-                                <img :src="`/images/product/product-04.jpg`" class="img-fluid object-fit-contain" alt="product ">
-                                <div class="position-absolute top-0 end-0 p-3">
-                                    <div class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
-                                        Sale
+                            <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                <div class="position-relative">
+                                    <img :src="`/images/product/product-04.jpg`" class="img-fluid object-fit-contain"
+                                         alt="product ">
+                                    <div class="position-absolute top-0 end-0 p-3">
+                                        <div
+                                            class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
+                                            Sale
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center py-3">
-                                <div class="text-light-gray-hover cursor-pointer">
-                                    Chanel
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="text-light-gray-hover cursor-pointer">
+                                        Chanel
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
+                                <div class="py-3 fs-6 fw-bold line-height-2 text-dark">
+                                    Dopo Designs Woolrich Klettersack Backpack
                                 </div>
-                            </div>
-                            <div class="py-3 fs-6 fw-bold line-height-2">
-                                Dopo Designs Woolrich Klettersack Backpack
-                            </div>
-                            <div class="fs-4 text-secondary text-opacity-75"> $98.00 </div>
+                                <div class="fs-4 text-secondary text-opacity-75">
+                                    $98.00
+                                </div>
+                            </router-link>
                         </div>
                         <div class="p-1">
-                            <div class="position-relative">
-                                <img :src="`/images/product/product-05.jpg`" class="img-fluid object-fit-contain" alt="product ">
-                                <div class="position-absolute top-0 end-0 p-3 invisible">
-                                    <div class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
-                                        Sale
+                            <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                <div class="position-relative">
+                                    <img :src="`/images/product/product-05.jpg`" class="img-fluid object-fit-contain"
+                                         alt="product ">
+                                    <div class="position-absolute top-0 end-0 p-3 invisible">
+                                        <div
+                                            class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
+                                            Sale
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center py-3">
-                                <div class="text-light-gray-hover cursor-pointer">
-                                    Chanel
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="text-light-gray-hover cursor-pointer">
+                                        Chanel
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
+                                <div class="py-3 fs-6 fw-bold line-height-2 text-dark">
+                                    Dopo Designs Woolrich Klettersack Backpack
                                 </div>
-                            </div>
-                            <div class="py-3 fs-6 fw-bold line-height-2">
-                                Dopo Designs Woolrich Klettersack Backpack
-                            </div>
-                            <div class="fs-4 text-secondary text-opacity-75"> $26.00 </div>
+                                <div class="fs-4 text-secondary text-opacity-75"> $26.00</div>
+                            </router-link>
                         </div>
                         <div class="p-1">
-                            <div class="position-relative">
-                                <img :src="`/images/product/product-06.jpg`" class="img-fluid object-fit-contain" alt="product ">
-                                <div class="position-absolute top-0 end-0 p-3">
-                                    <div class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
-                                        Sale
+                            <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                <div class="position-relative">
+                                    <img :src="`/images/product/product-06.jpg`" class="img-fluid object-fit-contain"
+                                         alt="product ">
+                                    <div class="position-absolute top-0 end-0 p-3">
+                                        <div
+                                            class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
+                                            Sale
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center py-3">
-                                <div class="text-light-gray-hover cursor-pointer">
-                                    Chanel
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="text-light-gray-hover cursor-pointer">
+                                        Chanel
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
+                                <div class="py-3 fs-6 fw-bold line-height-2 text-dark">
+                                    Dopo Designs Woolrich Klettersack Backpack
                                 </div>
-                            </div>
-                            <div class="py-3 fs-6 fw-bold line-height-2">
-                                Dopo Designs Woolrich Klettersack Backpack
-                            </div>
-                            <div class="fs-4 text-secondary text-opacity-75"> $46.00 </div>
+                                <div class="fs-4 text-secondary text-opacity-75"> $46.00</div>
+                            </router-link>
                         </div>
                         <div class="p-1">
-                            <div class="position-relative">
-                                <img :src="`/images/product/product-07.jpg`" class="img-fluid object-fit-contain" alt="product ">
-                                <div class="position-absolute top-0 end-0 p-3 invisible">
-                                    <div class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
-                                        Sale
+                            <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                <div class="position-relative">
+                                    <img :src="`/images/product/product-07.jpg`" class="img-fluid object-fit-contain"
+                                         alt="product ">
+                                    <div class="position-absolute top-0 end-0 p-3 invisible">
+                                        <div
+                                            class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
+                                            Sale
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center py-3">
-                                <div class="text-light-gray-hover cursor-pointer">
-                                    Chanel
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="text-light-gray-hover cursor-pointer">
+                                        Chanel
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
+                                <div class="py-3 fs-6 fw-bold line-height-2 text-dark">
+                                    Dopo Designs Woolrich Klettersack Backpack
                                 </div>
-                            </div>
-                            <div class="py-3 fs-6 fw-bold line-height-2">
-                                Dopo Designs Woolrich Klettersack Backpack
-                            </div>
-                            <div class="fs-4 text-secondary text-opacity-75"> $21.00 </div>
+                                <div class="fs-4 text-secondary text-opacity-75"> $21.00</div>
+                            </router-link>
                         </div>
                         <div class="p-1">
-                            <div class="position-relative">
-                                <img :src="`/images/product/product-08.jpg`" class="img-fluid object-fit-contain" alt="product ">
-                                <div class="position-absolute top-0 end-0 p-3">
-                                    <div class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
-                                        Sale
+                            <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                <div class="position-relative">
+                                    <img :src="`/images/product/product-08.jpg`" class="img-fluid object-fit-contain"
+                                         alt="product ">
+                                    <div class="position-absolute top-0 end-0 p-3">
+                                        <div
+                                            class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
+                                            Sale
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center py-3">
-                                <div class="text-light-gray-hover cursor-pointer">
-                                    Chanel
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="text-light-gray-hover cursor-pointer">
+                                        Chanel
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
+                                <div class="py-3 fs-6 fw-bold line-height-2 text-dark">
+                                    Dopo Designs Woolrich Klettersack Backpack
                                 </div>
-                            </div>
-                            <div class="py-3 fs-6 fw-bold line-height-2">
-                                Dopo Designs Woolrich Klettersack Backpack
-                            </div>
-                            <div class="fs-4 text-secondary text-opacity-75"> $102.00 </div>
+                                <div class="fs-4 text-secondary text-opacity-75"> $102.00</div>
+                            </router-link>
                         </div>
                         <div class="p-1">
-                            <div class="position-relative">
-                                <img :src="`/images/product/product-09.jpg`" class="img-fluid object-fit-contain" alt="product ">
-                                <div class="position-absolute top-0 end-0 p-3 invisible">
-                                    <div class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
-                                        Sale
+                            <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                <div class="position-relative">
+                                    <img :src="`/images/product/product-09.jpg`" class="img-fluid object-fit-contain"
+                                         alt="product ">
+                                    <div class="position-absolute top-0 end-0 p-3 invisible">
+                                        <div
+                                            class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
+                                            Sale
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center py-3">
-                                <div class="text-light-gray-hover cursor-pointer">
-                                    Chanel
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="text-light-gray-hover cursor-pointer">
+                                        Chanel
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
+                                <div class="py-3 fs-6 fw-bold line-height-2 text-dark">
+                                    Dopo Designs Woolrich Klettersack Backpack
                                 </div>
-                            </div>
-                            <div class="py-3 fs-6 fw-bold line-height-2">
-                                Dopo Designs Woolrich Klettersack Backpack
-                            </div>
-                            <div class="fs-4 text-secondary text-opacity-75"> $98.00 </div>
+                                <div class="fs-4 text-secondary text-opacity-75"> $98.00</div>
+                            </router-link>
                         </div>
                         <div class="p-1">
-                            <div class="position-relative">
-                                <img :src="`/images/product/product-10.jpg`" class="img-fluid object-fit-contain" alt="product ">
-                                <div class="position-absolute top-0 end-0 p-3">
-                                    <div class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
-                                        Sale
+                            <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                <div class="position-relative">
+                                    <img :src="`/images/product/product-10.jpg`" class="img-fluid object-fit-contain"
+                                         alt="product ">
+                                    <div class="position-absolute top-0 end-0 p-3">
+                                        <div
+                                            class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
+                                            Sale
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center py-3">
-                                <div class="text-light-gray-hover cursor-pointer">
-                                    Chanel
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="text-light-gray-hover cursor-pointer">
+                                        Chanel
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
+                                <div class="py-3 fs-6 fw-bold line-height-2 text-dark">
+                                    Dopo Designs Woolrich Klettersack Backpack
                                 </div>
-                            </div>
-                            <div class="py-3 fs-6 fw-bold line-height-2">
-                                Dopo Designs Woolrich Klettersack Backpack
-                            </div>
-                            <div class="fs-4 text-secondary text-opacity-75"> $116.00 </div>
+                                <div class="fs-4 text-secondary text-opacity-75"> $116.00</div>
+                            </router-link>
                         </div>
                         <div class="p-1">
-                            <div class="position-relative">
-                                <img :src="`/images/product/product-11.jpg`" class="img-fluid object-fit-contain" alt="product ">
-                                <div class="position-absolute top-0 end-0 p-3 invisible">
-                                    <div class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
-                                        Sale
+                            <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                <div class="position-relative">
+                                    <img :src="`/images/product/product-11.jpg`" class="img-fluid object-fit-contain"
+                                         alt="product ">
+                                    <div class="position-absolute top-0 end-0 p-3 invisible">
+                                        <div
+                                            class="width-60 height-60 rounded-circle bg-dark d-flex justify-content-center align-items-center text-white">
+                                            Sale
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center py-3">
-                                <div class="text-light-gray-hover cursor-pointer">
-                                    Chanel
+                                <div class="d-flex justify-content-between align-items-center py-3">
+                                    <div class="text-light-gray-hover cursor-pointer">
+                                        Chanel
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                        <i class="bi bi-star-fill text-warning mx-1"></i>
+                                    </div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
-                                    <i class="bi bi-star-fill text-warning mx-1"></i>
+                                <div class="py-3 fs-6 fw-bold line-height-2 text-dark">
+                                    Dopo Designs Woolrich Klettersack Backpack
                                 </div>
-                            </div>
-                            <div class="py-3 fs-6 fw-bold line-height-2">
-                                Dopo Designs Woolrich Klettersack Backpack
-                            </div>
-                            <div class="fs-4 text-secondary text-opacity-75"> $39.00 </div>
+                                <div class="fs-4 text-secondary text-opacity-75"> $39.00</div>
+                            </router-link>
                         </div>
                     </div>
 
@@ -387,7 +457,7 @@
                             <!-- On sale -->
                             <div class="row mb-4">
                                 <div class="col-7">
-                                    <div class="fw-medium fs-4"> On Sale </div>
+                                    <div class="fw-medium fs-4"> On Sale</div>
                                 </div>
                                 <div class="col-5">
                                     <hr class="border border-secondary w-100">
@@ -397,298 +467,358 @@
                             <!-- On sale carousel -->
                             <div class="on-sale-carousel owl-carousel owl-theme">
                                 <div class="item">
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-01.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-02.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-02.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-03.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-03.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-04.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-04.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </router-link>
                                 </div>
                                 <div class="item">
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-01.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-02.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-02.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-03.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-03.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-04.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-04.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </router-link>
                                 </div>
                                 <div class="item">
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-01.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-02.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-02.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-03.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-03.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-4">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img :src="`/images/product/product-04.jpg`" class="img-fluid" alt="product">
-                                            </div>
-                                            <div class="col-9">
-                                                <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
-                                                    <div class="d-flex align-items-center justify-content-end">
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                        <i class="mx-1 bi bi-star-fill text-warning"></i>
-                                                    </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
+                                        <div class="mb-4">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    <img :src="`/images/product/product-04.jpg`" class="img-fluid"
+                                                         alt="product">
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="d-flex align-items-center small">
-                                                    <span class="text-secondary me-3"> $100.00 </span>
-                                                    <span class="text-danger"> $80.00 </span>
+                                                <div class="col-9">
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <div class="text-secondary text-opacity-75"> H&M</div>
+                                                        <div class="d-flex align-items-center justify-content-end">
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                            <i class="mx-1 bi bi-star-fill text-warning"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs
+                                                        Woolrich
+                                                    </div>
+                                                    <div class="d-flex align-items-center small">
+                                                        <span class="text-secondary me-3"> $100.00 </span>
+                                                        <span class="text-danger"> $80.00 </span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </router-link>
                                 </div>
                             </div>
 
@@ -698,7 +828,7 @@
                             <!-- Latest arrivals -->
                             <div class="row mb-4">
                                 <div class="col-7">
-                                    <div class="fw-medium fs-4"> Latest Arrivals </div>
+                                    <div class="fw-medium fs-4"> Latest Arrivals</div>
                                 </div>
                                 <div class="col-5">
                                     <hr class="border border-secondary w-100">
@@ -708,14 +838,16 @@
                             <!-- Latest arrivals carousel -->
                             <div class="latest-arrival-carousel owl-carousel owl-theme">
                                 <div class="item">
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-05.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-05.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -724,19 +856,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-06.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-06.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -745,19 +880,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-07.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-07.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -766,19 +904,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-08.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-08.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -787,21 +928,24 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
                                 </div>
                                 <div class="item">
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-05.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-05.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -810,19 +954,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-06.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-06.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -831,19 +978,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                        <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-07.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-07.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -852,19 +1002,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                        </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-08.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-08.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -873,21 +1026,24 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
                                 </div>
                                 <div class="item">
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-05.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-05.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -896,19 +1052,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-06.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-06.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -917,19 +1076,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-07.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-07.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -938,19 +1100,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-08.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-08.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -959,11 +1124,12 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
                                 </div>
                             </div>
 
@@ -973,7 +1139,7 @@
                             <!-- Top viewed -->
                             <div class="row mb-4">
                                 <div class="col-7">
-                                    <div class="fw-medium fs-4"> Top Viewed </div>
+                                    <div class="fw-medium fs-4"> Top Viewed</div>
                                 </div>
                                 <div class="col-5">
                                     <hr class="border border-secondary w-100">
@@ -983,14 +1149,16 @@
                             <!-- Top viewed carousel -->
                             <div class="top-viewed-carousel owl-carousel owl-theme">
                                 <div class="item">
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-09.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-09.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -999,19 +1167,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-10.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-10.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1020,19 +1191,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-11.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-11.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1041,19 +1215,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1062,21 +1239,24 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
                                 </div>
                                 <div class="item">
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-09.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-09.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1085,19 +1265,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-10.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-10.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1106,19 +1289,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-11.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-11.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1127,19 +1313,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1148,21 +1337,24 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
                                 </div>
                                 <div class="item">
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-09.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-09.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1171,19 +1363,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-10.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-10.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1192,19 +1387,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-11.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-11.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1213,19 +1411,22 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
+                                    <router-link :to="{name: 'singleProduct'}" class="text-decoration-none">
                                     <div class="mb-4">
                                         <div class="row">
                                             <div class="col-3">
-                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid" alt="product">
+                                                <img :src="`/images/product/product-01.jpg`" class="img-fluid"
+                                                     alt="product">
                                             </div>
                                             <div class="col-9">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <div class="text-secondary text-opacity-75"> H&M </div>
+                                                    <div class="text-secondary text-opacity-75"> H&M</div>
                                                     <div class="d-flex align-items-center justify-content-end">
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
@@ -1234,11 +1435,12 @@
                                                         <i class="mx-1 bi bi-star-fill text-warning"></i>
                                                     </div>
                                                 </div>
-                                                <div class="py-3 fw-bold line-height-2"> Copo Designs Woolrich </div>
-                                                <div class="text-secondary"> $100.00 </div>
+                                                <div class="py-3 fw-bold line-height-2 text-dark"> Copo Designs Woolrich</div>
+                                                <div class="text-secondary"> $100.00</div>
                                             </div>
                                         </div>
                                     </div>
+                                    </router-link>
                                 </div>
                             </div>
 
@@ -1256,16 +1458,19 @@
                 <div class="col-md-6 mb-4">
                     <div class="position-relative w-100 background-effect overflow-hidden">
                         <div class="overflow-hidden before-effect">
-                            <img :src="`/images/banner/banner-6.jpg`" class="img-fluid object-fit-cover w-100 height-320 image-effect extra-effect" alt="">
+                            <img :src="`/images/banner/banner-6.jpg`"
+                                 class="img-fluid object-fit-cover w-100 height-320 image-effect extra-effect" alt="">
                         </div>
-                        <div class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-3">
+                        <div
+                            class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-3">
                             <div class="p-3 col-md-8">
-                                <div class="fw-bold small mb-3"> New Arrivals </div>
-                                <div class="fw-medium fs-3 mb-3 line-height-2"> White Sneakers For Men’s </div>
+                                <div class="fw-bold small mb-3"> New Arrivals</div>
+                                <div class="fw-medium fs-3 mb-3 line-height-2"> White Sneakers For Men’s</div>
                                 <div class="mt-3">
-                                    <a href="javascript:void(0)" class="text-decoration-none text-dark border-bottom border-2 border-dark pb-1 fw-bold">
+                                    <router-link :to="{name: 'shop'}"
+                                                 class="text-decoration-none text-dark border-bottom border-2 border-dark pb-1 fw-bold">
                                         SHOP NOW
-                                    </a>
+                                    </router-link>
                                 </div>
                             </div>
                         </div>
@@ -1274,16 +1479,19 @@
                 <div class="col-md-6 mb-4">
                     <div class="position-relative w-100 background-effect overflow-hidden">
                         <div class="overflow-hidden before-effect">
-                            <img :src="`/images/banner/banner-7.jpg`" class="img-fluid object-fit-cover w-100 height-320 image-effect extra-effect" alt="">
+                            <img :src="`/images/banner/banner-7.jpg`"
+                                 class="img-fluid object-fit-cover w-100 height-320 image-effect extra-effect" alt="">
                         </div>
-                        <div class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-3">
+                        <div
+                            class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-3">
                             <div class="p-3 col-md-8">
                                 <div class="fw-bold small mb-3">Products amazing!</div>
-                                <div class="fw-medium fs-3 mb-3 line-height-2"> Short T-Shirts For Women’s </div>
+                                <div class="fw-medium fs-3 mb-3 line-height-2"> Short T-Shirts For Women’s</div>
                                 <div class="mt-3">
-                                    <a href="javascript:void(0)" class="text-decoration-none text-dark border-bottom border-2 border-dark pb-1 fw-bold">
+                                    <router-link :to="{name: 'shop'}"
+                                                 class="text-decoration-none text-dark border-bottom border-2 border-dark pb-1 fw-bold">
                                         SHOP NOW
-                                    </a>
+                                    </router-link>
                                 </div>
                             </div>
                         </div>
@@ -1302,7 +1510,7 @@
                         <img :src="`/images/boxes/box-1.webp`" class="width-75 height-75" alt="box 1">
                     </div>
                     <div class="mb-3">
-                        <div class="fw-bold"> Free Shipping Worldwide </div>
+                        <div class="fw-bold"> Free Shipping Worldwide</div>
                     </div>
                     <div class="text-center text-secondary text-opacity-75 px-4 line-height-2">
                         Mirum est notare quam littera gothica, quam nunc putamus parum claram
@@ -1313,7 +1521,7 @@
                         <img :src="`/images/boxes/box-2.webp`" class="width-75 height-75" alt="box 2">
                     </div>
                     <div class="mb-3">
-                        <div class="fw-bold"> Money Back Guarantee </div>
+                        <div class="fw-bold"> Money Back Guarantee</div>
                     </div>
                     <div class="text-center text-secondary text-opacity-75 px-4 line-height-2">
                         Mirum est notare quam littera gothica, quam nunc putamus parum claram
@@ -1324,7 +1532,7 @@
                         <img :src="`/images/boxes/box-3.webp`" class="width-75 height-75" alt="box 3">
                     </div>
                     <div class="mb-3">
-                        <div class="fw-bold"> Online Support 24/7 </div>
+                        <div class="fw-bold"> Online Support 24/7</div>
                     </div>
                     <div class="text-center text-secondary text-opacity-75 px-4 line-height-2">
                         Mirum est notare quam littera gothica, quam nunc putamus parum claram
@@ -1345,63 +1553,79 @@
             </div>
             <div class="d-flex justify-content-center text-center">
                 <div class="col-lg-6 text-secondary text-opacity-75 mb-4 line-height-2">
-                    Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum formas.
+                    Mirum est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum
+                    formas.
                 </div>
             </div>
             <div class="blog-owl-carousel owl-carousel owl-theme">
                 <div class="item p-3 background-effect">
                     <div class="position-relative overflow-hidden">
-                        <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover height-350 image-effect" alt="blog 1">
+                        <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover height-350 image-effect"
+                             alt="blog 1">
                         <div class="position-absolute top-0 end-0 p-3">
-                            <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center"> <div class="text-light-gray"> AUG </div> <div class="fs-4"> 12 </div> </div>
+                            <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center">
+                                <div class="text-light-gray"> AUG</div>
+                                <div class="fs-4"> 12</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="py-3 fw-medium fs-5"> Bypi non habent claritatem  insitam. </div>
-                    <div class="pb-3 text-secondary text-opacity-75"> HasTech </div>
+                    <div class="py-3 fw-medium fs-5"> Bypi non habent claritatem insitam.</div>
+                    <div class="pb-3 text-secondary text-opacity-75"> HasTech</div>
                     <div class="pb-3 text-opacity-75 text-secondary line-height-2">
-                        Aypi non habent claritatem  insitam. Aypi non habent claritatem
-                        insitam. Aypi non habent claritatem  insitam.Aypi non habent
-                        claritatem  insitam. Aypi non habent claritatem  insitam.
+                        Aypi non habent claritatem insitam. Aypi non habent claritatem
+                        insitam. Aypi non habent claritatem insitam.Aypi non habent
+                        claritatem insitam. Aypi non habent claritatem insitam.
                     </div>
-                    <a href="javascript:void(0)" class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
+                    <router-link :to="{name: 'singleBlog'}"
+                                 class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
                         Read more . . .
-                    </a>
+                    </router-link>
                 </div>
                 <div class="item p-3 background-effect">
                     <div class="position-relative overflow-hidden">
-                        <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover height-350 image-effect" alt="blog 2">
+                        <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover height-350 image-effect"
+                             alt="blog 2">
                         <div class="position-absolute top-0 end-0 p-3">
-                            <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center"> <div class="text-light-gray"> AUG </div> <div class="fs-4"> 12 </div> </div>
+                            <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center">
+                                <div class="text-light-gray"> AUG</div>
+                                <div class="fs-4"> 12</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="py-3 fw-medium fs-5"> Bypi non habent claritatem  insitam. </div>
-                    <div class="pb-3 text-secondary text-opacity-75"> HasTech </div>
+                    <div class="py-3 fw-medium fs-5"> Bypi non habent claritatem insitam.</div>
+                    <div class="pb-3 text-secondary text-opacity-75"> HasTech</div>
                     <div class="pb-3 text-opacity-75 text-secondary line-height-2">
-                        Aypi non habent claritatem  insitam. Aypi non habent claritatem
-                        insitam. Aypi non habent claritatem  insitam.Aypi non habent
-                        claritatem  insitam. Aypi non habent claritatem  insitam.
+                        Aypi non habent claritatem insitam. Aypi non habent claritatem
+                        insitam. Aypi non habent claritatem insitam.Aypi non habent
+                        claritatem insitam. Aypi non habent claritatem insitam.
                     </div>
-                    <a href="javascript:void(0)" class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
+                    <router-link :to="{name: 'singleBlog'}"
+                                 class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
                         Read more . . .
-                    </a>
+                    </router-link>
                 </div>
                 <div class="item p-3 background-effect">
                     <div class="position-relative overflow-hidden">
-                        <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover height-350 image-effect" alt="blog 3">
+                        <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover height-350 image-effect"
+                             alt="blog 3">
                         <div class="position-absolute top-0 end-0 p-3">
-                            <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center"> <div class="text-light-gray"> AUG </div> <div class="fs-4"> 12 </div> </div>
+                            <div class="px-4 py-3 bg-white shadow-sm fw-bold text-center">
+                                <div class="text-light-gray"> AUG</div>
+                                <div class="fs-4"> 12</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="py-3 fw-medium fs-5"> Bypi non habent claritatem  insitam. </div>
-                    <div class="pb-3 text-secondary text-opacity-75"> HasTech </div>
+                    <div class="py-3 fw-medium fs-5"> Bypi non habent claritatem insitam.</div>
+                    <div class="pb-3 text-secondary text-opacity-75"> HasTech</div>
                     <div class="pb-3 text-opacity-75 text-secondary line-height-2">
-                        Aypi non habent claritatem  insitam. Aypi non habent claritatem
-                        insitam. Aypi non habent claritatem  insitam.Aypi non habent
-                        claritatem  insitam. Aypi non habent claritatem  insitam.
+                        Aypi non habent claritatem insitam. Aypi non habent claritatem
+                        insitam. Aypi non habent claritatem insitam.Aypi non habent
+                        claritatem insitam. Aypi non habent claritatem insitam.
                     </div>
-                    <a href="javascript:void(0)" class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
+                    <router-link :to="{name: 'singleBlog'}"
+                                 class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
                         Read more . . .
-                    </a>
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -1433,7 +1657,7 @@ export default {
                 margin: 10,
                 nav: false,
                 animateOut: 'fadeOut',
-                autoplay:true,
+                autoplay: true,
                 autoplaySpeed: 7000,
                 autoplayHoverPause: false,
                 responsive: {
@@ -1457,7 +1681,7 @@ export default {
                 margin: 10,
                 nav: false,
                 dots: false,
-                autoplay:true,
+                autoplay: true,
                 slideTransition: 'linear',
                 autoplaySpeed: 4000,
                 autoplayHoverPause: false,
@@ -1488,7 +1712,7 @@ export default {
                 margin: 10,
                 nav: false,
                 dots: false,
-                autoplay:true,
+                autoplay: true,
                 slideTransition: 'linear',
                 autoplaySpeed: 4000,
                 autoplayHoverPause: false,
@@ -1519,7 +1743,7 @@ export default {
                 margin: 10,
                 nav: false,
                 dots: false,
-                autoplay:true,
+                autoplay: true,
                 slideTransition: 'linear',
                 autoplaySpeed: 4000,
                 autoplayHoverPause: false,
@@ -1550,7 +1774,7 @@ export default {
                 margin: 10,
                 nav: false,
                 dots: false,
-                autoplay:true,
+                autoplay: true,
                 slideTransition: 'linear',
                 autoplaySpeed: 4000,
                 autoplayHoverPause: false,
@@ -1575,7 +1799,7 @@ export default {
                 margin: 10,
                 nav: false,
                 dots: false,
-                autoplay:true,
+                autoplay: true,
                 slideTransition: 'linear',
                 autoplaySpeed: 4000,
                 autoplayHoverPause: false,
@@ -1600,7 +1824,7 @@ export default {
                 margin: 10,
                 nav: false,
                 dots: false,
-                autoplay:true,
+                autoplay: true,
                 slideTransition: 'linear',
                 autoplaySpeed: 4000,
                 autoplayHoverPause: false,

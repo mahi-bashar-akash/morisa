@@ -124,7 +124,7 @@
                             <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
                                 <i class="bi bi-search text-light-gray"></i>
                             </div>
-                            <input type="text" name="keyword" class="form-control ps-5" placeholder="Search here anything" required autocomplete="new-keyword">
+                            <input type="text" name="keyword" class="form-control ps-5 py-3" placeholder="Search here anything" required autocomplete="new-keyword">
                         </div>
                     </div>
 
@@ -142,22 +142,51 @@
                         <button type="button" class="btn-icon rounded-3 me-3" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="bi bi-envelope"></i>
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end width-340">
-                            <li>
-                                <span class="d-block dropdown-item-text px-3 mb-2 fw-medium">
-                                    John Smith
-                                </span>
-                                <span class="d-block dropdown-item-text px-3 text-secondary">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sequi?
-                                </span>
+                        <ul class="dropdown-menu dropdown-menu-end width-330">
+                            <li class="mb-1">
+                                <a href="javascript:void(0)" class="text-decoration-none dropdown-item">
+                                    <span class="d-block fw-medium">
+                                        John Smith
+                                    </span>
+                                    <span class="text-secondary truncate-to-2-line text-wrap">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sequi?
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="javascript:void(0)" class="text-decoration-none dropdown-item">
+                                    <span class="d-block fw-medium">
+                                        John Duo
+                                    </span>
+                                    <span class="text-secondary truncate-to-2-line text-wrap">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sequi?
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="javascript:void(0)" class="text-decoration-none dropdown-item">
+                                    <span class="d-block fw-medium">
+                                        Emma WordSon
+                                    </span>
+                                    <span class="text-secondary truncate-to-2-line text-wrap">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sequi?
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="javascript:void(0)" class="text-decoration-none dropdown-item">
+                                    <span class="d-block fw-medium">
+                                        ElbRas William
+                                    </span>
+                                    <span class="text-secondary truncate-to-2-line text-wrap">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sequi?
+                                    </span>
+                                </a>
                             </li>
                             <li>
-                                <span class="d-block dropdown-item-text px-3 mb-2 fw-medium">
-                                    John Duo
-                                </span>
-                                <span class="d-block dropdown-item-text px-3 text-secondary">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, sequi?
-                                </span>
+                                <a href="javascript:void(0)" class="btn btn-light-theme d-block">
+                                    Show all
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -169,14 +198,19 @@
                                  class="img-fluid object-fit-contain width-45 height-45 rounded-circle" alt="avatar">
                         </div>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <router-link :to="{name: ''}" class="dropdown-item">
-                                    Profile
+                            <li class="mb-1">
+                                <router-link :to="{name: 'profile'}" class="dropdown-item">
+                                    <i class="bi bi-person"></i> <span class="ms-2"> Profile </span>
+                                </router-link>
+                            </li>
+                            <li class="mb-1">
+                                <router-link :to="{name: 'settings'}" class="dropdown-item">
+                                    <i class="bi bi-gear"></i> <span class="ms-2"> Settings </span>
                                 </router-link>
                             </li>
                             <li>
                                 <button type="button" class="dropdown-item">
-                                    Logout
+                                    <i class="bi bi-box-arrow-in-right"></i> <span class="ms-2"> Logout </span>
                                 </button>
                             </li>
                         </ul>

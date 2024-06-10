@@ -310,50 +310,58 @@
                             <div class="fs-4 fw-medium mb-3">
                                 RECENT POST
                             </div>
+                            <router-link :to="{name: 'singleBlog'}" class="text-decoration-none">
                             <div class="d-flex justify-content-start align-items-center py-3">
                                 <div class="col-3">
                                     <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100"
                                          alt="blog ">
                                 </div>
                                 <div class="col-9 ps-3">
-                                    <div class="truncate-to-1-line">
+                                    <div class="truncate-to-1-line text-dark">
                                         Aypi non habent claritatem insitam.
                                     </div>
                                 </div>
                             </div>
+                            </router-link>
+                            <router-link :to="{name: 'singleBlog'}" class="text-decoration-none">
                             <div class="d-flex justify-content-start align-items-center py-3">
                                 <div class="col-3">
                                     <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover w-100 h-100"
                                          alt="blog ">
                                 </div>
                                 <div class="col-9 ps-3">
-                                    <div class="truncate-to-1-line">
+                                    <div class="truncate-to-1-line text-dark">
                                         Aypi non habent claritatem insitam.
                                     </div>
                                 </div>
                             </div>
+                            </router-link>
+                            <router-link :to="{name: 'singleBlog'}" class="text-decoration-none">
                             <div class="d-flex justify-content-start align-items-center py-3">
                                 <div class="col-3">
                                     <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover w-100 h-100"
                                          alt="blog ">
                                 </div>
                                 <div class="col-9 ps-3">
-                                    <div class="truncate-to-1-line">
+                                    <div class="truncate-to-1-line text-dark">
                                         Aypi non habent claritatem insitam.
                                     </div>
                                 </div>
                             </div>
+                            </router-link>
+                            <router-link :to="{name: 'singleBlog'}" class="text-decoration-none">
                             <div class="d-flex justify-content-start align-items-center py-3">
                                 <div class="col-3">
                                     <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100"
                                          alt="blog ">
                                 </div>
                                 <div class="col-9 ps-3">
-                                    <div class="truncate-to-1-line">
+                                    <div class="truncate-to-1-line text-dark">
                                         Aypi non habent claritatem insitam.
                                     </div>
                                 </div>
                             </div>
+                            </router-link>
                         </div>
                         <div class="px-2 mt-4">
                             <div class="fs-4 fw-medium mb-3">

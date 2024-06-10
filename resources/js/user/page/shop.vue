@@ -428,10 +428,22 @@
                         <div class="px-2 py-3">
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="text" name="min-number" placeholder="min amount" class="form-control border shadow-none p-3">
+                                    <label for="min-price" class="form-label"> Min </label>
+                                    <div class="position-relative">
+                                        <input id="min-price" type="text" name="min-price" class="form-control border shadow-none p-3">
+                                        <div class="position-absolute top-50 end-0 translate-middle-y pe-3">
+                                            $
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-6">
-                                    <input type="text" name="max-number" placeholder="max amount" class="form-control border shadow-none p-3">
+                                    <label for="max-price" class="form-label"> Max </label>
+                                    <div class="position-relative">
+                                        <input id="max-price" type="text" name="max-price" class="form-control border shadow-none p-3">
+                                        <div class="position-absolute top-50 end-0 translate-middle-y pe-3">
+                                            $
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

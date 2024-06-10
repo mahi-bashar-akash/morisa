@@ -77,14 +77,18 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="overflow-hidden background-effect">
-                                        <img :src="`/images/44.webp`" class="img-fluid object-fit-cover image-effect" alt="blog">
-                                    </div>
+                                    <router-link :to="{name: 'singleBlog'}" class="w-100">
+                                        <div class="overflow-hidden background-effect">
+                                            <img :src="`/images/44.webp`" class="img-fluid object-fit-cover image-effect" alt="blog">
+                                        </div>
+                                    </router-link>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="overflow-hidden background-effect">
-                                        <img :src="`/images/45.webp`" class="img-fluid object-fit-cover image-effect" alt="blog">
-                                    </div>
+                                    <router-link :to="{name: 'singleBlog'}" class="w-100">
+                                        <div class="overflow-hidden background-effect">
+                                            <img :src="`/images/45.webp`" class="img-fluid object-fit-cover image-effect" alt="blog">
+                                        </div>
+                                    </router-link>
                                 </div>
                             </div>
                             <div class="my-3 text-secondary">
@@ -227,7 +231,7 @@
                             <div class="fs-4 fw-medium mb-3">
                                 RECENT POST
                             </div>
-                            <a href="javascript:void(0)" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
+                            <router-link :to="{name: 'singleBlog'}" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
                                 <span class="col-3">
                                     <div class="overflow-hidden">
                                         <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog ">
@@ -238,8 +242,8 @@
                                         Aypi non habent claritatem insitam.
                                     </span>
                                 </span>
-                            </a>
-                            <a href="javascript:void(0)" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
+                            </router-link>
+                            <router-link :to="{name: 'singleBlog'}" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
                                 <span class="col-3">
                                     <div class="overflow-hidden">
                                         <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog ">
@@ -250,8 +254,8 @@
                                         Aypi non habent claritatem insitam.
                                     </span>
                                 </span>
-                            </a>
-                            <a href="javascript:void(0)" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
+                            </router-link>
+                            <router-link :to="{name: 'singleBlog'}" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
                                 <span class="col-3">
                                     <div class="overflow-hidden">
                                         <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog ">
@@ -262,8 +266,8 @@
                                         Aypi non habent claritatem insitam.
                                     </span>
                                 </span>
-                            </a>
-                            <a href="javascript:void(0)" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
+                            </router-link>
+                            <router-link :to="{name: 'singleBlog'}" class="d-flex justify-content-start align-items-center py-3 text-decoration-none text-secondary background-effect">
                                 <span class="col-3">
                                     <div class="overflow-hidden">
                                         <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover w-100 h-100 image-effect" alt="blog ">
@@ -274,7 +278,7 @@
                                         Aypi non habent claritatem insitam.
                                     </span>
                                 </span>
-                            </a>
+                            </router-link>
                         </div>
                         <div class="px-2 mt-4">
                             <div class="fs-4 fw-medium mb-3">
