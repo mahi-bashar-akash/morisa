@@ -1,8 +1,7 @@
-import {createRouter, createWebHistory} from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
 import authLayout from "../authentication/layout/layout.vue";
     import login from "../authentication/pages/login.vue";
-    import registration from "../authentication/pages/registration.vue";
     import forget from "../authentication/pages/forget.vue";
 
 import layout from "../layout/layout.vue";
@@ -29,18 +28,14 @@ const routes = [
 
     {
         path: AUTH_ROOT_URL, name: 'authLayout', component: authLayout,
-
         children: [
             { path: AUTH_ROOT_URL + 'login', name: 'login', component: login, meta: { title: TITLE + ' - Login' } },
-            { path: AUTH_ROOT_URL + 'registration', name: 'registration', component: registration, meta: { title: TITLE + ' - Registration' } },
             { path: AUTH_ROOT_URL + 'forget', name: 'forget', component: forget, meta: { title: TITLE + ' - Forget' } },
         ]
-
     },
 
     {
         path: ROOT_URL, name: 'layout', component: layout,
-
         children: [
             { path: ROOT_URL + 'dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - Dashboard' } },
             { path: ROOT_URL + 'slider', name: 'sliders', component: slider, meta: { title: TITLE + ' - Slider' } },
@@ -55,7 +50,6 @@ const routes = [
             { path: ROOT_URL + 'settings', name: 'settings', component: settings, meta: { title: TITLE + ' - Settings' } },
             { path: ROOT_URL + 'profile', name: 'profile', component: profile, meta: { title: TITLE + ' - Profile' } },
         ]
-
     },
 
 ];

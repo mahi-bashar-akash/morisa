@@ -64,3 +64,7 @@
     background-color: var(--theme) !important;
     color: var(--bs-white) !important;
 }
+
+.linear-background {
+    background: linear-gradient(220deg, rgb(9, 12, 17) 10%, #0c2239 35%, #2b1e38 55%, rgb(9, 12, 17) 90%);
+}
