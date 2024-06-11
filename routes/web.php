@@ -28,3 +28,9 @@ Route::get('/admin/', [\App\Http\Controllers\AppController::class, 'admin'])->wh
 Route::get('/admin/{any}', [\App\Http\Controllers\AppController::class, 'admin'])->where('any', '.*')->name('lvs.admin.any');
 
 Route::get('/admin', function () { return redirect()->route('lvs.admin.any', 'dashboard'); } );
+
+Route::get('/admin/auth', [\App\Http\Controllers\AppController::class, 'admin'])->where('any', '.*')->name('lvs.admin.auth');
+
+Route::get('/admin/auth/{any}', [\App\Http\Controllers\AppController::class, 'admin'])->where('any', '.*')->name('lvs.admin.auth.any');
+
+Route::get('/admin/auth', function () { return redirect()->route('lvs.admin.auth.any', 'login'); } );

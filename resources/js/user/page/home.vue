@@ -1792,7 +1792,7 @@ export default {
             })
         },
 
-        /* Function to latest arrival owl carousel */
+        /* Function to the latest arrival owl carousel */
         latestArrivalOwlCarousel() {
             $('.latest-arrival-carousel').owlCarousel({
                 loop: true,
