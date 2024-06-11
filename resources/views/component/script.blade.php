@@ -1,18 +1,15 @@
 <script type="application/javascript">
-
     window.core = {
         APP_NAME: 'Mimosa',
-        APP_URL: '{{env('APP_URL')}}',
+        APP_URL: '{{env('APP_URL')}}'
     };
-
     const loader = document.getElementById("preloader");
-
     window.addEventListener("load", function () {
-        setTimeout(() => {
+        setTimeout( () => {
             loader.style.display = "none";
-        },3000);
-    });
-
+            }, 3000);
+        }
+    );
 </script>
 
 {{-- bootstrap bundle js --}}

@@ -1577,7 +1577,7 @@
                         claritatem insitam. Aypi non habent claritatem insitam.
                     </div>
                     <router-link :to="{name: 'singleBlog'}"
-                                 class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
+                                 class="pb-1 text-decoration-none text-light-gray-hover">
                         Read more . . .
                     </router-link>
                 </div>
@@ -1600,7 +1600,7 @@
                         claritatem insitam. Aypi non habent claritatem insitam.
                     </div>
                     <router-link :to="{name: 'singleBlog'}"
-                                 class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
+                                 class="pb-1 text-decoration-none text-light-gray-hover">
                         Read more . . .
                     </router-link>
                 </div>
@@ -1623,7 +1623,7 @@
                         claritatem insitam. Aypi non habent claritatem insitam.
                     </div>
                     <router-link :to="{name: 'singleBlog'}"
-                                 class="pb-1 text-dark text-decoration-none border-bottom border-secondary border-opacity-50">
+                                 class="pb-1 text-decoration-none text-light-gray-hover">
                         Read more . . .
                     </router-link>
                 </div>
