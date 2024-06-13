@@ -1,6 +1,8 @@
 <template>
 
     <div class="row">
+
+        <!-- Sliders -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
             <div class="p-3 w-100 shadow bg-white rounded-3">
                 <div class="d-flex justify-content-start align-items-center fw-bold">
@@ -16,6 +18,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Boxes -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
             <div class="p-3 w-100 shadow bg-white rounded-3">
                 <div class="d-flex justify-content-start align-items-center fw-bold">
@@ -31,6 +35,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Categories -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
             <div class="p-3 w-100 shadow bg-white rounded-3">
                 <div class="d-flex justify-content-start align-items-center fw-bold">
@@ -46,6 +52,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Blogs -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
             <div class="p-3 w-100 shadow bg-white rounded-3">
                 <div class="d-flex justify-content-start align-items-center fw-bold">
@@ -61,6 +69,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Products -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
             <div class="p-3 w-100 shadow bg-white rounded-3">
                 <div class="d-flex justify-content-start align-items-center fw-bold">
@@ -76,6 +86,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 </template>
