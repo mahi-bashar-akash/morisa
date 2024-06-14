@@ -14,6 +14,7 @@ import layout from "../layout/layout.vue";
     import checkout from "../page/checkout.vue";
     import profileLayout from "../page/profile/layout/layout.vue";
         import details from "../page/profile/pages/details.vue";
+        import settings from "../page/profile/pages/settings.vue";
 
 const TITLE = window.core.APP_NAME
 const ROOT_URL = "/user/";
@@ -35,7 +36,8 @@ const routes = [
             {
                 path: ROOT_URL, name: 'profileLayout', component: profileLayout,
                 children: [
-                    { path: ROOT_URL + 'details', name: 'details', component: details, meta: { title: TITLE + ' - Details ' } },
+                    { path: ROOT_URL + 'details', name: 'details', component: details, meta: { title: TITLE + ' - Details' } },
+                    { path: ROOT_URL + 'settings', name: 'settings', component: settings, meta: { title: TITLE + ' - Settings' } },
                 ]
             }
         ]

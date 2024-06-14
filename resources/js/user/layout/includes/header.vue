@@ -81,10 +81,27 @@
                             Registration
                         </router-link>
                     </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: ''}" class="nav-link" @click="collapse()" v-if="userInfo">
+                    <li class="nav-item dropdown" v-if="userInfo">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Profile
-                        </router-link>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <router-link :to="{name: 'details'}" class="dropdown-item">
+                                    Details
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link :to="{name: 'settings'}" class="dropdown-item">
+                                    Settings
+                                </router-link>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item">
+                                    Logout
+                                </button>
+                            </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'cart'}" class="nav-link" @click="collapse()">
