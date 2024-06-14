@@ -1,129 +1,121 @@
 <template>
 
     <div class="d-flex justify-content-end mb-4">
-        <button type="button" class="btn btn-theme width-120 py-2" data-bs-toggle="modal" data-bs-target="#manageModal">
+        <button type="button" class="btn btn-theme width-120 py-2 rounded-0" data-bs-toggle="modal" data-bs-target="#manageModal">
             New
         </button>
     </div>
 
-    <!-- Slider list -->
-    <div class="card bg-white border-0 rounded-0">
-        <div class="card-header bg-white border-0 rounded-0 height-50 d-flex align-items-center justify-content-start fs-5 fw-medium">
-            Sliders
-        </div>
-        <div class="card-body bg-white border-0 rounded-0 height-calc-250 scrollbar">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
 
-                <!-- Slider card -->
-                <div class="p-3">
-                    <div class="card border rounded-0 p-3">
-                        <div class="card-body bg-white border-0 rounded-0">
-                            <div class="position-relative">
-                                <img :src="`/images/banner/banner-1.jpg`" class="img-fluid object-fit-cover height-250" alt="banner 1">
-                                <div class="position-absolute top-0 start-0 p-3">
-                                    <div class="width-35 height-35 d-flex justify-content-center align-items-center rounded-circle shadow bg-white">
-                                        01
-                                    </div>
-                                </div>
+        <!-- Slider card -->
+        <div class="mb-3">
+            <div class="card border rounded-0 p-3">
+                <div class="card-body bg-white border-0 rounded-0">
+                    <div class="position-relative">
+                        <img :src="`/images/banner/banner-1.jpg`" class="img-fluid object-fit-cover height-250" alt="banner 1">
+                        <div class="position-absolute top-0 start-0 p-3">
+                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                                01
                             </div>
-                        </div>
-                        <div class="card-footer bg-white border-0 rounded-0">
-                            <div class="fw-medium"> CLOTHING </div>
-                            <div class="fw-medium mb-3"> NEW COLLECTION </div>
-                            <div class="fw-bold mb-3 fs-4"> SUMMER FASHION </div>
-                            <div class="text-secondary mb-3">
-                                We crack for this purely rock style with stitched quills in relief and metallic hardware.
-                            </div>
-                            <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95" data-bs-toggle="modal" data-bs-target="#manageModal">
-                                Edit
-                            </button>
                         </div>
                     </div>
                 </div>
-
-                <!-- Slider card -->
-                <div class="p-3">
-                    <div class="card border rounded-0 p-3">
-                        <div class="card-body bg-white border-0 rounded-0">
-                            <div class="position-relative">
-                                <img :src="`/images/banner/banner-4.jpg`" class="img-fluid object-fit-cover height-250" alt="banner 2">
-                                <div class="position-absolute top-0 start-0 p-3">
-                                    <div class="width-35 height-35 d-flex justify-content-center align-items-center rounded-circle shadow bg-white">
-                                        02
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white border-0 rounded-0">
-                            <div class="fw-medium"> T-SHIRT </div>
-                            <div class="fw-medium mb-3"> NEW COLLECTION </div>
-                            <div class="fw-bold mb-3 fs-4"> MODERN FASHION </div>
-                            <div class="text-secondary mb-3">
-                                BlackBird collection of minimal, sleek and functional Carryalls were designed with creatives in mind.
-                            </div>
-                            <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95" data-bs-toggle="modal" data-bs-target="#manageModal">
-                                Edit
-                            </button>
-                        </div>
+                <div class="card-footer bg-white border-0 rounded-0">
+                    <div class="fw-medium"> CLOTHING </div>
+                    <div class="fw-medium mb-3"> NEW COLLECTION </div>
+                    <div class="fw-bold mb-3 fs-4"> SUMMER FASHION </div>
+                    <div class="text-secondary mb-3">
+                        We crack for this purely rock style with stitched quills in relief and metallic hardware.
                     </div>
+                    <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-3" data-bs-toggle="modal" data-bs-target="#manageModal">
+                        Edit
+                    </button>
                 </div>
-
-                <!-- Slider card -->
-                <div class="p-3">
-                    <div class="card border rounded-0 p-3">
-                        <div class="card-body bg-white border-0 rounded-0">
-                            <div class="position-relative">
-                                <img :src="`/images/banner/banner-2.jpg`" class="img-fluid object-fit-cover height-250" alt="banner 2">
-                                <div class="position-absolute top-0 start-0 p-3">
-                                    <div class="width-35 height-35 d-flex justify-content-center align-items-center rounded-circle shadow bg-white">
-                                        03
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white border-0 rounded-0">
-                            <div class="fw-medium"> T-SHIRT </div>
-                            <div class="fw-medium mb-3"> NEW COLLECTION </div>
-                            <div class="fw-bold mb-3 fs-4"> MODERN FASHION </div>
-                            <div class="text-secondary mb-3">
-                                BlackBird collection of minimal, sleek and functional Carryalls were designed with creatives in mind.
-                            </div>
-                            <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95" data-bs-toggle="modal" data-bs-target="#manageModal">
-                                Edit
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slider card -->
-                <div class="p-3">
-                    <div class="card border rounded-0 p-3">
-                        <div class="card-body bg-white border-0 rounded-0">
-                            <div class="position-relative">
-                                <img :src="`/images/banner/banner-3.jpg`" class="img-fluid object-fit-cover height-250" alt="banner 2">
-                                <div class="position-absolute top-0 start-0 p-3">
-                                    <div class="width-35 height-35 d-flex justify-content-center align-items-center rounded-circle shadow bg-white">
-                                        04
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white border-0 rounded-0">
-                            <div class="fw-medium"> T-SHIRT </div>
-                            <div class="fw-medium mb-3"> NEW COLLECTION </div>
-                            <div class="fw-bold mb-3 fs-4"> MODERN FASHION </div>
-                            <div class="text-secondary mb-3">
-                                BlackBird collection of minimal, sleek and functional Carryalls were designed with creatives in mind.
-                            </div>
-                            <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95" data-bs-toggle="modal" data-bs-target="#manageModal">
-                                Edit
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
+
+        <!-- Slider card -->
+        <div class="mb-3">
+            <div class="card border rounded-0 p-3">
+                <div class="card-body bg-white border-0 rounded-0">
+                    <div class="position-relative">
+                        <img :src="`/images/banner/banner-4.jpg`" class="img-fluid object-fit-cover height-250" alt="banner 2">
+                        <div class="position-absolute top-0 start-0 p-3">
+                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                                02
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-0 rounded-0">
+                    <div class="fw-medium"> T-SHIRT </div>
+                    <div class="fw-medium mb-3"> NEW COLLECTION </div>
+                    <div class="fw-bold mb-3 fs-4"> MODERN FASHION </div>
+                    <div class="text-secondary mb-3">
+                        BlackBird collection of minimal, sleek and functional Carryalls were designed with creatives in mind.
+                    </div>
+                    <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-3" data-bs-toggle="modal" data-bs-target="#manageModal">
+                        Edit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider card -->
+        <div class="mb-3">
+            <div class="card border rounded-0 p-3">
+                <div class="card-body bg-white border-0 rounded-0">
+                    <div class="position-relative">
+                        <img :src="`/images/banner/banner-2.jpg`" class="img-fluid object-fit-cover height-250" alt="banner 2">
+                        <div class="position-absolute top-0 start-0 p-3">
+                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                                03
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-0 rounded-0">
+                    <div class="fw-medium"> T-SHIRT </div>
+                    <div class="fw-medium mb-3"> NEW COLLECTION </div>
+                    <div class="fw-bold mb-3 fs-4"> MODERN FASHION </div>
+                    <div class="text-secondary mb-3">
+                        BlackBird collection of minimal, sleek and functional Carryalls were designed with creatives in mind.
+                    </div>
+                    <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-3" data-bs-toggle="modal" data-bs-target="#manageModal">
+                        Edit
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider card -->
+        <div class="mb-3">
+            <div class="card border rounded-0 p-3">
+                <div class="card-body bg-white border-0 rounded-0">
+                    <div class="position-relative">
+                        <img :src="`/images/banner/banner-3.jpg`" class="img-fluid object-fit-cover height-250" alt="banner 2">
+                        <div class="position-absolute top-0 start-0 p-3">
+                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                                04
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-0 rounded-0">
+                    <div class="fw-medium"> T-SHIRT </div>
+                    <div class="fw-medium mb-3"> NEW COLLECTION </div>
+                    <div class="fw-bold mb-3 fs-4"> MODERN FASHION </div>
+                    <div class="text-secondary mb-3">
+                        BlackBird collection of minimal, sleek and functional Carryalls were designed with creatives in mind.
+                    </div>
+                    <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-3" data-bs-toggle="modal" data-bs-target="#manageModal">
+                        Edit
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- Slider manage modal -->

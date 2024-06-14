@@ -8,7 +8,7 @@ import layout from "../layout/layout.vue";
     import dashboard from "../pages/dashboard.vue";
     import slider from "../pages/slider.vue";
     import box from "../pages/box.vue";
-    import category from "../pages/category.vue";
+    import attribute from "../pages/attribute.vue";
     import about from "../pages/about.vue";
     import contact from "../pages/contact.vue";
     import blog from "../pages/blog.vue";
@@ -40,7 +40,7 @@ const routes = [
             { path: ROOT_URL + 'dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - Dashboard' } },
             { path: ROOT_URL + 'slider', name: 'sliders', component: slider, meta: { title: TITLE + ' - Slider' } },
             { path: ROOT_URL + 'box', name: 'boxes', component: box, meta: { title: TITLE + ' - Box' } },
-            { path: ROOT_URL + 'category', name: 'categories', component: category, meta: { title: TITLE + ' - Category' } },
+            { path: ROOT_URL + 'attribute', name: 'attribute', component: attribute, meta: { title: TITLE + ' - attribute' } },
             { path: ROOT_URL + 'about', name: 'about', component: about, meta: { title: TITLE + ' - About' } },
             { path: ROOT_URL + 'contact', name: 'contact', component: contact, meta: { title: TITLE + ' - Contact' } },
             { path: ROOT_URL + 'blog', name: 'blogs', component: blog, meta: { title: TITLE + ' - Blog' } },

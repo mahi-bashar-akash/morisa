@@ -4,87 +4,107 @@
 
         <!-- Sliders -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
-            <div class="p-3 w-100 shadow bg-white rounded-3">
-                <div class="d-flex justify-content-start align-items-center fw-bold">
-                    <div class="width-35 height-35 d-flex justify-content-center align-items-center">
-                        <i class="bi bi-sliders"></i>
-                    </div>
-                    <div class="ms-2">
-                        Sliders
-                    </div>
+            <router-link :to="{name: 'sliders'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
+                <div class="pb-3 text-light-gray fs-5">
+                    Sliders
                 </div>
-                <div class="mt-3 ps-2 fw-bold">
-                    Count No. 1,00,000
+                <div class="pb-3 text-theme">
+                    <i class="bi bi-sliders fw-bold fs-4"></i>
                 </div>
-            </div>
+                <div class="text-light-gray fs-5">
+                    1,00,000
+                </div>
+            </router-link>
         </div>
 
         <!-- Boxes -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
-            <div class="p-3 w-100 shadow bg-white rounded-3">
-                <div class="d-flex justify-content-start align-items-center fw-bold">
-                    <div class="width-35 height-35 d-flex justify-content-center align-items-center">
-                        <i class="bi bi-boxes"></i>
-                    </div>
-                    <div class="ms-2">
-                        Boxes
-                    </div>
+            <router-link :to="{name: 'boxes'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
+                <div class="pb-3 text-light-gray fs-5">
+                    Boxes
                 </div>
-                <div class="mt-3 ps-2 fw-bold">
-                    Count No. 1,00,000
+                <div class="pb-3 text-theme">
+                    <i class="bi bi-boxes fw-bold fs-4"></i>
                 </div>
-            </div>
+                <div class="text-light-gray fs-5">
+                    1,00,000
+                </div>
+            </router-link>
         </div>
 
         <!-- Categories -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
-            <div class="p-3 w-100 shadow bg-white rounded-3">
-                <div class="d-flex justify-content-start align-items-center fw-bold">
-                    <div class="width-35 height-35 d-flex justify-content-center align-items-center">
-                        <i class="bi bi-link-45deg"></i>
-                    </div>
-                    <div class="ms-2">
-                        Categories
-                    </div>
+            <router-link :to="{name: 'attribute'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
+                <div class="pb-3 text-light-gray fs-5">
+                    Attributes
                 </div>
-                <div class="mt-3 ps-2 fw-bold">
-                    Count No. 1,00,000
+                <div class="pb-3 text-theme">
+                    <i class="bi bi-link-45deg fw-bold fs-4"></i>
                 </div>
-            </div>
+                <div class="text-light-gray fs-5">
+                    1,00,000
+                </div>
+            </router-link>
         </div>
 
         <!-- Blogs -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
-            <div class="p-3 w-100 shadow bg-white rounded-3">
-                <div class="d-flex justify-content-start align-items-center fw-bold">
-                    <div class="width-35 height-35 d-flex justify-content-center align-items-center">
-                        <i class="bi bi-card-text"></i>
-                    </div>
-                    <div class="ms-2">
-                        Blogs
-                    </div>
+            <router-link :to="{name: 'blogs'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
+                <div class="pb-3 text-light-gray fs-5">
+                    Blogs
                 </div>
-                <div class="mt-3 ps-2 fw-bold">
-                    Count No. 1,00,000
+                <div class="pb-3 text-theme">
+                    <i class="bi bi-card-text fw-bold fs-4"></i>
                 </div>
-            </div>
+                <div class="text-light-gray fs-5">
+                    1,00,000
+                </div>
+            </router-link>
         </div>
 
         <!-- Products -->
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
-            <div class="p-3 w-100 shadow bg-white rounded-3">
-                <div class="d-flex justify-content-start align-items-center fw-bold">
-                    <div class="width-35 height-35 d-flex justify-content-center align-items-center">
-                        <i class="bi bi-bag"></i>
-                    </div>
-                    <div class="ms-2">
-                        Products
-                    </div>
+            <router-link :to="{name: 'products'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
+                <div class="pb-3 text-light-gray fs-5">
+                    Products
                 </div>
-                <div class="mt-3 ps-2 fw-bold">
-                    Count No. 1,00,000
+                <div class="pb-3 text-theme">
+                    <i class="bi bi-bag fw-bold fs-4"></i>
                 </div>
-            </div>
+                <div class="text-light-gray fs-5">
+                    1,00,000
+                </div>
+            </router-link>
+        </div>
+
+        <!-- Customers -->
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+            <router-link :to="{name: 'customers'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
+                <div class="pb-3 text-light-gray fs-5">
+                    Customers
+                </div>
+                <div class="pb-3 text-theme">
+                    <i class="bi bi-people fw-bold fs-4"></i>
+                </div>
+                <div class="text-light-gray fs-5">
+                    1,00,000
+                </div>
+            </router-link>
+        </div>
+
+        <!-- Orders -->
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+            <router-link :to="{name: 'orders'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
+                <div class="pb-3 text-light-gray fs-5">
+                    Orders
+                </div>
+                <div class="pb-3 text-theme">
+                    <i class="bi bi-cart fw-bold fs-4"></i>
+                </div>
+                <div class="text-light-gray fs-5">
+                    1,00,000
+                </div>
+            </router-link>
         </div>
 
     </div>

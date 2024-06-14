@@ -42,9 +42,9 @@
                 </router-link>
 
                 <!-- admin sidebar link - categories -->
-                <router-link :to="{name: 'categories'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                <router-link :to="{name: 'attribute'}" class="admin-sidebar-body-link" @click="sidebarClose()">
                     <i class="bi bi-link-45deg"></i>
-                    <span class="ms-2"> categories </span>
+                    <span class="ms-2"> Attribute </span>
                 </router-link>
 
                 <!-- admin sidebar link - about -->
@@ -221,7 +221,7 @@
             </div>
 
             <!-- admin content body -->
-            <div class="admin-content-body">
+            <div class="admin-content-body scrollbar">
                 <router-view/>
             </div>
 

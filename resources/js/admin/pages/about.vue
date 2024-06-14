@@ -30,7 +30,7 @@
                         <textarea name="our-mission" id="our-mission" cols="30" rows="5" class="form-textarea p-3" required autocomplete="new-our-mission" placeholder="Enter your mission"></textarea>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="form-group mb-3">
                         <label for="our-vision" class="form-label fw-medium">Our vision</label>
                         <textarea name="our-vision" id="our-vision" cols="30" rows="5" class="form-textarea p-3" required autocomplete="new-our-vision" placeholder="Enter your vision"></textarea>
