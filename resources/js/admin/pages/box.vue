@@ -91,7 +91,7 @@
 
     </div>
 
-    <!-- Slider manage modal -->
+    <!-- Box manage modal -->
     <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <form class="modal-content rounded-0 border-0 p-4">
