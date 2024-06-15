@@ -1,5 +1,250 @@
 <template>
 
+    <div class="d-flex justify-content-end mb-4">
+        <button type="button" class="btn btn-theme width-120 py-2 rounded-0" @click="openManageModal()">
+            New
+        </button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table">
+
+            <!-- Product header -->
+            <thead>
+                <tr class="p-3">
+                    <th class="ps-4 py-3">
+                        <div class="min-width-150">
+                            Name
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Price
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Stock
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            BarCode
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Category
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Brand
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Size
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Color
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Action
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+
+            <!-- Product body -->
+            <tbody>
+
+                <!-- Product list -->
+                <tr class="align-middle" v-for="each in [1,2,3,4,5,6,7,8,9,10]">
+                    <td class="ps-4 py-3">
+                        <div class="min-width-150">
+                            <div class="truncate-to-1-line">
+                                Aopo Designs Woolrich Klettersack Backpack
+                            </div>
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-100">
+                            $122.00
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-100">
+                            5
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-100">
+                            PRO54321
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Male
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Polo
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-100">
+                            <div class="truncate-to-1-line">
+                                L, M, S, XL, XS, XXL
+                            </div>
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-100">
+                            <div class="truncate-to-1-line">
+                                Black, Blue, Green, Grey, Red, White
+                            </div>
+                        </div>
+                    </td>
+                    <td class="ps-4 py-2">
+                        <div class="min-width-100">
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
+                                    <i class="bi bi-pencil-square text-secondary"></i>
+                                </button>
+                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
+                                    <i class="bi bi-trash2 text-danger"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Product manage modal -->
+    <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content rounded-0 border-0 p-4">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <template v-if="this.formData.id === undefined"> Create </template>
+                        <template v-if="this.formData.id !== undefined"> Edit </template>
+                        Product
+                    </h1>
+                    <button type="button" class="btn-close shadow-none" @click="closeManageModal()"></button>
+                </div>
+                <div class="modal-body border-0">
+
+                    <div class="form-group mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" type="text" name="name" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-name">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="price" class="form-label">Price</label>
+                        <input id="price" type="text" name="price" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-price">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="stock" class="form-label">Stock Amount</label>
+                        <input id="stock" type="text" name="stock" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-stock">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="barcode" class="form-label">BarCode</label>
+                        <input id="barcode" type="text" name="barcode" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-barcode">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="category" class="form-label">Category</label>
+                        <select name="category" id="category" class="form-select p-3 border rounded-0 shadow-none" required autocomplete="new-category">
+                            <option value="0">Select a category</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Children</option>
+                            <option value="4">Accessories</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="brand" class="form-label">Brand</label>
+                        <select name="brand" id="brand" class="form-select p-3 border rounded-0 shadow-none" required autocomplete="new-brand">
+                            <option value="0">Select a brand</option>
+                            <option value="1">Calvin Klein</option>
+                            <option value="2">Diesel</option>
+                            <option value="3">Polo</option>
+                            <option value="4">Tommy Hilfiger</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="size" class="form-label">Size</label>
+                        <div class="d-flex justify-content-start align-items-start gap-2 flex-wrap">
+                            <label v-for="size in sizes" :key="size.id" class="form-label border btn" :class="{ 'btn-light' : !size.selected, 'btn-theme' : size.selected }" :for="size.id" @click="toggleSizeSelection(size.id)">
+                                <input :id="size.id" type="checkbox" :name="size.id" class="form-checkbox" hidden>
+                                {{ size.name }}
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="color" class="form-label">Color</label>
+                        <div class="d-flex justify-content-start align-items-start gap-2 flex-wrap">
+                            <label v-for="color in colors" :key="color.id" class="form-label border btn" :class="{ 'btn-light' : !color.selected, 'btn-theme' : color.selected }" :for="color.id" @click="toggleColorSelection(color.id)">
+                                <input :id="color.id" type="checkbox" :name="color.id" class="form-checkbox" hidden>
+                                {{ color.name }}
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary py-2 width-95 rounded-0" @click="closeManageModal()">
+                        Close
+                    </button>
+                    <button type="submit" class="btn btn-theme py-2 width-95 rounded-0">
+                        Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Product delete modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form class="modal-content rounded-0 border-0 p-4">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Delete Product </h1>
+                    <button type="button" class="btn-close shadow-none" @click="closeDeleteModal()"></button>
+                </div>
+                <div class="modal-body border-0">
+                    <div class="mb-3 text-center pt-4 fs-4"> Are you sure ? </div>
+                </div>
+                <div class="modal-footer border-0 d-flex justify-content-between align-items-center">
+                    <div class="col-5">
+                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0" @click="closeDeleteModal()">
+                            Close
+                        </button>
+                    </div>
+                    <div class="col-5">
+                        <button type="button" class="btn btn-theme py-2 w-100 rounded-0">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </template>
 
 <script>
@@ -8,12 +253,72 @@ export default {
     data(){
         return{
 
+            sizes: [
+                { id: 'L', name: 'L', selected: false },
+                { id: 'M', name: 'M', selected: false },
+                { id: 'S', name: 'S', selected: false },
+                { id: 'XL', name: 'XL', selected: false },
+                { id: 'XS', name: 'XS', selected: false },
+                { id: 'XXL', name: 'XXL', selected: false }
+            ],
+
+            colors: [
+                { id: 'Black', name: 'Black', selected: false },
+                { id: 'Blue', name: 'Blue', selected: false },
+                { id: 'Red', name: 'Red', selected: false },
+                { id: 'Green', name: 'Green', selected: false },
+                { id: 'Yellow', name: 'Yellow', selected: false },
+                { id: 'Purple', name: 'Purple', selected: false }
+            ],
+
+            formData: {  }
+
         }
     },
     mounted() {
 
     },
     methods: {
+
+        /* --- --- --- open manage modal --- --- --- */
+        openManageModal(){
+            const myModal = new bootstrap.Modal("#manageModal", {keyboard: false});
+            myModal.show();
+        },
+
+        /* --- --- --- close manage modal --- --- --- */
+        closeManageModal(){
+            let myModalEl = document.getElementById('manageModal');
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
+        },
+
+        /* --- --- --- open delete model --- --- --- */
+        openDeleteModal(){
+            const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false});
+            myModal.show();
+        },
+
+        /* --- --- --- close manage modal --- --- --- */
+        closeDeleteModal(){
+            let myModalEl = document.getElementById('deleteModal');
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
+        },
+
+        /* --- --- --- toggle size selection --- --- --- */
+        toggleSizeSelection(id) {
+            console.log(id)
+            const size = this.sizes.find(s => s.id === id);
+            if (size) { size.selected = !size.selected; }
+        },
+
+        /* --- --- --- toggle color selection --- --- --- */
+        toggleColorSelection(id) {
+            console.log(id)
+            const color = this.colors.find(c => c.id === id);
+            if (color) { color.selected = !color.selected; }
+        }
 
     }
 }

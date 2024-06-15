@@ -1,13 +1,15 @@
 <template>
 
     <div class="d-flex justify-content-end mb-4">
-        <button type="button" class="btn btn-theme width-120 py-2 rounded-0" data-bs-toggle="modal" data-bs-target="#manageModal">
+        <button type="button" class="btn btn-theme width-120 py-2 rounded-0" @click="openManageModal()">
             New
         </button>
     </div>
 
     <div class="table-responsive">
         <table class="table">
+
+            <!-- Attribute header -->
             <thead>
                 <tr class="p-3">
                     <th class="ps-4 py-3">
@@ -27,7 +29,11 @@
                     </th>
                 </tr>
             </thead>
+
+            <!-- Attribute body -->
             <tbody>
+
+                <!-- Attribute list -->
                 <tr class="align-middle">
                     <td class="ps-4 py-3">
                         <div class="min-width-200">
@@ -42,16 +48,17 @@
                     <td class="ps-4 py-2">
                         <div class="min-width-100">
                             <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
+                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
                                     <i class="bi bi-pencil-square text-secondary"></i>
                                 </button>
-                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
                                     <i class="bi bi-trash2 text-danger"></i>
                                 </button>
                             </div>
                         </div>
                     </td>
                 </tr>
+
                 <tr class="align-middle">
                     <td class="ps-4 py-3">
                         <div class="min-width-200">
@@ -66,16 +73,17 @@
                     <td class="ps-4 py-2">
                         <div class="min-width-100">
                             <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
+                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
                                     <i class="bi bi-pencil-square text-secondary"></i>
                                 </button>
-                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
                                     <i class="bi bi-trash2 text-danger"></i>
                                 </button>
                             </div>
                         </div>
                     </td>
                 </tr>
+
                 <tr class="align-middle">
                     <td class="ps-4 py-3">
                         <div class="min-width-200">
@@ -90,16 +98,17 @@
                     <td class="ps-4 py-2">
                         <div class="min-width-100">
                             <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
+                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
                                     <i class="bi bi-pencil-square text-secondary"></i>
                                 </button>
-                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
                                     <i class="bi bi-trash2 text-danger"></i>
                                 </button>
                             </div>
                         </div>
                     </td>
                 </tr>
+
                 <tr class="align-middle">
                     <td class="ps-4 py-3">
                         <div class="min-width-200">
@@ -114,16 +123,17 @@
                     <td class="ps-4 py-2">
                         <div class="min-width-100">
                             <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
+                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
                                     <i class="bi bi-pencil-square text-secondary"></i>
                                 </button>
-                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
                                     <i class="bi bi-trash2 text-danger"></i>
                                 </button>
                             </div>
                         </div>
                     </td>
                 </tr>
+
             </tbody>
         </table>
     </div>
@@ -134,15 +144,11 @@
             <form class="modal-content rounded-0 border-0 p-4">
                 <div class="modal-header border-0">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        <template v-if="this.formData.id === undefined">
-                            Create
-                        </template>
-                        <template v-if="this.formData.id !== undefined">
-                            Edit
-                        </template>
+                        <template v-if="this.formData.id === undefined"> Create </template>
+                        <template v-if="this.formData.id !== undefined"> Edit </template>
                         Attribute
                     </h1>
-                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close shadow-none" @click="closeManageModal()"></button>
                 </div>
                 <div class="modal-body border-0">
                     <div class="form-group mb-3">
@@ -166,7 +172,7 @@
                     </button>
                 </div>
                 <div class="modal-footer border-0">
-                    <button type="button" class="btn btn-secondary py-2 width-95 rounded-0" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-secondary py-2 width-95 rounded-0" @click="closeManageModal()">
                         Close
                     </button>
                     <button type="submit" class="btn btn-theme py-2 width-95 rounded-0">
@@ -182,17 +188,15 @@
         <div class="modal-dialog modal-dialog-centered">
             <form class="modal-content rounded-0 border-0 p-4">
                 <div class="modal-header border-0">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        Delete Attribute
-                    </h1>
-                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Delete Attribute </h1>
+                    <button type="button" class="btn-close shadow-none" @click="closeDeleteModal()"></button>
                 </div>
                 <div class="modal-body border-0">
                     <div class="mb-3 text-center pt-4 fs-4"> Are you sure ? </div>
                 </div>
                 <div class="modal-footer border-0 d-flex justify-content-between align-items-center">
                     <div class="col-5">
-                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0" data-bs-dismiss="modal">
+                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0" @click="closeDeleteModal()">
                             Close
                         </button>
                     </div>
@@ -227,17 +231,53 @@ export default {
     },
     methods: {
 
-        // remove attribute types
+        /* --- --- --- remove attribute types --- --- --- */
         deleteAttributeTypes(index) {
-            this.multipleParam.attributeType.splice(index, 1)
+            this.multipleParam.attributeType.splice(index, 1);
         },
 
-        // add attribute types
+        /* --- --- --- add attribute types --- --- --- */
         addGroup() {
-            this.multipleParam.attributeType.push({
-                types: '',
-            })
+            this.multipleParam.attributeType.push(
+                { types: '' }
+            );
         },
+
+        /* --- --- --- open manage model --- --- --- */
+        openManageModal(){
+            this.multipleParam = {
+                attributeType: [
+                    { types: '' }
+                ]
+            };
+            const myModal = new bootstrap.Modal("#manageModal", {keyboard: false});
+            myModal.show();
+        },
+
+        /* --- --- --- close manage modal --- --- --- */
+        closeManageModal(){
+            this.multipleParam = {
+                attributeType: [
+                    { types: '' }
+                ]
+            };
+            let myModalEl = document.getElementById('manageModal');
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
+        },
+
+        /* --- --- --- open delete model --- --- --- */
+        openDeleteModal(){
+            const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false});
+            myModal.show();
+        },
+
+        /* --- --- --- close manage modal --- --- --- */
+        closeDeleteModal(){
+            let myModalEl = document.getElementById('deleteModal');
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
+        }
 
     }
 }
