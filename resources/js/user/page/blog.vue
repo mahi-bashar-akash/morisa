@@ -40,12 +40,15 @@
                                         <img :src="`/images/blog/blog-1.jpg`"
                                              class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog ">
                                     </div>
-                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small"> August 10, 2022
+                                    <div class="p-3 fw-medium text-secondary text-opacity-75 small">
+                                        August 10, 2022
                                     </div>
                                     <div class="px-3 mb-3 truncate-to-1-line fs-5 text-dark"> Aypi Non Habent Claritatem
                                         Insitam.
                                     </div>
-                                    <div class="px-3 text-secondary text-opacity-75 pb-3 small"> HasTech</div>
+                                    <div class="px-3 text-secondary text-opacity-75 pb-3 small">
+                                        HasTech
+                                    </div>
                                     <div class="px-3 truncate-to-3-line text-secondary mb-4">
                                         It is a long established fact that a reader will be distracted by the readable
                                         content of a page when looking at its layout. The point of using Lorem Ipsum is

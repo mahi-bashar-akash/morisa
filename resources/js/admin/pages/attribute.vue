@@ -10,65 +10,117 @@
         <table class="table">
             <thead>
                 <tr class="p-3">
-                    <th class="ps-4 py-3"> Attribute </th>
-                    <th class="ps-4 py-3"> Types </th>
-                    <th class="ps-4 py-3"> Action </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-200">
+                            Attribute
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-400">
+                            Types
+                        </div>
+                    </th>
+                    <th class="ps-4 py-3">
+                        <div class="min-width-100">
+                            Action
+                        </div>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="align-middle">
-                    <td class="ps-4 py-3"> Categories </td>
-                    <td class="ps-4 py-3"> Male, Female, Children, Accessories </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-200">
+                            Categories
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-400">
+                            Male, Female, Children, Accessories
+                        </div>
+                    </td>
                     <td class="ps-4 py-2">
-                        <div class="d-flex justify-content-start align-items-center gap-2">
-                            <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
-                                <i class="bi bi-pencil-square text-secondary"></i>
-                            </button>
-                            <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                <i class="bi bi-trash2 text-danger"></i>
-                            </button>
+                        <div class="min-width-100">
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
+                                    <i class="bi bi-pencil-square text-secondary"></i>
+                                </button>
+                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                    <i class="bi bi-trash2 text-danger"></i>
+                                </button>
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr class="align-middle">
-                    <td class="ps-4 py-3"> Brands </td>
-                    <td class="ps-4 py-3"> Calvin Klein, Diesel, Polo, Tommy Hilfiger </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-200">
+                            Brands
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-400">
+                            Calvin Klein, Diesel, Polo, Tommy Hilfiger
+                        </div>
+                    </td>
                     <td class="ps-4 py-2">
-                        <div class="d-flex justify-content-start align-items-center gap-2">
-                            <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
-                                <i class="bi bi-pencil-square text-secondary"></i>
-                            </button>
-                            <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                <i class="bi bi-trash2 text-danger"></i>
-                            </button>
+                        <div class="min-width-100">
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
+                                    <i class="bi bi-pencil-square text-secondary"></i>
+                                </button>
+                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                    <i class="bi bi-trash2 text-danger"></i>
+                                </button>
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr class="align-middle">
-                    <td class="ps-4 py-3"> Sizes </td>
-                    <td class="ps-4 py-3"> L, M, S, XL, XS, XXL </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-200">
+                            Sizes
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-400">
+                            L, M, S, XL, XS, XXL
+                        </div>
+                    </td>
                     <td class="ps-4 py-2">
-                        <div class="d-flex justify-content-start align-items-center gap-2">
-                            <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
-                                <i class="bi bi-pencil-square text-secondary"></i>
-                            </button>
-                            <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                <i class="bi bi-trash2 text-danger"></i>
-                            </button>
+                        <div class="min-width-100">
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
+                                    <i class="bi bi-pencil-square text-secondary"></i>
+                                </button>
+                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                    <i class="bi bi-trash2 text-danger"></i>
+                                </button>
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr class="align-middle">
-                    <td class="ps-4 py-3"> Colors </td>
-                    <td class="ps-4 py-3"> Black, Blue, Green, Grey, Red, White </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-200">
+                            Colors
+                        </div>
+                    </td>
+                    <td class="ps-4 py-3">
+                        <div class="min-width-400">
+                            Black, Blue, Green, Grey, Red, White
+                        </div>
+                    </td>
                     <td class="ps-4 py-2">
-                        <div class="d-flex justify-content-start align-items-center gap-2">
-                            <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
-                                <i class="bi bi-pencil-square text-secondary"></i>
-                            </button>
-                            <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                <i class="bi bi-trash2 text-danger"></i>
-                            </button>
+                        <div class="min-width-100">
+                            <div class="d-flex justify-content-start align-items-center gap-2">
+                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#manageModal">
+                                    <i class="bi bi-pencil-square text-secondary"></i>
+                                </button>
+                                <button type="button" class="btn-icon rounded-circle" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                    <i class="bi bi-trash2 text-danger"></i>
+                                </button>
+                            </div>
                         </div>
                     </td>
                 </tr>
