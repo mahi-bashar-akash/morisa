@@ -283,8 +283,16 @@
                         </label>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="box-catalogue-title" class="form-label">Box Title</label>
-                        <input id="box-catalogue-title" type="text" name="box-catalogue-title" class="form-control p-3 border shadow-none rounded-0" required autoComplete="new-box-catalogue-title">
+                        <label for="blog-title" class="form-label">Blog Title</label>
+                        <input id="blog-title" type="text" name="blog-title" class="form-control p-3 border shadow-none rounded-0" required autoComplete="new-blog-title">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="blog-author" class="form-label">Blog Author</label>
+                        <input id="blog-author" type="text" name="blog-author" class="form-control p-3 border shadow-none rounded-0" required autoComplete="new-blog-author">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="blog-description" class="form-label">Blog Description</label>
+                        <textarea name="blog-description" id="blog-description" cols="30" rows="5" class="form-textarea p-3 border shadow-none rounded-0" required autocomplete="new-blog-description"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0">

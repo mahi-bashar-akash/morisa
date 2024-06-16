@@ -148,14 +148,19 @@
                         <input id="name" type="text" name="name" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-name">
                     </div>
 
-                    <div class="form-group mb-3">
-                        <label for="price" class="form-label">Price</label>
-                        <input id="price" type="text" name="price" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-price">
-                    </div>
-
-                    <div class="form-group mb-3">
-                        <label for="stock" class="form-label">Stock Amount</label>
-                        <input id="stock" type="text" name="stock" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-stock">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="price" class="form-label">Price</label>
+                                <input id="price" type="text" name="price" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-price">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="stock" class="form-label">Stock Amount</label>
+                                <input id="stock" type="text" name="stock" class="form-control p-3 border rounded-0 shadow-none" required autocomplete="new-stock">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group mb-3">
@@ -188,8 +193,10 @@
                     <div class="form-group mb-3">
                         <label for="size" class="form-label">Size</label>
                         <div class="d-flex justify-content-start align-items-start gap-2 flex-wrap">
-                            <label v-for="size in sizes" :key="size.id" class="form-label border btn" :class="{ 'btn-light' : !size.selected, 'btn-theme' : size.selected }" :for="size.id" @click="toggleSizeSelection(size.id)">
-                                <input :id="size.id" type="checkbox" :name="size.id" class="form-checkbox" hidden>
+                            <label v-for="size in sizes" :key="size.id" class="form-label border px-3 py-2 cursor-pointer rounded-0"
+                                   :class="{ 'bg-light': !size.selected, 'bg-theme': size.selected }">
+                                <input :id="size.id" type="checkbox" :name="'size'" class="form-checkbox"
+                                       v-model="size.selected" :value="size.id" hidden="hidden">
                                 {{ size.name }}
                             </label>
                         </div>
@@ -198,8 +205,10 @@
                     <div class="form-group mb-3">
                         <label for="color" class="form-label">Color</label>
                         <div class="d-flex justify-content-start align-items-start gap-2 flex-wrap">
-                            <label v-for="color in colors" :key="color.id" class="form-label border btn" :class="{ 'btn-light' : !color.selected, 'btn-theme' : color.selected }" :for="color.id" @click="toggleColorSelection(color.id)">
-                                <input :id="color.id" type="checkbox" :name="color.id" class="form-checkbox" hidden>
+                            <label v-for="color in colors" :key="color.id" class="form-label border px-3 py-2 cursor-pointer rounded-0"
+                                   :class="{ 'bg-light': !color.selected, 'bg-theme': color.selected }">
+                                <input :id="color.id" type="checkbox" :name="'color'" class="form-checkbox"
+                                       v-model="color.selected" :value="color.id" hidden="hidden">
                                 {{ color.name }}
                             </label>
                         </div>
@@ -254,21 +263,21 @@ export default {
         return{
 
             sizes: [
-                { id: 'L', name: 'L', selected: false },
-                { id: 'M', name: 'M', selected: false },
-                { id: 'S', name: 'S', selected: false },
-                { id: 'XL', name: 'XL', selected: false },
-                { id: 'XS', name: 'XS', selected: false },
-                { id: 'XXL', name: 'XXL', selected: false }
+                { id: 'l', name: 'L', selected: false },
+                { id: 'm', name: 'M', selected: false },
+                { id: 's', name: 'S', selected: false },
+                { id: 'xl', name: 'XL', selected: false },
+                { id: 'xs', name: 'XS', selected: false },
+                { id: 'xxl', name: 'XXL', selected: false },
             ],
 
             colors: [
-                { id: 'Black', name: 'Black', selected: false },
-                { id: 'Blue', name: 'Blue', selected: false },
-                { id: 'Red', name: 'Red', selected: false },
-                { id: 'Green', name: 'Green', selected: false },
-                { id: 'Yellow', name: 'Yellow', selected: false },
-                { id: 'Purple', name: 'Purple', selected: false }
+                { id: 'red', name: 'Black', selected: false },
+                { id: 'blue', name: 'Blue', selected: false },
+                { id: 'green', name: 'Green', selected: false },
+                { id: 'grey', name: 'Grey', selected: false },
+                { id: 'red', name: 'Red', selected: false },
+                { id: 'white', name: 'White', selected: false },
             ],
 
             formData: {  }
@@ -305,20 +314,6 @@ export default {
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
-
-        /* --- --- --- toggle size selection --- --- --- */
-        toggleSizeSelection(id) {
-            console.log(id)
-            const size = this.sizes.find(s => s.id === id);
-            if (size) { size.selected = !size.selected; }
-        },
-
-        /* --- --- --- toggle color selection --- --- --- */
-        toggleColorSelection(id) {
-            console.log(id)
-            const color = this.colors.find(c => c.id === id);
-            if (color) { color.selected = !color.selected; }
-        }
 
     }
 }

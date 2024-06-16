@@ -37,7 +37,7 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-theme py-2 width-120">
+                    <button type="submit" class="btn btn-theme py-2 width-120 rounded-0">
                         SUBMIT
                     </button>
                 </div>
