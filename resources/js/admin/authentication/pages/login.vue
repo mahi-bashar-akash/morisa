@@ -27,12 +27,12 @@
         <div class="form-group mb-3">
             <label for="email" class="form-label">Email</label>
             <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0" required
-                   autocomplete="new-email" placeholder="Enter your email">
+                   autocomplete="new-email" placeholder="Enter your email" v-model="loginParam.email">
         </div>
         <div class="form-group mb-3">
             <label for="password" class="form-label">Password</label>
             <input id="password" type="password" name="password" class="form-control px-3 height-45 border shadow-none rounded-0"
-                   required autocomplete="new-password" placeholder="Enter your password">
+                   required autocomplete="new-password" placeholder="Enter your password" v-model="loginParam.password">
         </div>
         <div class="d-flex align-items-center justify-content-between mb-3">
             <div class="form-group">
@@ -56,12 +56,21 @@
 
 export default {
     data() {
-        return {}
+        return {
+
+            loginParam: {
+                email: '',
+                password: '',
+            }
+
+        }
     },
     mounted() {
 
     },
-    methods: {}
+    methods: {
+        
+    }
 }
 
 </script>

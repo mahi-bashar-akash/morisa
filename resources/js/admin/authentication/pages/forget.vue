@@ -11,7 +11,7 @@
         <div class="form-group mb-3">
             <label for="email" class="form-label">Email Address</label>
             <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0" required
-                   autocomplete="new-email" placeholder="Enter your email">
+                   autocomplete="new-email" placeholder="Enter your email" v-model="forgetData.email">
         </div>
         <div class="d-flex justify-content-between align-items-center">
 
@@ -39,23 +39,23 @@
         <div class="form-group mb-3">
             <label for="email" class="form-label">Email</label>
             <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0" required
-                   autocomplete="new-email" placeholder="Enter your email">
+                   autocomplete="new-email" placeholder="Enter your email" v-model="resetData.email">
         </div>
         <div class="form-group mb-3">
             <label for="code" class="form-label mb-0">Code</label>
             <div class="small text-secondary mb-2 fw-normal"> Please code collect from your email</div>
             <input id="code" type="text" name="code" class="form-control px-3 height-45 border shadow-none rounded-0" required
-                   autocomplete="new-code" placeholder="Enter your code">
+                   autocomplete="new-code" placeholder="Enter your code" v-model="resetData.code">
         </div>
         <div class="form-group mb-3">
             <label for="password" class="form-label">Password</label>
             <input id="password" type="password" name="password" class="form-control px-3 height-45 border shadow-none rounded-0"
-                   required autocomplete="new-password" placeholder="Enter your new password">
+                   required autocomplete="new-password" placeholder="Enter your new password" v-model="resetData.password">
         </div>
         <div class="form-group mb-3">
             <label for="confirm-password" class="form-label">Confirm Password</label>
             <input id="confirm-password" type="password" name="confirm-password"
-                   class="form-control px-3 height-45 border shadow-none rounded-0" required autocomplete="new-confirm-password" placeholder="Enter your new confirm password">
+                   class="form-control px-3 height-45 border shadow-none rounded-0" required autocomplete="new-confirm-password" placeholder="Enter your new confirm password" v-model="resetData.confirmPassword">
         </div>
         <div class="d-flex justify-content-between align-items-center">
 
@@ -77,7 +77,19 @@
 export default {
     data() {
         return {
-            tab: 'forget'
+            tab: 'forget',
+
+            forgetData: {
+                email: '',
+            },
+
+            resetData: {
+                email: '',
+                code: '',
+                password: '',
+                confirmPassword: '',
+            }
+
         }
     },
     mounted() {
