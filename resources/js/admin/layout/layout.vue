@@ -197,11 +197,6 @@
                                     <i class="bi bi-person"></i> <span class="ms-2"> Profile </span>
                                 </router-link>
                             </li>
-                            <li class="mb-1">
-                                <router-link :to="{name: 'settings'}" class="dropdown-item">
-                                    <i class="bi bi-gear"></i> <span class="ms-2"> Settings </span>
-                                </router-link>
-                            </li>
                             <li>
                                 <button type="button" class="dropdown-item">
                                     <i class="bi bi-box-arrow-in-right"></i> <span class="ms-2"> Logout </span>
