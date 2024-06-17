@@ -13,14 +13,17 @@
             <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0" required
                    autocomplete="new-email" placeholder="Enter your email">
         </div>
-        <div class="mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+
             <button type="submit" class="btn btn-outline-theme width-170 height-45 rounded-0" @click="tab = 'reset'">
                 Forget Password
             </button>
+
+            <router-link :to="{name: 'login'}" class="text-decoration-none text-light-gray-hover">
+                Back to login
+            </router-link>
+
         </div>
-        <router-link :to="{name: 'login'}" class="text-decoration-none text-light-gray-hover">
-            Back to login
-        </router-link>
     </div>
 
     <div class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'reset'">
@@ -54,14 +57,17 @@
             <input id="confirm-password" type="password" name="confirm-password"
                    class="form-control px-3 height-45 border shadow-none rounded-0" required autocomplete="new-confirm-password" placeholder="Enter your new confirm password">
         </div>
-        <div class="mb-3">
+        <div class="d-flex justify-content-between align-items-center">
+
             <button type="submit" class="btn btn-outline-theme width-120 height-45 rounded-0">
                 Reset
             </button>
+
+            <router-link :to="{name: 'login'}" class="text-decoration-none text-light-gray-hover">
+                Back to login
+            </router-link>
+
         </div>
-        <router-link :to="{name: 'login'}" class="text-decoration-none text-light-gray-hover">
-            Back to login
-        </router-link>
     </div>
 
 </template>
