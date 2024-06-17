@@ -132,7 +132,7 @@
     <!-- Product manage modal -->
     <div class="modal fade" id="manageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <form class="modal-content rounded-0 border-0 p-4">
+            <form @submit.prevent="manageProduct()" class="modal-content rounded-0 border-0 p-4">
                 <div class="modal-header border-0">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">
                         <template v-if="this.formData.id === undefined"> Create</template>
@@ -283,21 +283,21 @@ export default {
         return {
 
             sizes: [
-                {id: 'l', name: 'L', selected: false},
-                {id: 'm', name: 'M', selected: false},
-                {id: 's', name: 'S', selected: false},
-                {id: 'xl', name: 'XL', selected: false},
-                {id: 'xs', name: 'XS', selected: false},
-                {id: 'xxl', name: 'XXL', selected: false},
+                { id: 'L', name: 'L', selected: false },
+                { id: 'M', name: 'M', selected: false },
+                { id: 'S', name: 'S', selected: false },
+                { id: 'XL', name: 'XL', selected: false },
+                { id: 'XS', name: 'XS', selected: false },
+                { id: 'XXL', name: 'XXL', selected: false },
             ],
 
             colors: [
-                {id: 'red', name: 'Black', selected: false},
-                {id: 'blue', name: 'Blue', selected: false},
-                {id: 'green', name: 'Green', selected: false},
-                {id: 'grey', name: 'Grey', selected: false},
-                {id: 'red', name: 'Red', selected: false},
-                {id: 'white', name: 'White', selected: false},
+                { id: 'Black', name: 'Black', selected: false },
+                { id: 'Blue', name: 'Blue', selected: false },
+                { id: 'Green', name: 'Green', selected: false },
+                { id: 'Grey', name: 'Grey', selected: false },
+                { id: 'Red', name: 'Red', selected: false },
+                { id: 'White', name: 'White', selected: false },
             ],
 
             formData: {
@@ -307,16 +307,8 @@ export default {
                 barCode: '',
                 category: 'select-category-type',
                 brand: 'select-brand-type',
-                size: [
-                    {
-                        selected: ''
-                    },
-                ],
-                color: [
-                    {
-                        selected: ''
-                    },
-                ],
+                size: [],
+                color: [],
                 description: '',
             }
 
@@ -352,6 +344,11 @@ export default {
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
+
+        manageProduct(){
+            this.formData.size = this.sizes.filter(size => size.selected).map(size => size.id);
+            this.formData.color = this.colors.filter(color => color.selected).map(color => color.id);
+        }
 
     }
 }
