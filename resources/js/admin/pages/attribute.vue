@@ -11,128 +11,128 @@
 
             <!-- Attribute header -->
             <thead>
-                <tr class="p-3">
-                    <th class="ps-4 py-3">
-                        <div class="min-width-200">
-                            Attribute
-                        </div>
-                    </th>
-                    <th class="ps-4 py-3">
-                        <div class="min-width-400">
-                            Types
-                        </div>
-                    </th>
-                    <th class="ps-4 py-3">
-                        <div class="min-width-100">
-                            Action
-                        </div>
-                    </th>
-                </tr>
+            <tr class="p-3">
+                <th class="ps-4 py-3">
+                    <div class="min-width-200">
+                        Attribute
+                    </div>
+                </th>
+                <th class="ps-4 py-3">
+                    <div class="min-width-400">
+                        Types
+                    </div>
+                </th>
+                <th class="ps-4 py-3">
+                    <div class="min-width-100">
+                        Action
+                    </div>
+                </th>
+            </tr>
             </thead>
 
             <!-- Attribute body -->
             <tbody>
 
-                <!-- Attribute list -->
-                <tr class="align-middle">
-                    <td class="ps-4 py-3">
-                        <div class="min-width-200">
-                            Categories
+            <!-- Attribute list -->
+            <tr class="align-middle">
+                <td class="ps-4 py-3">
+                    <div class="min-width-200">
+                        Categories
+                    </div>
+                </td>
+                <td class="ps-4 py-3">
+                    <div class="min-width-400">
+                        Male, Female, Children, Accessories
+                    </div>
+                </td>
+                <td class="ps-4 py-2">
+                    <div class="min-width-100">
+                        <div class="d-flex justify-content-start align-items-center gap-2">
+                            <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
+                                <i class="bi bi-pencil-square text-secondary"></i>
+                            </button>
+                            <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
+                                <i class="bi bi-trash2 text-danger"></i>
+                            </button>
                         </div>
-                    </td>
-                    <td class="ps-4 py-3">
-                        <div class="min-width-400">
-                            Male, Female, Children, Accessories
-                        </div>
-                    </td>
-                    <td class="ps-4 py-2">
-                        <div class="min-width-100">
-                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
-                                    <i class="bi bi-pencil-square text-secondary"></i>
-                                </button>
-                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
-                                    <i class="bi bi-trash2 text-danger"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
+                    </div>
+                </td>
+            </tr>
 
-                <tr class="align-middle">
-                    <td class="ps-4 py-3">
-                        <div class="min-width-200">
-                            Brands
+            <tr class="align-middle">
+                <td class="ps-4 py-3">
+                    <div class="min-width-200">
+                        Brands
+                    </div>
+                </td>
+                <td class="ps-4 py-3">
+                    <div class="min-width-400">
+                        Calvin Klein, Diesel, Polo, Tommy Hilfiger
+                    </div>
+                </td>
+                <td class="ps-4 py-2">
+                    <div class="min-width-100">
+                        <div class="d-flex justify-content-start align-items-center gap-2">
+                            <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
+                                <i class="bi bi-pencil-square text-secondary"></i>
+                            </button>
+                            <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
+                                <i class="bi bi-trash2 text-danger"></i>
+                            </button>
                         </div>
-                    </td>
-                    <td class="ps-4 py-3">
-                        <div class="min-width-400">
-                            Calvin Klein, Diesel, Polo, Tommy Hilfiger
-                        </div>
-                    </td>
-                    <td class="ps-4 py-2">
-                        <div class="min-width-100">
-                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
-                                    <i class="bi bi-pencil-square text-secondary"></i>
-                                </button>
-                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
-                                    <i class="bi bi-trash2 text-danger"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
+                    </div>
+                </td>
+            </tr>
 
-                <tr class="align-middle">
-                    <td class="ps-4 py-3">
-                        <div class="min-width-200">
-                            Sizes
+            <tr class="align-middle">
+                <td class="ps-4 py-3">
+                    <div class="min-width-200">
+                        Sizes
+                    </div>
+                </td>
+                <td class="ps-4 py-3">
+                    <div class="min-width-400">
+                        L, M, S, XL, XS, XXL
+                    </div>
+                </td>
+                <td class="ps-4 py-2">
+                    <div class="min-width-100">
+                        <div class="d-flex justify-content-start align-items-center gap-2">
+                            <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
+                                <i class="bi bi-pencil-square text-secondary"></i>
+                            </button>
+                            <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
+                                <i class="bi bi-trash2 text-danger"></i>
+                            </button>
                         </div>
-                    </td>
-                    <td class="ps-4 py-3">
-                        <div class="min-width-400">
-                            L, M, S, XL, XS, XXL
-                        </div>
-                    </td>
-                    <td class="ps-4 py-2">
-                        <div class="min-width-100">
-                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
-                                    <i class="bi bi-pencil-square text-secondary"></i>
-                                </button>
-                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
-                                    <i class="bi bi-trash2 text-danger"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
+                    </div>
+                </td>
+            </tr>
 
-                <tr class="align-middle">
-                    <td class="ps-4 py-3">
-                        <div class="min-width-200">
-                            Colors
+            <tr class="align-middle">
+                <td class="ps-4 py-3">
+                    <div class="min-width-200">
+                        Colors
+                    </div>
+                </td>
+                <td class="ps-4 py-3">
+                    <div class="min-width-400">
+                        Black, Blue, Green, Grey, Red, White
+                    </div>
+                </td>
+                <td class="ps-4 py-2">
+                    <div class="min-width-100">
+                        <div class="d-flex justify-content-start align-items-center gap-2">
+                            <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
+                                <i class="bi bi-pencil-square text-secondary"></i>
+                            </button>
+                            <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
+                                <i class="bi bi-trash2 text-danger"></i>
+                            </button>
                         </div>
-                    </td>
-                    <td class="ps-4 py-3">
-                        <div class="min-width-400">
-                            Black, Blue, Green, Grey, Red, White
-                        </div>
-                    </td>
-                    <td class="ps-4 py-2">
-                        <div class="min-width-100">
-                            <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle" @click="openManageModal()">
-                                    <i class="bi bi-pencil-square text-secondary"></i>
-                                </button>
-                                <button type="button" class="btn-icon rounded-circle" @click="openDeleteModal()">
-                                    <i class="bi bi-trash2 text-danger"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
+                    </div>
+                </td>
+            </tr>
 
             </tbody>
         </table>
@@ -144,24 +144,30 @@
             <form class="modal-content rounded-0 border-0 p-4">
                 <div class="modal-header border-0">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        <template v-if="this.formData.id === undefined"> Create </template>
-                        <template v-if="this.formData.id !== undefined"> Edit </template>
+                        <template v-if="this.formData.id === undefined"> Create</template>
+                        <template v-if="this.formData.id !== undefined"> Edit</template>
                         Attribute
                     </h1>
                     <button type="button" class="btn-close shadow-none" @click="closeManageModal()"></button>
                 </div>
                 <div class="modal-body border-0">
                     <div class="form-group mb-3">
-                        <label for="attribute-title" class="form-label"> Attribute Title </label>
-                        <input id="attribute-title" type="text" name="attribute-title" class="form-control p-3 border shadow-none rounded-0" required autocomplete="new-attribute-title" v-model="formData.attributeTitle">
+                        <label for="name" class="form-label"> Name </label>
+                        <input id="name" type="text" name="name"
+                               class="form-control p-3 border shadow-none rounded-0" required
+                               autocomplete="new-name" v-model="formData.name">
                     </div>
 
-                    <div class="form-group mb-3" v-for="(each, index) in multipleParam.attributeType">
-                        <label for="attribute-types" class="form-label"> Attribute Types </label>
+                    <div class="form-group mb-3" v-for="(each, index) in multipleParam.type">
+                        <label for="types" class="form-label"> Attribute Types </label>
                         <div class="position-relative">
-                            <input id="attribute-types" type="text" name="attribute-types" class="form-control p-3 border shadow-none rounded-0" required autocomplete="new-attribute-types" v-model="each.attributeTypes">
-                            <div v-if="multipleParam.attributeType.length > 1" class="position-absolute top-50 end-0 translate-middle-y">
-                                <button type="button" @click="deleteAttributeTypes(index)" class="btn-icon rounded-circle me-2">
+                            <input id="types" type="text" name="types"
+                                   class="form-control p-3 border shadow-none rounded-0" required
+                                   autocomplete="new-types" v-model="each.types">
+                            <div v-if="multipleParam.type.length > 1"
+                                 class="position-absolute top-50 end-0 translate-middle-y">
+                                <button type="button" @click="deleteAttributeTypes(index)"
+                                        class="btn-icon rounded-circle me-2">
                                     <i class="bi bi-trash2 text-danger"></i>
                                 </button>
                             </div>
@@ -192,11 +198,12 @@
                     <button type="button" class="btn-close shadow-none" @click="closeDeleteModal()"></button>
                 </div>
                 <div class="modal-body border-0">
-                    <div class="mb-3 text-center pt-4 fs-4"> Are you sure ? </div>
+                    <div class="mb-3 text-center pt-4 fs-4"> Are you sure ?</div>
                 </div>
                 <div class="modal-footer border-0 d-flex justify-content-between align-items-center">
                     <div class="col-5">
-                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0" @click="closeDeleteModal()">
+                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0"
+                                @click="closeDeleteModal()">
                             Close
                         </button>
                     </div>
@@ -215,14 +222,14 @@
 <script>
 
 export default {
-    data(){
-        return{
+    data() {
+        return {
             formData: {
                 attributeTitle: '',
-                attributeTypes: '',
+                type: '',
             },
             multipleParam: {
-                attributeType: [{types: ''}],
+                type: [{types: ''}],
             },
         }
     },
@@ -233,21 +240,21 @@ export default {
 
         /* --- --- --- remove attribute types --- --- --- */
         deleteAttributeTypes(index) {
-            this.multipleParam.attributeType.splice(index, 1);
+            this.multipleParam.type.splice(index, 1);
         },
 
         /* --- --- --- add attribute types --- --- --- */
         addGroup() {
-            this.multipleParam.attributeType.push(
-                { types: '' }
+            this.multipleParam.type.push(
+                {types: ''}
             );
         },
 
         /* --- --- --- open manage model --- --- --- */
-        openManageModal(){
+        openManageModal() {
             this.multipleParam = {
-                attributeType: [
-                    { types: '' }
+                type: [
+                    {types: ''}
                 ]
             };
             const myModal = new bootstrap.Modal("#manageModal", {keyboard: false});
@@ -255,10 +262,10 @@ export default {
         },
 
         /* --- --- --- close manage modal --- --- --- */
-        closeManageModal(){
+        closeManageModal() {
             this.multipleParam = {
-                attributeType: [
-                    { types: '' }
+                type: [
+                    {types: ''}
                 ]
             };
             let myModalEl = document.getElementById('manageModal');
@@ -267,13 +274,13 @@ export default {
         },
 
         /* --- --- --- open delete model --- --- --- */
-        openDeleteModal(){
+        openDeleteModal() {
             const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false});
             myModal.show();
         },
 
         /* --- --- --- close manage modal --- --- --- */
-        closeDeleteModal(){
+        closeDeleteModal() {
             let myModalEl = document.getElementById('deleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();

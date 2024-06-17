@@ -194,12 +194,18 @@
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li class="mb-1">
                                 <router-link :to="{name: 'profile'}" class="dropdown-item">
-                                    <i class="bi bi-person"></i> <span class="ms-2"> Profile </span>
+                                    <i class="bi bi-person"></i>
+                                    <span class="ms-2">
+                                        Profile
+                                    </span>
                                 </router-link>
                             </li>
                             <li>
                                 <button type="button" class="dropdown-item">
-                                    <i class="bi bi-box-arrow-in-right"></i> <span class="ms-2"> Logout </span>
+                                    <i class="bi bi-box-arrow-in-right"></i>
+                                    <span class="ms-2">
+                                        Logout
+                                    </span>
                                 </button>
                             </li>
                         </ul>

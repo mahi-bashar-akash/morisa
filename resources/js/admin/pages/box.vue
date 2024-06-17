@@ -14,25 +14,31 @@
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
                         <div class="w-100 height-150 d-flex justify-content-center align-items-center">
-                            <img :src="`/images/boxes/box-1.webp`" class="img-fluid object-fit-cover width-75 height-75" alt="banner 1">
+                            <img :src="`/images/boxes/box-1.webp`" class="img-fluid object-fit-cover width-75 height-75"
+                                 alt="banner 1">
                         </div>
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 01
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer bg-white border-0 rounded-0">
-                    <div class="fw-bold mb-3 fs-6"> Free Shipping Worldwide </div>
+                    <div class="fw-bold mb-3 fs-6">
+                        Free Shipping Worldwide
+                    </div>
                     <div class="text-secondary mb-3">
                         Mirum est notare quam littera gothica, quam nunc putamus parum claram
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -46,25 +52,31 @@
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
                         <div class="w-100 height-150 d-flex justify-content-center align-items-center">
-                            <img :src="`/images/boxes/box-2.webp`" class="img-fluid object-fit-cover width-75 height-75" alt="banner 1">
+                            <img :src="`/images/boxes/box-2.webp`" class="img-fluid object-fit-cover width-75 height-75"
+                                 alt="banner 1">
                         </div>
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 02
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer bg-white border-0 rounded-0">
-                    <div class="fw-bold mb-3 fs-6"> Money Back Guarantee </div>
+                    <div class="fw-bold mb-3 fs-6">
+                        Money Back Guarantee
+                    </div>
                     <div class="text-secondary mb-3">
                         Mirum est notare quam littera gothica, quam nunc putamus parum claram
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -78,25 +90,31 @@
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
                         <div class="w-100 height-150 d-flex justify-content-center align-items-center">
-                            <img :src="`/images/boxes/box-3.webp`" class="img-fluid object-fit-cover width-75 height-75" alt="banner 1">
+                            <img :src="`/images/boxes/box-3.webp`" class="img-fluid object-fit-cover width-75 height-75"
+                                 alt="banner 1">
                         </div>
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 03
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="card-footer bg-white border-0 rounded-0">
-                    <div class="fw-bold mb-3 fs-6"> Online Support 24/7 </div>
+                    <div class="fw-bold mb-3 fs-6">
+                        Online Support 24/7
+                    </div>
                     <div class="text-secondary mb-3">
                         Mirum est notare quam littera gothica, quam nunc putamus parum claram
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -124,8 +142,9 @@
                 </div>
                 <div class="modal-body border-0">
                     <div class="form-group mv-3">
-                        <label for="box-upload-file" class="form-label border w-100 px-3 height-200 d-flex justify-content-center align-items-center flex-column cursor-pointer">
-                            <input type="file" name="box-upload-file" id="box-upload-file" hidden="hidden">
+                        <label for="upload-file"
+                               class="form-label border w-100 px-3 height-200 d-flex justify-content-center align-items-center flex-column cursor-pointer">
+                            <input type="file" name="upload-file" id="upload-file" hidden="hidden">
                             <i class="bi bi-cloud-check fs-1"></i>
                             <span class="fw-bold small">
                                 Upload File
@@ -133,8 +152,14 @@
                         </label>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="box-catalogue-title" class="form-label">Box Title</label>
-                        <input id="box-catalogue-title" type="text" name="box-catalogue-title" class="form-control p-3 border shadow-none rounded-0" required autocomplete="new-box-catalogue-title">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="title" type="text" name="title" class="form-control p-3 border shadow-none rounded-0"
+                               required autocomplete="new-title">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="description" class="form-textarea p-3 resize" id="description" cols="30"
+                                  rows="5" required autocomplete="new-description"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0">
@@ -154,15 +179,20 @@
         <div class="modal-dialog modal-dialog-centered">
             <form class="modal-content rounded-0 border-0 p-4">
                 <div class="modal-header border-0">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Delete Box </h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Delete Box
+                    </h1>
                     <button type="button" class="btn-close shadow-none" @click="closeDeleteModal()"></button>
                 </div>
                 <div class="modal-body border-0">
-                    <div class="mb-3 text-center pt-4 fs-4"> Are you sure ? </div>
+                    <div class="mb-3 text-center pt-4 fs-4">
+                        Are you sure ?
+                    </div>
                 </div>
                 <div class="modal-footer border-0 d-flex justify-content-between align-items-center">
                     <div class="col-5">
-                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0" @click="closeDeleteModal()">
+                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0"
+                                @click="closeDeleteModal()">
                             Close
                         </button>
                     </div>
@@ -181,8 +211,8 @@
 <script>
 
 export default {
-    data(){
-        return{
+    data() {
+        return {
             formData: {
                 uploadImage: null,
                 title: '',
@@ -195,26 +225,26 @@ export default {
     methods: {
 
         /* --- --- --- open manage model --- --- --- */
-        openManageModal(){
+        openManageModal() {
             const myModal = new bootstrap.Modal("#manageModal", {keyboard: false});
             myModal.show();
         },
 
         /* --- --- --- close manage modal --- --- --- */
-        closeManageModal(){
+        closeManageModal() {
             let myModalEl = document.getElementById('manageModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
         /* --- --- --- open delete model --- --- --- */
-        openDeleteModal(){
+        openDeleteModal() {
             const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false});
             myModal.show();
         },
 
         /* --- --- --- close delete modal --- --- --- */
-        closeDeleteModal(){
+        closeDeleteModal() {
             let myModalEl = document.getElementById('deleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();

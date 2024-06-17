@@ -3,6 +3,11 @@
     height: 100%;
     outline: none;
     border: 1px solid var(--bs-border-color);
+
+    &.resize {
+        resize: none;
+    }
+
 }
 
 .form-checkbox[type=checkbox] {

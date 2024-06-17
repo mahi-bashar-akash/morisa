@@ -13,9 +13,11 @@
             <div class="card border rounded-0 p-3">
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
-                        <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
+                        <img :src="`/images/blog/blog-1.jpg`"
+                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 01
                             </div>
                         </div>
@@ -38,10 +40,12 @@
                         'Content here, content here'.
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -54,9 +58,11 @@
             <div class="card border rounded-0 p-3">
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
-                        <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
+                        <img :src="`/images/blog/blog-2.jpg`"
+                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 02
                             </div>
                         </div>
@@ -79,10 +85,12 @@
                         'Content here, content here'.
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -95,9 +103,11 @@
             <div class="card border rounded-0 p-3">
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
-                        <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
+                        <img :src="`/images/blog/blog-3.jpg`"
+                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 03
                             </div>
                         </div>
@@ -120,10 +130,12 @@
                         'Content here, content here'.
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -136,9 +148,11 @@
             <div class="card border rounded-0 p-3">
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
-                        <img :src="`/images/blog/blog-1.jpg`" class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
+                        <img :src="`/images/blog/blog-1.jpg`"
+                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 04
                             </div>
                         </div>
@@ -161,10 +175,12 @@
                         'Content here, content here'.
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -177,9 +193,11 @@
             <div class="card border rounded-0 p-3">
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
-                        <img :src="`/images/blog/blog-2.jpg`" class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
+                        <img :src="`/images/blog/blog-2.jpg`"
+                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 05
                             </div>
                         </div>
@@ -202,10 +220,12 @@
                         'Content here, content here'.
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -218,9 +238,11 @@
             <div class="card border rounded-0 p-3">
                 <div class="card-body bg-white border-0 rounded-0">
                     <div class="position-relative">
-                        <img :src="`/images/blog/blog-3.jpg`" class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
+                        <img :src="`/images/blog/blog-3.jpg`"
+                             class="img-fluid object-fit-cover height-250 w-100 image-effect" alt="blog 1">
                         <div class="position-absolute top-0 start-0 p-3">
-                            <div class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                            <div
+                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
                                 06
                             </div>
                         </div>
@@ -243,10 +265,12 @@
                         'Content here, content here'.
                     </div>
                     <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2" @click="openManageModal()">
+                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                @click="openManageModal()">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2" @click="openDeleteModal()">
+                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                @click="openDeleteModal()">
                             Delete
                         </button>
                     </div>
@@ -274,8 +298,9 @@
                 </div>
                 <div class="modal-body border-0">
                     <div class="form-group mv-3">
-                        <label for="box-upload-file" class="form-label border w-100 px-3 height-200 d-flex justify-content-center align-items-center flex-column cursor-pointer">
-                            <input type="file" name="box-upload-file" id="box-upload-file" hidden="hidden">
+                        <label for="file-upload"
+                               class="form-label border w-100 px-3 height-200 d-flex justify-content-center align-items-center flex-column cursor-pointer">
+                            <input type="file" name="file-upload" id="file-upload" hidden="hidden">
                             <i class="bi bi-cloud-check fs-1"></i>
                             <span class="fw-bold small">
                                 Upload File
@@ -283,16 +308,22 @@
                         </label>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="blog-title" class="form-label">Blog Title</label>
-                        <input id="blog-title" type="text" name="blog-title" class="form-control p-3 border shadow-none rounded-0" required autoComplete="new-blog-title">
+                        <label for="name" class="form-label">Name</label>
+                        <input id="name" type="text" name="name"
+                               class="form-control p-3 border shadow-none rounded-0" required
+                               autoComplete="new-name">
                     </div>
                     <div class="form-group mb-3">
-                        <label for="blog-author" class="form-label">Blog Author</label>
-                        <input id="blog-author" type="text" name="blog-author" class="form-control p-3 border shadow-none rounded-0" required autoComplete="new-blog-author">
+                        <label for="author" class="form-label">Author</label>
+                        <input id="author" type="text" name="author"
+                               class="form-control p-3 border shadow-none rounded-0" required
+                               autoComplete="new-author">
                     </div>
                     <div class="form-group mb-3">
-                        <label for="blog-description" class="form-label">Blog Description</label>
-                        <textarea name="blog-description" id="blog-description" cols="30" rows="5" class="form-textarea p-3 border shadow-none rounded-0" required autocomplete="new-blog-description"></textarea>
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="description" id="description" cols="30" rows="5"
+                                  class="form-textarea p-3 border shadow-none rounded-0 resize" required
+                                  autocomplete="new-description"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0">
@@ -316,11 +347,12 @@
                     <button type="button" class="btn-close shadow-none" @click="closeDeleteModal()"></button>
                 </div>
                 <div class="modal-body border-0">
-                    <div class="mb-3 text-center pt-4 fs-4"> Are you sure ? </div>
+                    <div class="mb-3 text-center pt-4 fs-4"> Are you sure ?</div>
                 </div>
                 <div class="modal-footer border-0 d-flex justify-content-between align-items-center">
                     <div class="col-5">
-                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0" @click="closeDeleteModal()">
+                        <button type="button" class="btn btn-secondary py-2 w-100 rounded-0"
+                                @click="closeDeleteModal()">
                             Close
                         </button>
                     </div>
@@ -353,26 +385,26 @@ export default {
     methods: {
 
         /* --- --- --- open manage model --- --- --- */
-        openManageModal(){
+        openManageModal() {
             const myModal = new bootstrap.Modal("#manageModal", {keyboard: false});
             myModal.show();
         },
 
         /* --- --- --- close manage modal --- --- --- */
-        closeManageModal(){
+        closeManageModal() {
             let myModalEl = document.getElementById('manageModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();
         },
 
         /* --- --- --- open delete model --- --- --- */
-        openDeleteModal(){
+        openDeleteModal() {
             const myModal = new bootstrap.Modal("#deleteModal", {keyboard: false});
             myModal.show();
         },
 
         /* --- --- --- close delete modal --- --- --- */
-        closeDeleteModal(){
+        closeDeleteModal() {
             let myModalEl = document.getElementById('deleteModal');
             let modal = bootstrap.Modal.getInstance(myModalEl)
             modal.hide();

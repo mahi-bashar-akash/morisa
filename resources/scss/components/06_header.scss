@@ -30,6 +30,7 @@
             box-shadow: 0 0 8px 0 var(--bs-border-color);
             display: block !important;
             transition: 0.3s all ease-in-out !important;
+            z-index: 9999999999;
 
             &.show {
                 transition: 0.3s all ease-in-out !important;
@@ -50,6 +51,7 @@
             box-shadow: 0 0 8px 0 var(--bs-border-color);
             display: block !important;
             transition: 0.3s all ease-in-out !important;
+            z-index: 9999999999;
 
             &.show {
                 transition: 0.3s all ease-in-out !important;

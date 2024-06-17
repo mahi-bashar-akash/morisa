@@ -214,6 +214,11 @@
                         </div>
                     </div>
 
+                    <div class="form-group mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-textarea p-3 resize" name="description" id="description" cols="30" rows="5" required autocomplete="new-description"></textarea>
+                    </div>
+
                 </div>
                 <div class="modal-footer border-0">
                     <button type="button" class="btn btn-secondary py-2 width-95 rounded-0" @click="closeManageModal()">

@@ -160,17 +160,26 @@
                             <input type="file" name="slider-upload-file" id="slider-upload-file" hidden="hidden">
                             <i class="bi bi-cloud-check fs-1"></i>
                             <span class="fw-bold small">
-                                Upload File
+                                Upload Slider
                             </span>
                         </label>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="slider-catalogue-title" class="form-label">Catalogue Title</label>
-                        <input id="slider-catalogue-title" type="text" name="slider-catalogue-title" class="form-control p-3 border shadow-none rounded-0" required autocomplete="new-slider-catalogue-title">
+                        <label for="slider-category-type" class="form-label">Category Type</label>
+                        <select name="slider-category-type" id="slider-category-type" class="form-select p-3 border shadow-none rounded-0" required autocomplete="new-category-type">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="children">Children</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="slider-description" class="form-label">Description</label>
-                        <textarea name="slider-description" id="slider-description" cols="30" rows="5" class="form-textarea p-3 border shadow-none rounded-0" required autocomplete="new-slider-description"></textarea>
+                        <label for="slider-name" class="form-label">Name</label>
+                        <input id="slider-name" type="text" name="slider-name" class="form-control p-3 border shadow-none rounded-0" required autocomplete="new-name">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="description" id="description" cols="30" rows="5" class="form-textarea p-3 border shadow-none rounded-0" required autocomplete="new-description"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0">

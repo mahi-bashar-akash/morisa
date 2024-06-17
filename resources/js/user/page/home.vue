@@ -8,7 +8,7 @@
                     <div class="position-relative">
                         <img :src="`/images/banner/banner-5.jpg`" class="img-fluid" alt="banner-1">
                         <div
-                            class="position-absolute top-0 bottom-0 start-0 d-flex justify-content-center align-items-start flex-column">
+                            class="position-absolute top-0 bottom-0 start-0 d-flex justify-content-center align-items-start flex-column z-1">
                             <div class="col-md-8 p-5">
                                 <div class="small mb-4 fw-bold"> CLOTHING <br> NEW COLLECTION</div>
                                 <div class="fs-3 mb-3"> NEW ARRIVALS!</div>
@@ -29,7 +29,7 @@
                     <div class="position-relative">
                         <img :src="`/images/banner/banner-4.jpg`" class="img-fluid" alt="banner-2">
                         <div
-                            class="position-absolute top-0 bottom-0 start-0 d-flex justify-content-center align-items-start flex-column">
+                            class="position-absolute top-0 bottom-0 start-0 d-flex justify-content-center align-items-start flex-column z-1">
                             <div class="col-md-8 p-5">
                                 <div class="small mb-4 fw-bold"> T-SHIRT <br> NEW COLLECTION</div>
                                 <div class="fs-3 mb-3"> CLEAN & ELEGANT!</div>
@@ -1462,7 +1462,7 @@
                                  class="img-fluid object-fit-cover w-100 height-320 image-effect extra-effect" alt="">
                         </div>
                         <div
-                            class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-3">
+                            class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-1">
                             <div class="p-3 col-md-8">
                                 <div class="fw-bold small mb-3"> New Arrivals</div>
                                 <div class="fw-medium fs-3 mb-3 line-height-2"> White Sneakers For Men’s</div>
@@ -1483,7 +1483,7 @@
                                  class="img-fluid object-fit-cover w-100 height-320 image-effect extra-effect" alt="">
                         </div>
                         <div
-                            class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-3">
+                            class="position-absolute top-0 bottom-0 start-0 p-3 d-flex justify-content-start align-items-center z-1">
                             <div class="p-3 col-md-8">
                                 <div class="fw-bold small mb-3">Products amazing!</div>
                                 <div class="fw-medium fs-3 mb-3 line-height-2"> Short T-Shirts For Women’s</div>

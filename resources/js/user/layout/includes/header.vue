@@ -71,32 +71,32 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <router-link :to="{name: 'login'}" class="nav-link" @click="collapse()" v-if="!userInfo">
-                            Login
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'registration'}" class="nav-link" @click="collapse()" v-if="!userInfo">
-                            Registration
-                        </router-link>
-                    </li>
-                    <li class="nav-item dropdown" v-if="userInfo">
+                    <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Profile
                         </a>
                         <ul class="dropdown-menu">
-                            <li>
+                            <li class="mb-1" v-if="!userInfo">
+                                <router-link :to="{name: 'login'}" class="dropdown-item">
+                                    Login
+                                </router-link>
+                            </li>
+                            <li v-if="!userInfo">
+                                <router-link :to="{name: 'registration'}" class="dropdown-item">
+                                    Registration
+                                </router-link>
+                            </li>
+                            <li class="mb-1" v-if="userInfo">
                                 <router-link :to="{name: 'details'}" class="dropdown-item">
                                     Details
                                 </router-link>
                             </li>
-                            <li>
+                            <li class="mb-1" v-if="userInfo">
                                 <router-link :to="{name: 'settings'}" class="dropdown-item">
                                     Settings
                                 </router-link>
                             </li>
-                            <li>
+                            <li v-if="userInfo">
                                 <button type="button" class="dropdown-item">
                                     Logout
                                 </button>
@@ -120,7 +120,7 @@
 export default {
     data() {
         return {
-            userInfo: null
+            userInfo: true
         }
     },
     mounted() {  },
