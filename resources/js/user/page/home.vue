@@ -19,7 +19,7 @@
                                 </div>
                                 <router-link :to="{name: 'shop'}"
                                              class="btn btn-outline-dark px-4 px-md-5 py-2 py-md-3 rounded-0">
-                                    READ MORE
+                                    SHOP NOW
                                 </router-link>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                                 </div>
                                 <router-link :to="{name: 'shop'}"
                                              class="btn btn-outline-dark px-4 px-md-5 py-2 py-md-3 rounded-0">
-                                    READ MORE
+                                    SHOP NOW
                                 </router-link>
                             </div>
                         </div>
