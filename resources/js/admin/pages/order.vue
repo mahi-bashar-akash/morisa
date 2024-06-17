@@ -79,9 +79,9 @@
                     <td class="ps-4 py-2">
                         <div class="min-width-150 max-width-200">
                             <div class="d-flex justify-content-start align-items-center gap-2">
-                                <button type="button" class="btn-icon rounded-circle">
+                                <a href="javascript:void(0)" class="btn-icon rounded-circle">
                                     <i class="bi bi-eye text-secondary"></i>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </td>

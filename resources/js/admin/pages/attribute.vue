@@ -208,8 +208,8 @@
                         </button>
                     </div>
                     <div class="col-5">
-                        <button type="button" class="btn btn-theme py-2 w-100 rounded-0">
-                            Save
+                        <button type="submit" class="btn btn-theme py-2 w-100 rounded-0">
+                            Confirm
                         </button>
                     </div>
                 </div>

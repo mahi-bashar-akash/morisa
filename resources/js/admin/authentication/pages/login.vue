@@ -1,6 +1,6 @@
 <template>
 
-    <div class="w-100 shadow bg-white p-4 p-sm-5 fw-medium">
+    <form class="w-100 shadow bg-white p-4 p-sm-5 fw-medium">
         <div class="text-center">
             <div class="mb-4">
                 <img :src="`/images/logo.webp`" class="width-100" alt="logo">
@@ -48,7 +48,7 @@
         <button type="submit" class="btn btn-outline-theme width-120 height-45 rounded-0">
             Login
         </button>
-    </div>
+    </form>
 
 </template>
 

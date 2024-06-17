@@ -1,6 +1,6 @@
 <template>
 
-    <div class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'forget'">
+    <form class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'forget'">
         <div class="mb-4 text-center">
             <img :src="`/images/logo.webp`" class="width-100" alt="logo">
         </div>
@@ -24,9 +24,9 @@
             </router-link>
 
         </div>
-    </div>
+    </form>
 
-    <div class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'reset'">
+    <form class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'reset'">
         <div class="mb-4 text-center">
             <img :src="`/images/logo.webp`" class="width-100" alt="logo">
         </div>
@@ -68,7 +68,7 @@
             </router-link>
 
         </div>
-    </div>
+    </form>
 
 </template>
 

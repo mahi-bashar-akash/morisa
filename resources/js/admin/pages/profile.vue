@@ -97,25 +97,22 @@ export default {
     data() {
         return {
             tab: 1,
-
             profileParam: {
-                full_name: 'Mr. Mahi Bashar Akash',
-                email: 'mahibashar2023@gmail.com',
-                phone_number: '+880 01400125289',
+                full_name: '',
+                email: '',
+                phone_number: '',
             },
-
             passwordParam: {
                 oldPassword: '',
                 password: '',
                 confirmPassword: '',
             },
-
         }
     },
-    mounted() {
-
-    },
+    mounted() {  },
     methods: {
+
+        /* --- --- --- set tab --- --- --- */
         setTab(tab) {
             this.tab = tab
         }

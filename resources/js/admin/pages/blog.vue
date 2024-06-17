@@ -311,19 +311,19 @@
                         <label for="name" class="form-label">Name</label>
                         <input id="name" type="text" name="name"
                                class="form-control p-3 border shadow-none rounded-0" required
-                               autoComplete="new-name">
+                               autoComplete="new-name" v-model="formData.name">
                     </div>
                     <div class="form-group mb-3">
                         <label for="author" class="form-label">Author</label>
                         <input id="author" type="text" name="author"
                                class="form-control p-3 border shadow-none rounded-0" required
-                               autoComplete="new-author">
+                               autoComplete="new-author" v-model="formData.author">
                     </div>
                     <div class="form-group mb-3">
                         <label for="description" class="form-label">Description</label>
                         <textarea name="description" id="description" cols="30" rows="5"
                                   class="form-textarea p-3 border shadow-none rounded-0 resize" required
-                                  autocomplete="new-description"></textarea>
+                                  autocomplete="new-description" v-model="formData.description"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0">
@@ -357,8 +357,8 @@
                         </button>
                     </div>
                     <div class="col-5">
-                        <button type="button" class="btn btn-theme py-2 w-100 rounded-0">
-                            Save
+                        <button type="submit" class="btn btn-theme py-2 w-100 rounded-0">
+                            Confirm
                         </button>
                     </div>
                 </div>
@@ -375,7 +375,9 @@ export default {
         return {
             formData: {
                 uploadImage: null,
-                title: '',
+                name: '',
+                author: '',
+                description: '',
             }
         }
     },

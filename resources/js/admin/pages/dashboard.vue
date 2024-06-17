@@ -12,7 +12,7 @@
                     <i class="bi bi-sliders fw-bold fs-4"></i>
                 </div>
                 <div class="text-light-gray fs-5">
-                    1,00,000
+                    {{ formData.slider_count }}
                 </div>
             </router-link>
         </div>
@@ -27,7 +27,7 @@
                     <i class="bi bi-boxes fw-bold fs-4"></i>
                 </div>
                 <div class="text-light-gray fs-5">
-                    1,00,000
+                    {{ formData.box_count }}
                 </div>
             </router-link>
         </div>
@@ -42,7 +42,7 @@
                     <i class="bi bi-link-45deg fw-bold fs-4"></i>
                 </div>
                 <div class="text-light-gray fs-5">
-                    1,00,000
+                    {{ formData.attribute_count }}
                 </div>
             </router-link>
         </div>
@@ -57,7 +57,7 @@
                     <i class="bi bi-card-text fw-bold fs-4"></i>
                 </div>
                 <div class="text-light-gray fs-5">
-                    1,00,000
+                    {{ formData.blog_count }}
                 </div>
             </router-link>
         </div>
@@ -72,7 +72,7 @@
                     <i class="bi bi-bag fw-bold fs-4"></i>
                 </div>
                 <div class="text-light-gray fs-5">
-                    1,00,000
+                    {{ formData.product_count }}
                 </div>
             </router-link>
         </div>
@@ -87,7 +87,7 @@
                     <i class="bi bi-people fw-bold fs-4"></i>
                 </div>
                 <div class="text-light-gray fs-5">
-                    1,00,000
+                    {{ formData.customer_count }}
                 </div>
             </router-link>
         </div>
@@ -102,7 +102,7 @@
                     <i class="bi bi-cart fw-bold fs-4"></i>
                 </div>
                 <div class="text-light-gray fs-5">
-                    1,00,000
+                    {{ formData.order_count }}
                 </div>
             </router-link>
         </div>
@@ -115,7 +115,17 @@
 
 export default {
     data() {
-        return {}
+        return {
+            formData: {
+                slider_count: '1,00,000',
+                box_count: '1,00,000',
+                attribute_count: '1,00,000',
+                blog_count: '1,00,000',
+                product_count: '1,00,000',
+                customer_count: '1,00,000',
+                order_count: '1,00,000',
+            }
+        }
     },
     mounted() {
 

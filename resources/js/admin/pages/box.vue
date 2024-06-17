@@ -154,12 +154,12 @@
                     <div class="form-group mb-3">
                         <label for="name" class="form-label">Name</label>
                         <input id="title" type="text" name="title" class="form-control p-3 border shadow-none rounded-0"
-                               required autocomplete="new-title">
+                               required autocomplete="new-title" v-model="formData.name">
                     </div>
                     <div class="form-group mb-3">
                         <label for="description" class="form-label">Description</label>
                         <textarea name="description" class="form-textarea p-3 resize" id="description" cols="30"
-                                  rows="5" required autocomplete="new-description"></textarea>
+                                  rows="5" required autocomplete="new-description" v-model="formData.description"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0">
@@ -197,8 +197,8 @@
                         </button>
                     </div>
                     <div class="col-5">
-                        <button type="button" class="btn btn-theme py-2 w-100 rounded-0">
-                            Save
+                        <button type="submit" class="btn btn-theme py-2 w-100 rounded-0">
+                            Confirm
                         </button>
                     </div>
                 </div>
@@ -215,7 +215,8 @@ export default {
         return {
             formData: {
                 uploadImage: null,
-                title: '',
+                name: '',
+                description: '',
             }
         }
     },
