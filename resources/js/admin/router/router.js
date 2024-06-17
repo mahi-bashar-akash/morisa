@@ -16,7 +16,6 @@ import blog from "../pages/blog.vue";
 import product from "../pages/product.vue";
 import customer from "../pages/customer.vue";
 import order from "../pages/order.vue";
-import settings from "../pages/settings.vue";
 import profile from "../pages/profile.vue";
 
 const TITLE = window.core.APP_NAME
@@ -42,7 +41,6 @@ const routes = [
             { path: ROOT_URL + 'product', name: 'products', component: product, meta: { title: TITLE + ' - Product' } },
             { path: ROOT_URL + 'customer', name: 'customers', component: customer, meta: { title: TITLE + ' - Customer' } },
             { path: ROOT_URL + 'order', name: 'orders', component: order, meta: { title: TITLE + ' - Order' } },
-            { path: ROOT_URL + 'settings', name: 'settings', component: settings, meta: { title: TITLE + ' - Settings' } },
             { path: ROOT_URL + 'profile', name: 'profile', component: profile, meta: { title: TITLE + ' - Profile' } },
         ]
     },

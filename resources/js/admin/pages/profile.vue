@@ -1,41 +1,75 @@
 <template>
 
-    <div class="row justify-content-center align-items-center height-calc-90">
-        <div class="col-10 col-sm-7 col-md-6 col-lg-6 col-xl-4">
-            <div class="card bg-white border-0 rounded-0">
-                <div class="card-header bg-white border-0 rounded-0 d-flex justify-content-center pt-4 pb-3">
-                    <div class="width-150 height-150 rounded-circle shadow d-flex justify-content-center align-items-center">
-                        <i class="bi bi-plus text-theme fs-1"></i>
-                    </div>
+    <div class="row height-calc-120 justify-content-center align-items-center">
+
+        <div class="col-lg-6 col-xl-4">
+
+            <div class="card bg-white rounded-0">
+
+                <div class="card-header d-flex justify-content-start align-items-center gap-3 p-4 bg-white rounded-0 border-0">
+
+                    <button type="button" class="width-35 height-35 d-flex justify-content-center align-items-center border-0 shadow-sm" :class="{ 'bg-light' : tab !== 1, 'bg-theme' : tab === 1 }" @click="setTab(1)">
+                        <i class="bi bi-person-fill"></i>
+                    </button>
+
+                    <button type="button" class="width-35 height-35 d-flex justify-content-center align-items-center border-0 shadow-sm" :class="{ 'bg-light' : tab !== 2, 'bg-theme' : tab === 2 }" @click="setTab(2)">
+                        <i class="bi bi-shield-fill"></i>
+                    </button>
+
                 </div>
-                <div class="card-body bg-white border-0 rounded-0 px-4 text-center">
-                    <div class="mb-3 fw-bold">
-                        Full Name
-                    </div>
-                    <div class="mb-3 text-secondary">
-                        Mahi Bashar Akash
-                    </div>
-                    <div class="mb-3 fw-bold">
-                        Phone Number
-                    </div>
-                    <div class="mb-3 text-secondary">
-                        +880 01400125289
-                    </div>
-                    <div class="mb-3 fw-bold">
-                        Email
-                    </div>
-                    <div class="mb-3 text-secondary">
-                        mahibashar2023@gmail.com
-                    </div>
-                    <div class="mb-3 fw-bold">
-                        Present Address
-                    </div>
-                    <div class="mb-3 text-secondary">
-                        Jessore Sadar, Jessore, Bangladesh
-                    </div>
+
+                <div class="card-body p-4 border-0">
+
+                    <template v-if="tab === 1">
+                        <div class="form-group mb-3">
+                            <div class="d-flex justify-content-center">
+                                <label for="upload-file" class="width-200 height-200 rounded-circle cursor-pointer d-flex justify-content-center align-items-center shadow fs-1 text-light-gray">
+                                    MBA
+                                    <input type="file" name="upload-file" id="upload-file" hidden="hidden">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="full-name" class="form-label">Full Name</label>
+                            <input id="full-name" type="text" name="full-name" class="form-control p-3 shadow-none rounded-0" required autocomplete="new-full-name" v-model="profileParam.full_name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" type="email" name="email" class="form-control p-3 shadow-none rounded-0" required autocomplete="new-email" v-model="profileParam.email">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="phone-number" class="form-label">Phone Number</label>
+                            <input id="phone-number" type="text" name="phone-number" class="form-control p-3 shadow-none rounded-0" required autocomplete="new-phone-number" v-model="profileParam.phone_number">
+                        </div>
+                        <button type="submit" class="btn btn-theme rounded-0 py-2 width-120">
+                            SUBMIT
+                        </button>
+                    </template>
+
+                    <template v-if="tab === 2">
+                        <div class="form-group mb-3">
+                            <label for="old-password" class="form-label">Old Password</label>
+                            <input id="old-password" type="text" name="old-password" class="form-control p-3 shadow-none rounded-0" required autocomplete="new-old-password" v-model="passwordParam.oldPassword">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password" class="form-label">New Password</label>
+                            <input id="password" type="text" name="password" class="form-control p-3 shadow-none rounded-0" required autocomplete="new-password" v-model="passwordParam.password">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="confirm-password" class="form-label">Confirm Password</label>
+                            <input id="confirm-password" type="text" name="confirm-password" class="form-control p-3 shadow-none rounded-0" required autocomplete="new-confirm-password" v-model="passwordParam.confirmPassword">
+                        </div>
+                        <button type="submit" class="btn btn-theme py-2 width-120 rounded-0">
+                            SUBMIT
+                        </button>
+                    </template>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
 
 </template>
@@ -45,6 +79,19 @@
 export default {
     data(){
         return{
+            tab: 1,
+
+            profileParam: {
+                full_name: 'Mahi Bashar Akash',
+                email: 'mahibashar2023@gmail.com',
+                phone_number: '+880 01400125289',
+            },
+
+            passwordParam: {
+                oldPassword: '',
+                password: '',
+                confirmPassword: '',
+            },
 
         }
     },
@@ -52,7 +99,9 @@ export default {
 
     },
     methods: {
-
+        setTab(tab) {
+            this.tab = tab
+        }
     }
 }
 

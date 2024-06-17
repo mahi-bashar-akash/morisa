@@ -53,12 +53,6 @@
                     <span class="ms-2"> about </span>
                 </router-link>
 
-                <!-- admin sidebar link - contact -->
-                <router-link :to="{name: 'contact'}" class="admin-sidebar-body-link" @click="sidebarClose()">
-                    <i class="bi bi-telephone"></i>
-                    <span class="ms-2"> contact </span>
-                </router-link>
-
                 <!-- admin sidebar link - blogs -->
                 <router-link :to="{name: 'blogs'}" class="admin-sidebar-body-link" @click="sidebarClose()">
                     <i class="bi bi-card-text"></i>
