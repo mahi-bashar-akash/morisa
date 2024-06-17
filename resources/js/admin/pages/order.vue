@@ -1,6 +1,6 @@
 <template>
 
-    <div class="height-calc-250 scrollbar px-1">
+    <div class="height-calc-190 scrollbar px-1">
         <div class="table-responsive">
             <table class="table">
                 <!-- Order header -->
