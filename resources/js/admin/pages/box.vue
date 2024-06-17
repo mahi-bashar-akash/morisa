@@ -6,122 +6,124 @@
         </button>
     </div>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+    <div class="height-calc-200 scrollbar px-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
 
-        <!-- box card -->
-        <div class="mb-3">
-            <div class="card border rounded-0 p-3">
-                <div class="card-body bg-white border-0 rounded-0">
-                    <div class="position-relative">
-                        <div class="w-100 height-150 d-flex justify-content-center align-items-center">
-                            <img :src="`/images/boxes/box-1.webp`" class="img-fluid object-fit-cover width-75 height-75"
-                                 alt="banner 1">
-                        </div>
-                        <div class="position-absolute top-0 start-0 p-3">
-                            <div
-                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
-                                01
+            <!-- box card -->
+            <div class="mb-3">
+                <div class="card border rounded-0 p-3">
+                    <div class="card-body bg-white border-0 rounded-0">
+                        <div class="position-relative">
+                            <div class="w-100 height-150 d-flex justify-content-center align-items-center">
+                                <img :src="`/images/boxes/box-1.webp`" class="img-fluid object-fit-cover width-75 height-75"
+                                     alt="banner 1">
+                            </div>
+                            <div class="position-absolute top-0 start-0 p-3">
+                                <div
+                                    class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                                    01
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-footer bg-white border-0 rounded-0">
-                    <div class="fw-bold mb-3 fs-6">
-                        Free Shipping Worldwide
-                    </div>
-                    <div class="text-secondary mb-3">
-                        Mirum est notare quam littera gothica, quam nunc putamus parum claram
-                    </div>
-                    <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
-                                @click="openManageModal()">
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
-                                @click="openDeleteModal()">
-                            Delete
-                        </button>
+                    <div class="card-footer bg-white border-0 rounded-0">
+                        <div class="fw-bold mb-3 fs-6">
+                            Free Shipping Worldwide
+                        </div>
+                        <div class="text-secondary mb-3">
+                            Mirum est notare quam littera gothica, quam nunc putamus parum claram
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center gap-3">
+                            <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                    @click="openManageModal()">
+                                Edit
+                            </button>
+                            <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                    @click="openDeleteModal()">
+                                Delete
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- box card -->
-        <div class="mb-3">
-            <div class="card border rounded-0 p-3">
-                <div class="card-body bg-white border-0 rounded-0">
-                    <div class="position-relative">
-                        <div class="w-100 height-150 d-flex justify-content-center align-items-center">
-                            <img :src="`/images/boxes/box-2.webp`" class="img-fluid object-fit-cover width-75 height-75"
-                                 alt="banner 1">
-                        </div>
-                        <div class="position-absolute top-0 start-0 p-3">
-                            <div
-                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
-                                02
+            <!-- box card -->
+            <div class="mb-3">
+                <div class="card border rounded-0 p-3">
+                    <div class="card-body bg-white border-0 rounded-0">
+                        <div class="position-relative">
+                            <div class="w-100 height-150 d-flex justify-content-center align-items-center">
+                                <img :src="`/images/boxes/box-2.webp`" class="img-fluid object-fit-cover width-75 height-75"
+                                     alt="banner 1">
+                            </div>
+                            <div class="position-absolute top-0 start-0 p-3">
+                                <div
+                                    class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                                    02
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-footer bg-white border-0 rounded-0">
-                    <div class="fw-bold mb-3 fs-6">
-                        Money Back Guarantee
-                    </div>
-                    <div class="text-secondary mb-3">
-                        Mirum est notare quam littera gothica, quam nunc putamus parum claram
-                    </div>
-                    <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
-                                @click="openManageModal()">
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
-                                @click="openDeleteModal()">
-                            Delete
-                        </button>
+                    <div class="card-footer bg-white border-0 rounded-0">
+                        <div class="fw-bold mb-3 fs-6">
+                            Money Back Guarantee
+                        </div>
+                        <div class="text-secondary mb-3">
+                            Mirum est notare quam littera gothica, quam nunc putamus parum claram
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center gap-3">
+                            <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                    @click="openManageModal()">
+                                Edit
+                            </button>
+                            <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                    @click="openDeleteModal()">
+                                Delete
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- box card -->
-        <div class="mb-3">
-            <div class="card border rounded-0 p-3">
-                <div class="card-body bg-white border-0 rounded-0">
-                    <div class="position-relative">
-                        <div class="w-100 height-150 d-flex justify-content-center align-items-center">
-                            <img :src="`/images/boxes/box-3.webp`" class="img-fluid object-fit-cover width-75 height-75"
-                                 alt="banner 1">
-                        </div>
-                        <div class="position-absolute top-0 start-0 p-3">
-                            <div
-                                class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
-                                03
+            <!-- box card -->
+            <div class="mb-3">
+                <div class="card border rounded-0 p-3">
+                    <div class="card-body bg-white border-0 rounded-0">
+                        <div class="position-relative">
+                            <div class="w-100 height-150 d-flex justify-content-center align-items-center">
+                                <img :src="`/images/boxes/box-3.webp`" class="img-fluid object-fit-cover width-75 height-75"
+                                     alt="banner 1">
+                            </div>
+                            <div class="position-absolute top-0 start-0 p-3">
+                                <div
+                                    class="width-45 height-45 d-flex justify-content-center align-items-center rounded-circle shadow bg-white fw-bold">
+                                    03
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-footer bg-white border-0 rounded-0">
-                    <div class="fw-bold mb-3 fs-6">
-                        Online Support 24/7
-                    </div>
-                    <div class="text-secondary mb-3">
-                        Mirum est notare quam littera gothica, quam nunc putamus parum claram
-                    </div>
-                    <div class="d-flex justify-content-start align-items-center gap-3">
-                        <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
-                                @click="openManageModal()">
-                            Edit
-                        </button>
-                        <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
-                                @click="openDeleteModal()">
-                            Delete
-                        </button>
+                    <div class="card-footer bg-white border-0 rounded-0">
+                        <div class="fw-bold mb-3 fs-6">
+                            Online Support 24/7
+                        </div>
+                        <div class="text-secondary mb-3">
+                            Mirum est notare quam littera gothica, quam nunc putamus parum claram
+                        </div>
+                        <div class="d-flex justify-content-start align-items-center gap-3">
+                            <button type="button" class="btn btn-outline-dark rounded-0 py-2 width-95 border-2"
+                                    @click="openManageModal()">
+                                Edit
+                            </button>
+                            <button type="button" class="btn btn-outline-danger rounded-0 py-2 width-95 border-2"
+                                    @click="openDeleteModal()">
+                                Delete
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
     <!-- Box manage modal -->

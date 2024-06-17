@@ -6,7 +6,8 @@
         </button>
     </div>
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">
+    <div class="height-calc-250 scrollbar px-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3">
 
         <!-- blog card -->
         <div class="mb-3">
@@ -278,6 +279,43 @@
             </div>
         </div>
 
+    </div>
+    </div>
+    <div class="height-50">
+        <div class="d-flex justify-content-between align-items-center border-top py-3">
+            <div aria-label="Page navigation example" class="admin-pagination">
+                <div class="pagination">
+                    <div class="page-item">
+                        <a class="page-link disabled" href="javascript:void(0)">
+                            <i class="bi bi-chevron-left"></i>
+                        </a>
+                    </div>
+                    <div class="page-item active">
+                        <a class="page-link" href="javascript:void(0)">
+                            1
+                        </a>
+                    </div>
+                    <div class="page-item">
+                        <a class="page-link" href="javascript:void(0)">
+                            2
+                        </a>
+                    </div>
+                    <div class="page-item">
+                        <a class="page-link" href="javascript:void(0)">
+                            3
+                        </a>
+                    </div>
+                    <div class="page-item">
+                        <a class="page-link" href="javascript:void(0)">
+                            <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-light-gray">
+                Showing 1 - 12 of 13 items
+            </div>
+        </div>
     </div>
 
     <!-- Blog manage modal -->

@@ -4,7 +4,7 @@
     "name": "vue-router"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-VOagkTF5.js",
+    "file": "assets/app-CAkcvl50.js",
     "name": "app",
     "src": "resources/js/admin/app.js",
     "isEntry": true,
@@ -22,7 +22,7 @@
     ]
   },
   "resources/scss/style-sheet.scss": {
-    "file": "assets/style-sheet-BIcPt5p0.css",
+    "file": "assets/style-sheet-CBYxaAMg.css",
     "src": "resources/scss/style-sheet.scss",
     "isEntry": true
   }
