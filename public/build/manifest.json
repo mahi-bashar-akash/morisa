@@ -4,7 +4,7 @@
     "name": "vue-router"
   },
   "resources/js/admin/app.js": {
-    "file": "assets/app-BwGI6Ne8.js",
+    "file": "assets/app-BNoWJsrW.js",
     "name": "app",
     "src": "resources/js/admin/app.js",
     "isEntry": true,
@@ -13,7 +13,7 @@
     ]
   },
   "resources/js/user/app.js": {
-    "file": "assets/app-Bz5Pb4LC.js",
+    "file": "assets/app-DBqU2h58.js",
     "name": "app",
     "src": "resources/js/user/app.js",
     "isEntry": true,

@@ -1,20 +1,25 @@
 import {createRouter, createWebHistory} from "vue-router";
 
+/*---------- global content ----------*/
 import layout from "../layout/layout.vue";
-    import home from "../page/home.vue";
-    import about from "../page/about.vue";
-    import contact from "../page/contact.vue";
-    import blog from "../page/blog.vue";
-    import singleBlog from "../page/single/blog.vue";
-    import shop from "../page/shop.vue";
-    import singleProduct from "../page/single/product.vue";
-    import login from "../page/login.vue";
-    import registration from "../page/registration.vue";
-    import cart from "../page/cart.vue";
-    import checkout from "../page/checkout.vue";
-    import profileLayout from "../page/profile/layout/layout.vue";
-        import details from "../page/profile/pages/details.vue";
-        import settings from "../page/profile/pages/settings.vue";
+import home from "../page/home.vue";
+import about from "../page/about.vue";
+import contact from "../page/contact.vue";
+import blog from "../page/blog.vue";
+import singleBlog from "../page/single/blog.vue";
+import shop from "../page/shop.vue";
+import singleProduct from "../page/single/product.vue";
+import cart from "../page/cart.vue";
+import checkout from "../page/checkout.vue";
+
+/*---------- user authentication ----------*/
+import login from "../page/login.vue";
+import registration from "../page/registration.vue";
+
+/*---------- user content ----------*/
+import profileLayout from "../page/profile/layout/layout.vue";
+import details from "../page/profile/pages/details.vue";
+import settings from "../page/profile/pages/settings.vue";
 
 const TITLE = window.core.APP_NAME
 const ROOT_URL = "/user/";
