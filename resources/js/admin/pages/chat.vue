@@ -382,8 +382,62 @@
             </div>
         </div>
         <div class="chat-content">
-            <div class="chat-content-header">
-
+            <div class="height-70 d-flex justify-content-between align-items-center px-4 border-bottom">
+                <div class="d-flex justify-content-start align-items-center">
+                    <div class="me-3">
+                        <img :src="`/images/avatar/avatar-01.jpg`" class="width-45 height-45 rounded-circle" alt="avatar">
+                    </div>
+                    <div class="text-theme fw-medium d-inline-block">
+                        Frank Thomas
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end align-items-center gap-2">
+                    <div class="dropdown">
+                        <button type="button" class="btn-white-light p-0 width-40 height-40 d-flex justify-content-center align-items-center border-0 rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-search"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <form class="width-350">
+                                    <div class="position-relative w-100">
+                                        <input type="text" name="keyword" placeholder="Search Here..." class="form-control ps-5 border height-46 box-inside-shadow py-3" required autocomplete="new-keyword">
+                                        <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
+                                            <i class="bi bi-search"></i>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn-white-light p-0 width-40 height-40 d-flex justify-content-center align-items-center border-0 rounded-circle">
+                        <i class="bi bi-camera-video"></i>
+                    </button>
+                    <button type="button" class="btn-white-light p-0 width-40 height-40 d-flex justify-content-center align-items-center border-0 rounded-circle">
+                        <i class="bi bi-telephone"></i>
+                    </button>
+                    <div class="dropdown">
+                        <button type="button" class="btn-white-light p-0 width-40 height-40 d-flex justify-content-center align-items-center border-0 rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <button type="button" class="dropdown-item">
+                                    <i class="bi bi-archive"></i> <span class="ms-2"> Archive </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item">
+                                    <i class="bi bi-mic-mute"></i> <span class="ms-2"> Muted </span>
+                                </button>
+                            </li>
+                            <li>
+                                <button type="button" class="dropdown-item">
+                                    <i class="bi bi-trash2"></i> <span class="ms-2"> Delete </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="chat-content-body">
 
