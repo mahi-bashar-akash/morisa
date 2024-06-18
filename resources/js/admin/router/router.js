@@ -8,6 +8,9 @@ import forget from "../authentication/pages/forget.vue";
 /*---------- Admin content ----------*/
 import layout from "../layout/layout.vue";
 import dashboard from "../pages/dashboard.vue";
+import calendar from "../pages/calendar.vue";
+import chat from "../pages/chat.vue";
+import email from "../pages/email.vue";
 import slider from "../pages/slider.vue";
 import box from "../pages/box.vue";
 import attribute from "../pages/attribute.vue";
@@ -33,6 +36,9 @@ const routes = [
         path: ROOT_URL, name: 'layout', component: layout,
         children: [
             { path: ROOT_URL + 'dashboard', name: 'dashboard', component: dashboard, meta: { title: TITLE + ' - Dashboard' } },
+            { path: ROOT_URL + 'calendar', name: 'calendar', component: calendar, meta: { title: TITLE + ' - Calendar' } },
+            { path: ROOT_URL + 'chat', name: 'chat', component: chat, meta: { title: TITLE + ' - Chat' } },
+            { path: ROOT_URL + 'email', name: 'email', component: email, meta: { title: TITLE + ' - Email' } },
             { path: ROOT_URL + 'slider', name: 'sliders', component: slider, meta: { title: TITLE + ' - Slider' } },
             { path: ROOT_URL + 'box', name: 'boxes', component: box, meta: { title: TITLE + ' - Box' } },
             { path: ROOT_URL + 'attribute', name: 'attribute', component: attribute, meta: { title: TITLE + ' - attribute' } },

@@ -29,6 +29,24 @@
                     <span class="ms-2"> dashboard </span>
                 </router-link>
 
+                <!-- admin sidebar link - calendar -->
+                <router-link :to="{name: 'calendar'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-calendar"></i>
+                    <span class="ms-2"> Calendar </span>
+                </router-link>
+
+                <!-- admin sidebar link - chat -->
+                <router-link :to="{name: 'chat'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-chat-square-dots"></i>
+                    <span class="ms-2"> Chat </span>
+                </router-link>
+
+                <!-- admin sidebar link - email -->
+                <router-link :to="{name: 'email'}" class="admin-sidebar-body-link" @click="sidebarClose()">
+                    <i class="bi bi-envelope"></i>
+                    <span class="ms-2"> email </span>
+                </router-link>
+
                 <!-- admin sidebar link - sliders -->
                 <router-link :to="{name: 'sliders'}" class="admin-sidebar-body-link" @click="sidebarClose()">
                     <i class="bi bi-sliders"></i>
