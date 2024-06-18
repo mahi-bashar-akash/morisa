@@ -11,7 +11,7 @@
                     </div>
                 </div>
 
-                <div class="my-4">
+                <div>
                     <div class="mb-3">
                         <button type="button"
                                 class="btn width-45 height-45 border rounded-circle d-flex justify-content-center align-items-center"
@@ -28,7 +28,7 @@
                         </button>
                     </div>
 
-                    <div class="mb-3">
+                    <div>
                         <button type="button"
                                 class="btn width-45 height-45 border rounded-circle d-flex justify-content-center align-items-center"
                                 @click="setTab(3)" :class="{ 'btn-light' : tab !== 3, 'btn-theme' : tab === 3 }">
@@ -37,35 +37,10 @@
                     </div>
                 </div>
 
-                <div>
-                    <div class="dropdown">
-                        <button type="button"
-                                class="btn width-45 height-45 btn-dark border rounded-2 d-flex justify-content-center align-items-center"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-gear"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    Action
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    Another action
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    Something else here
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
             <div class="chat-justify-adjust">
+
+                <!-- Chat -->
                 <template v-if="this.tab === 1">
                     <div class="d-flex justify-content-between align-items-center p-4">
                         <div class="fw-bold">
@@ -158,6 +133,8 @@
                         </button>
                     </div>
                 </template>
+
+                <!-- Contact -->
                 <template v-if="this.tab === 2">
                     <div class="d-flex justify-content-between align-items-center p-4">
                         <div class="fw-bold">
@@ -331,8 +308,76 @@
                         </div>
                     </div>
                 </template>
-                <template v-if="this.tab === 3">
 
+                <!-- Attachments -->
+                <template v-if="this.tab === 3">
+                    <div class="d-flex justify-content-between align-items-center p-4">
+                        <div class="fw-bold">
+                            Attachments
+                        </div>
+                    </div>
+                    <div class="p-3 height-calc-215 scrollbar">
+                        <button type="button" class="btn btn-white-light d-flex justify-content-start align-items-center w-100 border mb-2">
+                            <span class="me-3 d-inline-block">
+                                <span class="width-40 height-40 p-0 rounded-circle border-theme bg-light-theme text-theme fw-bold d-flex justify-content-center align-items-center">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                </span>
+                            </span>
+                            <span class="w-100 text-start">
+                                <span class="d-block truncate-to-1-line">
+                                    Design-phase-1.jpg
+                                </span>
+                                <span class="d-block mt-1 text-secondary text-opacity-75">
+                                    12.5 MB
+                                </span>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-white-light d-flex justify-content-start align-items-center w-100 border mb-2">
+                            <span class="me-3 d-inline-block">
+                                <span class="width-40 height-40 p-0 rounded-circle border-theme bg-light-theme text-theme fw-bold d-flex justify-content-center align-items-center">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                </span>
+                            </span>
+                            <span class="w-100 text-start">
+                                <span class="d-block truncate-to-1-line">
+                                    Design-phase-2.jpg
+                                </span>
+                                <span class="d-block mt-1 text-secondary text-opacity-75">
+                                    8.5 MB
+                                </span>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-white-light d-flex justify-content-start align-items-center w-100 border mb-2">
+                            <span class="me-3 d-inline-block">
+                                <span class="width-40 height-40 p-0 rounded-circle border-theme bg-light-theme text-theme fw-bold d-flex justify-content-center align-items-center">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                </span>
+                            </span>
+                            <span class="w-100 text-start">
+                                <span class="d-block truncate-to-1-line">
+                                    Design-phase-3.jpg
+                                </span>
+                                <span class="d-block mt-1 text-secondary text-opacity-75">
+                                    5.5 MB
+                                </span>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-white-light d-flex justify-content-start align-items-center w-100 border mb-2">
+                            <span class="me-3 d-inline-block">
+                                <span class="width-40 height-40 p-0 rounded-circle border-theme bg-light-theme text-theme fw-bold d-flex justify-content-center align-items-center">
+                                    <i class="bi bi-file-earmark-text"></i>
+                                </span>
+                            </span>
+                            <span class="w-100 text-start">
+                                <span class="d-block truncate-to-1-line">
+                                    Design-phase-4.jpg
+                                </span>
+                                <span class="d-block mt-1 text-secondary text-opacity-75">
+                                    19.2 MB
+                                </span>
+                            </span>
+                        </button>
+                    </div>
                 </template>
             </div>
         </div>

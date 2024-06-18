@@ -257,7 +257,7 @@ export default {
                 endTime: '',
                 location: '',
                 description: '',
-                type: '',
+                type: 'select-a-type',
             }
         }
     },

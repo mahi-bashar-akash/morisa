@@ -37,7 +37,7 @@
 
                 <!-- admin sidebar link - chat -->
                 <router-link :to="{name: 'chat'}" class="admin-sidebar-body-link" @click="sidebarClose()">
-                    <i class="bi bi-chat-square-dots"></i>
+                    <i class="bi bi-chat-left-text"></i>
                     <span class="ms-2"> Chat </span>
                 </router-link>
 
