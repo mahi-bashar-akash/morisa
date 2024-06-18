@@ -11,6 +11,19 @@
 
 }
 
+.btn-white-light {
+    background-color: var(--bs-white) !important;
+    color: var(--bs-black) !important;
+    transition: 0.3s all ease-in-out !important;
+
+    &:hover {
+        background-color: var(--bs-secondary-bg-subtle) !important;
+        color: var(--bs-black) !important;
+        transition: 0.3s all ease-in-out !important;
+    }
+
+}
+
 .btn-outline-theme{
     background-color: var(--bs-white) !important;
     color: var(--bs-black) !important;
