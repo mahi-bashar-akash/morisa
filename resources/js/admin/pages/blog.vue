@@ -1,7 +1,7 @@
 <template>
 
     <div class="d-flex justify-content-end mb-4">
-        <button type="button" class="btn btn-theme width-120 py-2 rounded-0" @click="openDeleteModal()">
+        <button type="button" class="btn btn-theme width-120 py-2 rounded-0" @click="openManageModal()">
             New
         </button>
     </div>
