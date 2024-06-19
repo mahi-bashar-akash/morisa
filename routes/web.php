@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 /*
-|--------------------------------------------------------------------------
+|
+|-------------------------------
 | Web Routes
-|--------------------------------------------------------------------------
+|-------------------------------
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider and all of them will
@@ -14,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 /*
-|---------------------------------------------
+|
+|-------------------------------
 | Web Route User
-|---------------------------------------------
+|-------------------------------
+|
 */
 
 Route::get('/user/', [\App\Http\Controllers\AppController::class, 'user'])->where('any', '.*')->name('lvs.user');
@@ -26,9 +29,11 @@ Route::get('/user/{any}', [\App\Http\Controllers\AppController::class, 'user'])-
 Route::get('/', function () { return redirect()->route('lvs.user.any', 'home'); } );
 
 /*
-|---------------------------------------------
+|
+|-------------------------------
 | Web Route Admin Auth
-|---------------------------------------------
+|-------------------------------
+|
 */
 
 Route::get('/admin/auth/', [\App\Http\Controllers\AppController::class, 'admin'])->where('any', '.*')->name('lvs.admin.auth');
@@ -38,9 +43,11 @@ Route::get('/admin/auth/{any}', [\App\Http\Controllers\AppController::class, 'ad
 Route::get('/admin/auth', function () { return redirect()->route('lvs.admin.auth.any', 'login'); } );
 
 /*
-|---------------------------------------------
+|
+|-------------------------------
 | Web Route Admin Content
-|---------------------------------------------
+|-------------------------------
+|
 */
 
 Route::get('/admin/', [\App\Http\Controllers\AppController::class, 'admin'])->where('any', '.*')->name('lvs.admin');
