@@ -145,7 +145,7 @@
                 <div class="d-flex justify-content-end align-items-center">
 
                     <!-- admin full screen -->
-                    <button type="button" class="btn-icon rounded-3 me-3">
+                    <button type="button" class="btn-icon rounded-3 me-3" @click="fullscreen()">
                         <i class="bi bi-fullscreen"></i>
                     </button>
 
@@ -256,13 +256,40 @@ export default {
 
     },
     methods: {
+
+        /* --- --- --- sidebar open --- --- --- */
         sidebarOpen() {
             this.isActiveSidebar = true;
         },
 
+        /* --- --- --- sidebar close --- --- --- */
         sidebarClose() {
             this.isActiveSidebar = false;
-        }
+        },
+
+        /* --- --- --- full screen --- --- --- */
+        fullscreen() {
+            if (!document.fullscreenElement
+                && !document.mozFullScreenElement
+                && !document.webkitFullscreenElement) {
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) {
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) {
+                    document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                }
+            } else {
+                if (document.cancelFullScreen) {
+                    document.cancelFullScreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitCancelFullScreen) {
+                    document.webkitCancelFullScreen();
+                }
+            }
+        },
+
     }
 }
 

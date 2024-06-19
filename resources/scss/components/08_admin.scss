@@ -277,10 +277,34 @@
 
                 }
 
+                .user-information-sidebar {
+                    width: 350px;
+                    height: calc(100vh - 152px);
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: -100%;
+                    transition: 0.3s all ease-in-out;
+                    background-color: var(--bs-white);
+                    z-index: 80;
+                    box-shadow: 0 0 8px 0 var(--bs-border-color);
+
+                    @media screen and (max-width: 576px) {
+                        width: 100%;
+                    }
+
+                    &.active {
+                        right: 0;
+                        transition: 0.3s all ease-in-out;
+                    }
+
+                }
+
                 .chat-content {
                     width: calc(100% - 350px);
                     height: calc(100vh - 152px);
                     background-color: var(--bs-white);
+                    position: relative;
 
                     @media screen and (max-width: 1200px) {
                         width: 100%;
@@ -293,14 +317,41 @@
             .email-wrapper {
                 display: flex;
                 overflow: hidden;
+                position: relative;
 
                 .email-sidebar {
                     width: 250px;
                     border-right: 1px solid var(--bs-border-color);
+                    background-color: var(--bs-white);
+
+                    @media screen and (max-width: 1200px) {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: -250px;
+                        transition: 0.3s all ease-in-out;
+                        z-index: 90;
+
+                        &.active {
+                            left: 0;
+                            transition: 0.3s all ease-in-out;
+                        }
+
+                    }
+
+                    @media screen and (max-width: 576px) {
+                        width: 100%;
+                    }
+
                 }
 
                 .email-content {
                     width: calc(100% - 250px);
+
+                    @media screen and (max-width: 1200px) {
+                        width: 100%;
+                    }
+
                 }
 
             }

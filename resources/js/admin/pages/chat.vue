@@ -6,25 +6,31 @@
 
                 <div class="d-flex justify-content-center align-items-center flex-column">
                     <div class="d-xl-none mb-3">
+
+                        <!-- close sidebar -->
                         <button type="button" class="btn-icon rounded-circle box-inside-shadow"
                                 @click="chatSidebarClose()">
                             <i class="bi bi-x-lg"></i>
                         </button>
+
                     </div>
 
+                    <!-- owner avatar -->
                     <div class="position-relative">
-                        <img :src="`/images/avatar/avatar-01.jpg`" class="width-45 height-45 rounded-circle"
+                        <img :src="`/images/avatar/avatar-01.jpg`" class="width-35 height-35 rounded-circle"
                              alt="avatar">
                         <div class="position-absolute bottom-0 end-0">
                             <div class="bg-success width-12 height-12 rounded-circle"></div>
                         </div>
                     </div>
+
                 </div>
 
+                <!-- group btn -->
                 <div>
                     <div class="mb-3">
                         <button type="button"
-                                class="btn width-45 height-45 border rounded-circle d-flex justify-content-center align-items-center"
+                                class="btn width-35 height-35 border rounded-circle d-flex justify-content-center align-items-center"
                                 @click="setTab(1)" :class="{ 'btn-light' : tab !== 1, 'btn-theme' : tab === 1 }">
                             <i class="bi bi-chat-dots"></i>
                         </button>
@@ -32,7 +38,7 @@
 
                     <div class="mb-3">
                         <button type="button"
-                                class="btn width-45 height-45 border rounded-circle d-flex justify-content-center align-items-center"
+                                class="btn width-35 height-35 border rounded-circle d-flex justify-content-center align-items-center"
                                 @click="setTab(2)" :class="{ 'btn-light' : tab !== 2, 'btn-theme' : tab === 2 }">
                             <i class="bi bi-people"></i>
                         </button>
@@ -40,7 +46,7 @@
 
                     <div>
                         <button type="button"
-                                class="btn width-45 height-45 border rounded-circle d-flex justify-content-center align-items-center"
+                                class="btn width-35 height-35 border rounded-circle d-flex justify-content-center align-items-center"
                                 @click="setTab(3)" :class="{ 'btn-light' : tab !== 3, 'btn-theme' : tab === 3 }">
                             <i class="bi bi-file-image"></i>
                         </button>
@@ -439,9 +445,65 @@
                         </button>
                     </div>
                 </template>
+
             </div>
         </div>
+
+        <!-- user information sidebar -->
+        <div class="user-information-sidebar scrollbar" :class="{ 'active' : userInformationSidebarActive }">
+            <div class="d-flex justify-content-end align-items-center p-3">
+                <button type="button" class="btn-icon box-inside-shadow rounded-circle" @click="userInformationSidebarClose()">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <img :src="`/images/avatar/avatar-02.jpg`" class="width-150 height-150 rounded-circle border border-5 border-secondary" alt="avatar">
+            </div>
+            <div class="my-3 fs-5 fw-medium text-center text-light-gray">
+                Lisa Parker
+            </div>
+            <div class="text-secondary text-opacity-75 d-flex justify-content-center align-items-center">
+                <div class="width-15 height-15 rounded-circle bg-success"></div>
+                <div class="ms-1 fw-medium"> Online </div>
+            </div>
+
+            <hr class="w-100 border border-secondary mt-3 mb-0">
+
+            <div class="p-3 text-center">
+                <div class="mb-3 fs-5 text-dark">
+                    Personal Details
+                </div>
+                <div class="mb-3">
+                    <div class="mb-2 text-secondary text-opacity-75 fw-medium">
+                        Phone Number
+                    </div>
+                    <div class="text-dark">
+                        +880 01400125289
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="mb-2 text-secondary text-opacity-75 fw-medium">
+                        EMAIL
+                    </div>
+                    <div class="text-dark">
+                        mahibashar2023@gmail.com
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="mb-2 text-secondary text-opacity-75 fw-medium">
+                        LOCATION
+                    </div>
+                    <div class="text-dark">
+                        California, USA
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- chat content -->
         <div class="chat-content">
+
+            <!-- chat content header -->
             <div class="height-70 d-flex justify-content-between align-items-center px-4 border-bottom">
                 <div class="d-flex justify-content-start align-items-center">
                     <div class="d-xl-none me-3">
@@ -449,21 +511,23 @@
                             <i class="bi bi-justify-left"></i>
                         </button>
                     </div>
-                    <div class="me-2">
-                        <div class="position-relative">
-                            <img :src="`/images/avatar/avatar-02.jpg`" class="width-45 height-45 rounded-circle"
-                                 alt="avatar">
-                            <div class="position-absolute bottom-0 end-0">
-                                <div class="bg-success width-12 height-12 rounded-circle"></div>
+                    <div class="d-flex justify-content-start align-items-center cursor-pointer" @click="userInformationSidebarOpen()">
+                        <div class="me-3">
+                            <div class="position-relative">
+                                <img :src="`/images/avatar/avatar-02.jpg`" class="width-35 height-35 rounded-circle"
+                                     alt="avatar">
+                                <div class="position-absolute bottom-0 end-0">
+                                    <div class="bg-success width-12 height-12 rounded-circle"></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="d-inline-block">
-                        <div class="text-theme fw-medium d-block"> Frank Thomas</div>
-                        <div class="text-secondary"> Online</div>
+                        <div class="d-none d-lg-inline-block">
+                            <div class="text-theme fw-medium d-block"> Frank Thomas</div>
+                            <div class="text-secondary"> Online</div>
+                        </div>
                     </div>
                 </div>
-                <div class="d-flex justify-content-end align-items-center gap-2">
+                <div class="d-flex justify-content-end align-items-center gap-1 gap-md-2">
                     <div class="dropdown">
                         <button type="button"
                                 class="btn-white-light p-0 width-40 height-40 d-flex justify-content-center align-items-center border-0 rounded-circle"
@@ -519,7 +583,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="height-calc-222 position-relative">
+
+                <!-- chat content body -->
                 <div class="height-calc-271 border-bottom p-4 scrollbar">
 
                     <div class="d-flex align-items-center justify-content-start">
@@ -609,13 +676,18 @@
                     </div>
 
                 </div>
+
+                <!-- typing your message -->
                 <form class="w-100">
                     <input type="text" name="message" placeholder="Typing your message"
                            class="form-control p-3 shadow-none rounded-0 border-0" required
                            autocomplete="new-message">
                 </form>
+
             </div>
+
         </div>
+
     </div>
 
 </template>
@@ -627,6 +699,7 @@ export default {
         return {
             tab: 1,
             chatSidebarActive: false,
+            userInformationSidebarActive: false,
         }
     },
     mounted() {
@@ -650,6 +723,16 @@ export default {
             if (window.innerWidth < 1201) {
                 this.chatSidebarActive = false;
             }
+        },
+
+        /* --- --- --- user information sidebar open  --- --- --- */
+        userInformationSidebarOpen() {
+            this.userInformationSidebarActive = true;
+        },
+
+        /* --- --- --- user information sidebar close --- --- --- */
+        userInformationSidebarClose() {
+            this.userInformationSidebarActive = false;
         },
 
     }
