@@ -236,6 +236,8 @@
 
             .chat-wrapper {
                 display: flex;
+                position: relative;
+                overflow: hidden;
 
                 .chat-sidebar {
                     width: 350px;
@@ -243,6 +245,20 @@
                     border-right: 1px solid var(--bs-border-color);
                     background-color: var(--bs-white);
                     display: flex;
+
+                    @media screen and (max-width: 1200px) {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: -350px;
+                        transition: 0.3s all ease-in-out;
+                        z-index: 90;
+                        &.active {
+                            left: 0;
+                            transition: 0.3s all ease-in-out;
+                        }
+
+                    }
 
                     .chat-justify-start {
                         width: 80px;
@@ -265,6 +281,11 @@
                     width: calc(100% - 350px);
                     height: calc(100vh - 152px);
                     background-color: var(--bs-white);
+
+                    @media screen and (max-width: 1200px) {
+                        width: 100%;
+                    }
+
                 }
 
             }
