@@ -8,7 +8,7 @@
                     <div class="d-xl-none mb-3">
 
                         <!-- close sidebar -->
-                        <button type="button" class="btn-icon rounded-circle box-inside-shadow"
+                        <button type="button" class="btn-icon width-30 height-30 rounded-circle box-inside-shadow"
                                 @click="chatSidebarClose()">
                             <i class="bi bi-x-lg"></i>
                         </button>
@@ -17,7 +17,7 @@
 
                     <!-- owner avatar -->
                     <div class="position-relative">
-                        <img :src="`/images/avatar/avatar-01.jpg`" class="width-35 height-35 rounded-circle"
+                        <img :src="`/images/avatar/avatar-01.jpg`" class="width-30 height-30 rounded-circle"
                              alt="avatar">
                         <div class="position-absolute bottom-0 end-0">
                             <div class="bg-success width-12 height-12 rounded-circle"></div>
@@ -30,7 +30,7 @@
                 <div>
                     <div class="mb-3">
                         <button type="button"
-                                class="btn width-35 height-35 border rounded-circle d-flex justify-content-center align-items-center"
+                                class="btn width-30 height-30 border rounded-circle d-flex justify-content-center align-items-center"
                                 @click="setTab(1)" :class="{ 'btn-light' : tab !== 1, 'btn-theme' : tab === 1 }">
                             <i class="bi bi-chat-dots"></i>
                         </button>
@@ -38,7 +38,7 @@
 
                     <div class="mb-3">
                         <button type="button"
-                                class="btn width-35 height-35 border rounded-circle d-flex justify-content-center align-items-center"
+                                class="btn width-30 height-30 border rounded-circle d-flex justify-content-center align-items-center"
                                 @click="setTab(2)" :class="{ 'btn-light' : tab !== 2, 'btn-theme' : tab === 2 }">
                             <i class="bi bi-people"></i>
                         </button>
@@ -46,7 +46,7 @@
 
                     <div>
                         <button type="button"
-                                class="btn width-35 height-35 border rounded-circle d-flex justify-content-center align-items-center"
+                                class="btn width-30 height-30 border rounded-circle d-flex justify-content-center align-items-center"
                                 @click="setTab(3)" :class="{ 'btn-light' : tab !== 3, 'btn-theme' : tab === 3 }">
                             <i class="bi bi-file-image"></i>
                         </button>
@@ -58,14 +58,10 @@
 
                 <!-- Chat -->
                 <template v-if="this.tab === 1">
-                    <div class="d-flex justify-content-between align-items-center p-4">
+                    <div class="d-flex justify-content-start align-items-center p-4">
                         <div class="fw-bold">
                             Chats
                         </div>
-                        <button type="button"
-                                class="btn btn-light-theme p-0 width-35 height-35 border-0 rounded-circle">
-                            <i class="bi bi-plus-lg"></i>
-                        </button>
                     </div>
                     <div class="px-3">
                         <div class="position-relative w-100">
@@ -79,7 +75,7 @@
                     </div>
                     <div class="mt-3 p-3 height-calc-293 scrollbar">
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-01.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -89,7 +85,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-02.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -99,7 +95,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-03.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -109,7 +105,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-04.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -119,7 +115,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-05.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -129,7 +125,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-06.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -139,7 +135,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-07.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -149,7 +145,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-08.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -159,7 +155,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
+                                class="btn btn-white-light w-100 mb-1 p-2 border-0 rounded-1 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-09.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -178,7 +174,7 @@
                             Contacts
                         </div>
                         <button type="button"
-                                class="btn btn-light-theme p-0 width-35 height-35 border-0 rounded-circle">
+                                class="btn btn-light-theme p-0 width-35 height-35 border-0 rounded-circle" @click="openContactModal()">
                             <i class="bi bi-plus-lg"></i>
                         </button>
                     </div>
@@ -690,6 +686,38 @@
 
     </div>
 
+    <!-- contact modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3 border-0 rounded-0">
+                <div class="modal-header border-0 rounded-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Contact
+                    </h1>
+                    <button type="button" class="btn-close" @click="closeContactModal()"></button>
+                </div>
+                <div class="modal-body border-0 rounded-0">
+                    <div class="form-group mb-3">
+                        <label for="person-name" class="form-label">Person Name</label>
+                        <input id="person-name" type="text" name="person-name" class="form-control p-3 rounded-0 shadow-none border" required autocomplete="new-person-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="person-phone-number" class="form-label">Person Phone Number</label>
+                        <input id="person-phone-number" type="text" name="person-phone-number" class="form-control p-3 rounded-0 shadow-none border" required autocomplete="new-person-phone-number">
+                    </div>
+                </div>
+                <div class="modal-footer border-0 rounded-0">
+                    <button type="button" class="btn btn-secondary rounded-0 width-96" @click="closeContactModal()">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-theme rounded-0 width-96">
+                        Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </template>
 
 <script>
@@ -733,6 +761,19 @@ export default {
         /* --- --- --- user information sidebar close --- --- --- */
         userInformationSidebarClose() {
             this.userInformationSidebarActive = false;
+        },
+
+        /* --- --- --- open manage model --- --- --- */
+        openContactModal() {
+            const myModal = new bootstrap.Modal("#contactModal", {keyboard: false});
+            myModal.show();
+        },
+
+        /* --- --- --- close manage modal --- --- --- */
+        closeContactModal() {
+            let myModalEl = document.getElementById('contactModal');
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
         },
 
     }

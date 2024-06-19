@@ -20,55 +20,73 @@
 
             <!-- list of type calling -->
             <div class="mb-3">
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-envelope"></i>
                         <span class="ms-2"> All </span>
                     </span>
-                        <span class="bg-light fw-medium rounded-1 px-2 height-25 d-flex justify-content-center align-items-center border">
+                    <span
+                        class="bg-light fw-medium rounded-1 px-2 height-25 d-flex justify-content-center align-items-center border">
                         5
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-archive"></i>
                         <span class="ms-2"> Index </span>
                     </span>
-                        <span class="bg-light fw-medium rounded-1 px-2 height-25 d-flex justify-content-center align-items-center border">
+                    <span
+                        class="bg-light fw-medium rounded-1 px-2 height-25 d-flex justify-content-center align-items-center border">
                         5
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-send"></i>
                         <span class="ms-2"> Sent </span>
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-pencil-square"></i>
                         <span class="ms-2"> Draft </span>
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-exclamation-diamond"></i>
                         <span class="ms-2"> Spam </span>
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-trash2"></i>
                         <span class="ms-2"> Trash </span>
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-bookmark-star"></i>
                         <span class="ms-2"> Starred </span>
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-tags"></i>
                         <span class="ms-2"> Important </span>
@@ -77,35 +95,45 @@
             </div>
 
             <!-- list of label -->
-            <div class="fw-bold text-light-gray mb-3"> LABELS </div>
+            <div class="fw-bold text-light-gray mb-3"> LABELS</div>
             <div class="mb-3">
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-circle"></i>
                         <span class="ms-2"> Support </span>
                     </span>
-                    <span class="bg-light fw-medium rounded-1 px-2 height-25 d-flex justify-content-center align-items-center border">
+                    <span
+                        class="bg-light fw-medium rounded-1 px-2 height-25 d-flex justify-content-center align-items-center border">
                         5
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-circle"></i>
                         <span class="ms-2"> Freelance </span>
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-circle"></i>
                         <span class="ms-2"> Social </span>
                     </span>
                 </button>
-                <button type="button" class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2" @click="sidebarClose()">
+                <button type="button"
+                        class="btn px-0 border-0 d-flex justify-content-between align-items-center text-light-gray-hover w-100 mb-2"
+                        @click="sidebarClose()">
                     <span>
                         <i class="bi bi-circle"></i>
                         <span class="ms-2"> Friendly </span>
                     </span>
-                    <span class="bg-light fw-medium rounded-1 px-2 height-25 d-flex justify-content-center align-items-center border">
+                    <span
+                        class="bg-light fw-medium rounded-1 px-2 height-25 d-flex justify-content-center align-items-center border">
                         5
                     </span>
                 </button>
@@ -114,6 +142,55 @@
 
         <!-- email content -->
         <div class="email-content">
+
+            <!-- email information -->
+            <div class="email-information" :class="{ 'active' : mailSidebarActive }">
+
+                <div class="p-3 d-flex justify-content-start align-items-center">
+                    <div class="me-3">
+                        <button type="button" class="btn-icon box-inside-shadow rounded-circle"
+                                @click="closeMailSidebar()">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-start">
+                        <div class="me-3">
+                            <img :src="`/images/avatar/avatar-03.jpg`" class="width-45 height-45 rounded-circle"
+                                 alt="avatar">
+                        </div>
+                        <div class="d-inline-block fw-bold text-theme">
+                            Peter, me
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-3 mt-4 scrollbar height-calc-490">
+                    <div class="border p-3 mb-3">
+                        Hi,
+                        <br><br>
+                        Everyone realizes why a new common language would be desirable: one could refuse to pay
+                        expensive
+                        translators. To achieve this, it would be necessary to have uniform grammar pronunciation.
+                        <br><br>
+                        Thank you
+                    </div>
+                </div>
+
+                <div class="p-3">
+                    <div class="form-group mb-3">
+                        <label for="reply" class="form-label fw-bold"> Reply </label>
+                        <textarea name="reply" class="form-textarea p-3 rounded-0 resize" id="reply" placeholder="Write here anything" cols="30" rows="5"
+                                  required autocomplete="new-reply"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-theme rounded-0 width-95">
+                            SUBMIT
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="container-fluid">
 
                 <div class="height-70 row align-items-center px-2">
@@ -127,7 +204,9 @@
 
                         <!-- search -->
                         <div class="w-100 position-relative">
-                            <input type="text" name="keyword" class="w-100 form-control bg-light shadow-none border-0 rounded-0 py-2 ps-5" placeholder="Search Here . . ." required autocomplete="new-keyword">
+                            <input type="text" name="keyword"
+                                   class="w-100 form-control bg-light shadow-none border-0 rounded-0 py-2 ps-5"
+                                   placeholder="Search Here . . ." required autocomplete="new-keyword">
                             <div class="position-absolute top-50 start-0 translate-middle-y ps-3">
                                 <i class="bi bi-search text-light-gray"></i>
                             </div>
@@ -161,36 +240,37 @@
                     <table class="table table-borderless table-hover">
                         <tbody>
 
-                            <!-- list of data -->
-                            <tr class="align-middle cursor-pointer" v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
-                                <td>
-                                    <div class="min-width-70 p-1 d-flex align-items-center justify-content-start">
-                                        <input type="checkbox" class="form-checkbox border-secondary">
-                                        <div class="ms-3">
-                                            <i class="bi bi-star-fill text-light-gray"></i>
-                                        </div>
+                        <!-- list of data -->
+                        <tr class="align-middle cursor-pointer"
+                            v-for="each in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
+                            <td>
+                                <div class="min-width-70 p-1 d-flex align-items-center justify-content-start">
+                                    <input type="checkbox" class="form-checkbox border-secondary">
+                                    <div class="ms-3">
+                                        <i class="bi bi-star-fill text-light-gray"></i>
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="min-width-150 p-1">
-                                        <div class="truncate-to-1-line">
-                                            Peter, me
-                                        </div>
+                                </div>
+                            </td>
+                            <td @click="openMailSidebar()">
+                                <div class="min-width-150 p-1">
+                                    <div class="truncate-to-1-line">
+                                        Peter, me
                                     </div>
-                                </td>
-                                <td>
-                                    <div class="min-width-300 p-1 d-flex align-items-center justify-content-start">
+                                </div>
+                            </td>
+                            <td @click="openMailSidebar()">
+                                <div class="min-width-300 p-1 d-flex align-items-center justify-content-start">
                                         <span class="fw-medium">
                                             Hello
                                         </span>
-                                        <i class="bi bi-dash-lg mx-2"></i>
-                                        <span class="text-light-gray truncate-to-1-line">
+                                    <i class="bi bi-dash-lg mx-2"></i>
+                                    <span class="text-light-gray truncate-to-1-line">
                                             Trip home from Colombo has been arranged, then Jenna will come get me from Stockholm.
                                             Trip home from Colombo has been arranged, then Jenna will come get me from Stockholm.
                                         </span>
-                                    </div>
-                                </td>
-                            </tr>
+                                </div>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>
@@ -248,19 +328,25 @@
                 <div class="modal-body border-0 rounded-0">
                     <div class="form-group mb-3">
                         <label for="to" class="form-label">To</label>
-                        <input id="to" type="text" name="to" class="form-control rounded-0 p-3 shadow-none border" required autocomplete="new-to">
+                        <input id="to" type="text" name="to" class="form-control rounded-0 p-3 shadow-none border"
+                               required autocomplete="new-to">
                     </div>
                     <div class="form-group mb-3">
                         <label for="subject" class="form-label">Subject</label>
-                        <input id="subject" type="text" name="subject" class="form-control rounded-0 p-3 shadow-none border" required autocomplete="new-subject">
+                        <input id="subject" type="text" name="subject"
+                               class="form-control rounded-0 p-3 shadow-none border" required
+                               autocomplete="new-subject">
                     </div>
                     <div class="form-group">
                         <label for="message" class="form-label">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="5" class="form-textarea rounded-0 p-3 shadow-none border" required autocomplete="new-message"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="5"
+                                  class="form-textarea rounded-0 p-3 shadow-none border" required
+                                  autocomplete="new-message"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-0 rounded-0">
-                    <button type="button" class="btn btn-secondary width-96 py-2 rounded-0" @click="closeComposeModal()">
+                    <button type="button" class="btn btn-secondary width-96 py-2 rounded-0"
+                            @click="closeComposeModal()">
                         Discard
                     </button>
                     <button type="button" class="btn btn-theme width-96 py-2 rounded-0">
@@ -287,7 +373,8 @@
                     </div>
                 </div>
                 <div class="modal-footer border-0 rounded-0">
-                    <button type="button" class="btn btn-secondary width-96 py-2 rounded-0" @click="closeArchiveModel()">
+                    <button type="button" class="btn btn-secondary width-96 py-2 rounded-0"
+                            @click="closeArchiveModel()">
                         Close
                     </button>
                     <button type="button" class="btn btn-theme width-96 py-2 rounded-0">
@@ -335,9 +422,10 @@
 <script>
 
 export default {
-    data(){
-        return{
+    data() {
+        return {
             emailSidebarActive: false,
+            mailSidebarActive: false,
         }
     },
     mounted() {
@@ -385,17 +473,27 @@ export default {
 
         /* --- --- --- email sidebar open --- --- --- */
         sidebarOpen() {
-            if(window.innerWidth < 1201) {
+            if (window.innerWidth < 1201) {
                 this.emailSidebarActive = true;
             }
         },
 
         /* --- --- --- email sidebar close --- --- --- */
         sidebarClose() {
-            if(window.innerWidth < 1201) {
+            if (window.innerWidth < 1201) {
                 this.emailSidebarActive = false;
             }
         },
+
+        /* --- --- --- mail sidebar open --- --- --- */
+        openMailSidebar() {
+            this.mailSidebarActive = true;
+        },
+
+        /* --- --- --- mail sidebar close --- --- --- */
+        closeMailSidebar() {
+            this.mailSidebarActive = false;
+        }
 
     }
 }
