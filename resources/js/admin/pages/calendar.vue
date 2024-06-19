@@ -220,7 +220,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <form class="modal-content rounded-0 border-0 p-4">
                 <div class="modal-header border-0">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Delete Calendar </h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> Delete Event </h1>
                     <button type="button" class="btn-close shadow-none" @click="closeDeleteModal()"></button>
                 </div>
                 <div class="modal-body border-0">

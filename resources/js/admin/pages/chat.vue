@@ -73,7 +73,7 @@
                     </div>
                     <div class="mt-3 p-3 height-calc-293 scrollbar">
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-01.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -83,7 +83,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-02.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -93,7 +93,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-03.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -103,7 +103,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-04.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -113,7 +113,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-05.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -123,7 +123,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-06.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -133,7 +133,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-07.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -143,7 +143,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-08.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
@@ -153,7 +153,7 @@
                             </span>
                         </button>
                         <button type="button"
-                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center">
+                                class="btn btn-white-light w-100 mb-1 py-2 px-4 border-0 rounded-0 d-flex justify-content-start align-items-center" @click="chatSidebarClose()">
                             <span>
                                 <img :src="`/images/avatar/avatar-09.jpg`" class="width-35 height-35 rounded-circle"
                                      alt="avatar">
