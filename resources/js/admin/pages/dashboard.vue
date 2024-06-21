@@ -1,9 +1,9 @@
 <template>
 
-    <div class="row">
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3">
 
         <!-- Sliders -->
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="mb-3">
             <router-link :to="{name: 'sliders'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
                 <div class="pb-3 text-light-gray fs-5">
                     Sliders
@@ -18,7 +18,7 @@
         </div>
 
         <!-- Boxes -->
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="mb-3">
             <router-link :to="{name: 'boxes'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
                 <div class="pb-3 text-light-gray fs-5">
                     Boxes
@@ -33,7 +33,7 @@
         </div>
 
         <!-- Categories -->
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="mb-3">
             <router-link :to="{name: 'attribute'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
                 <div class="pb-3 text-light-gray fs-5">
                     Attributes
@@ -48,7 +48,7 @@
         </div>
 
         <!-- Blogs -->
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="mb-3">
             <router-link :to="{name: 'blogs'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
                 <div class="pb-3 text-light-gray fs-5">
                     Blogs
@@ -63,7 +63,7 @@
         </div>
 
         <!-- Products -->
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="mb-3">
             <router-link :to="{name: 'products'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
                 <div class="pb-3 text-light-gray fs-5">
                     Products
@@ -78,7 +78,7 @@
         </div>
 
         <!-- Customers -->
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="mb-3">
             <router-link :to="{name: 'customers'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
                 <div class="pb-3 text-light-gray fs-5">
                     Customers
@@ -93,7 +93,7 @@
         </div>
 
         <!-- Orders -->
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="mb-3">
             <router-link :to="{name: 'orders'}" class="w-100 shadow bg-white p-5 text-center d-block text-decoration-none">
                 <div class="pb-3 text-light-gray fs-5">
                     Orders

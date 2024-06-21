@@ -234,7 +234,7 @@
             </div>
 
             <!-- admin content body -->
-            <div class="admin-content-body scrollbar">
+            <div class="admin-content-body scrollbar position-relative overflow-x-hidden">
                 <router-view/>
             </div>
 

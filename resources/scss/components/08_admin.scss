@@ -399,6 +399,21 @@
 
             }
 
+            .customer-details {
+                width: 360px;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                right: -100%;
+                transition: 0.3s all ease-in-out;
+
+                &.active {
+                    right: 0;
+                    transition: 0.3s all ease-in-out;
+                }
+
+            }
+
         }
 
     }
