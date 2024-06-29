@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 /*---------- Admin authentication ----------*/
 import authLayout from "../authentication/layout/layout.vue";
 import login from "../authentication/pages/login.vue";
+import registration from "../authentication/pages/registration.vue";
 import forget from "../authentication/pages/forget.vue";
 
 /*---------- Admin content ----------*/
@@ -29,6 +30,7 @@ const routes = [
         path: AUTH_ROOT_URL, name: 'authLayout', component: authLayout,
         children: [
             { path: AUTH_ROOT_URL + 'login', name: 'login', component: login, meta: { title: TITLE + ' - Login' } },
+            { path: AUTH_ROOT_URL + 'registration', name: 'registration', component: registration, meta: { title: TITLE + ' - Registration' } },
             { path: AUTH_ROOT_URL + 'forget', name: 'forget', component: forget, meta: { title: TITLE + ' - Forget' } },
         ]
     },
