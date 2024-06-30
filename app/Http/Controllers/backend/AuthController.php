@@ -85,25 +85,28 @@ class AuthController extends BaseController
     private function forget(Request $request, $model)
     {
         try {
-            $input = $request->input();
-            $validator = Validator::make($input, [
-                'email' => 'required|email'
+            $validator = Validator::make($request->all(), [
+                'email' => 'required',
             ]);
-            if ($validator->fails()) {
-                return response()->json(['status' => 500, 'errors' => $validator->errors()], 500);
+            if($validator->fails()) {
+                return response()->json(['errors' => $validator->errors()], 422);
             }
-            $userInfo = $model::where('email', $input['email'])->first();
-            if ($userInfo == null) {
+            $userInformation = $model::where('email', $request->email)->first();
+
+            if($userInformation == null) {
                 return response()->json(['errors' => ['email' => ['Email not found']]], 500);
             }
-            $reset_code = rand(100000, 999999);
-            $userInfo->reset_code = $reset_code;
-            $userInfo->save();
-            Mail::send('emails.forget', ['userInfo' => $userInfo], function ($message) use ($userInfo) {
-                $message->to($userInfo['email'], $userInfo['name'])->subject(env('MAIL_FROM_NAME') . ': Password reset code');
+
+            $random_number = rand(10000000, 99999999);
+            $userInformation->reset_code = $random_number;
+            $userInformation->save();
+
+            Mail::send('emails.forget', ['userInfo' => $userInformation], function ($message) use ($userInformation) {
+                $message->to($userInformation['email'], $userInformation['name'])->subject(env('MAIL_FROM_NAME') . ': Password reset code');
                 $message->from(env('MAIL_FROM_ADDRESS'), env('MAIL_FROM_NAME'));
             });
-            return response()->json(['message' => 'A reset code has been sent to your email. Please check your email']);
+
+            return response()->json(['message' => 'Forget password has been successfully']);
         } catch (\Exception $e) {
             return response()->json(['status' => 500, 'errors' => $e->getMessage(), 'line' => $e->getLine()], 500);
         }

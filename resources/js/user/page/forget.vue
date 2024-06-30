@@ -37,7 +37,7 @@
                     <label for="email" class="form-label">Email Address</label>
                     <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0"
                            autocomplete="off" placeholder="Enter your email" v-model="forgetData.email">
-                    <div class="error-report" v-if="error != null && error.email !== undefined"> {{error.email[0]}} </div>
+                    <div class="error-report" v-if="forgetError != null && forgetError.email !== undefined"> {{forgetError.email[0]}} </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
 
@@ -63,14 +63,14 @@
                     <label for="email" class="form-label">Email</label>
                     <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0"
                            autocomplete="off" placeholder="Enter your email" v-model="resetData.email">
-                    <div class="error-report" v-if="error != null && error.email !== undefined"> {{error.email[0]}} </div>
+                    <div class="error-report" v-if="resetError != null && resetError.email !== undefined"> {{resetError.email[0]}} </div>
                 </div>
                 <div class="form-group mb-3">
                     <label for="code" class="form-label mb-0">Code</label>
                     <div class="small text-secondary mb-2 fw-normal"> Please code collect from your email</div>
                     <input id="code" type="text" name="code" class="form-control px-3 height-45 border shadow-none rounded-0"
                            autocomplete="off" placeholder="Enter your code" v-model="resetData.code">
-                    <div class="error-report" v-if="error != null && error.code !== undefined"> {{error.code[0]}} </div>
+                    <div class="error-report" v-if="resetError != null && resetError.code !== undefined"> {{resetError.code[0]}} </div>
                 </div>
                 <div class="form-group mb-3">
                     <label for="password" class="form-label">Password</label>
@@ -78,7 +78,7 @@
                            class="form-control px-3 height-45 border shadow-none rounded-0"
                            autocomplete="off" placeholder="Enter your new password"
                            v-model="resetData.password">
-                    <div class="error-report" v-if="error != null && error.password !== undefined"> {{error.password[0]}} </div>
+                    <div class="error-report" v-if="resetError != null && resetError.password !== undefined"> {{resetError.password[0]}} </div>
                 </div>
                 <div class="form-group mb-3">
                     <label for="confirm-password" class="form-label">Confirm Password</label>
@@ -86,7 +86,7 @@
                            class="form-control px-3 height-45 border shadow-none rounded-0" required
                            autocomplete="off" placeholder="Enter your new confirm password"
                            v-model="resetData.password_confirmation">
-                    <div class="error-report" v-if="error != null && error.password_confirmation !== undefined"> {{error.password_confirmation[0]}} </div>
+                    <div class="error-report" v-if="resetError != null && resetError.password_confirmation !== undefined"> {{resetError.password_confirmation[0]}} </div>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
 
@@ -126,7 +126,8 @@ export default {
             tab: 'forget',
             forgetLoading: false,
             resetLoading: false,
-            error: null,
+            forgetError: null,
+            resetError: null,
             forgetData: {
                 email: '',
             },
@@ -154,7 +155,15 @@ export default {
                     this.resetData.email = this.forgetData.email;
                     toaster.info('Email Send Successfully');
                 }
-            })
+            }).catch(err => {
+                this.forgetLoading = false;
+                let res = err?.response;
+                if (res?.data?.errors !== undefined) {
+                    this.forgetError = res?.data?.errors;
+                } else {
+                    toaster.error('Service error!');
+                }
+            });
         },
 
         /* Function to reset api */
@@ -166,7 +175,15 @@ export default {
                     this.$router.push({name: 'login'});
                     toaster.info('Reset Account Successfully')
                 }
-            })
+            }).catch(err => {
+                this.resetLoading = false;
+                let res = err?.response;
+                if (res?.data?.errors !== undefined) {
+                    this.resetError = res?.data?.errors;
+                } else {
+                    toaster.error('Service error!');
+                }
+            });
         },
 
     }
