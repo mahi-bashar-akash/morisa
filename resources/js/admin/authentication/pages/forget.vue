@@ -1,6 +1,6 @@
 <template>
 
-    <form class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'forget'">
+    <form @submit.prevent="forget()" class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'forget'">
         <div class="mb-4 text-center">
             <img :src="`/images/logo.webp`" class="width-100" alt="logo">
         </div>
@@ -10,13 +10,17 @@
         </div>
         <div class="form-group mb-3">
             <label for="email" class="form-label">Email Address</label>
-            <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0" required
-                   autocomplete="new-email" placeholder="Enter your email" v-model="forgetData.email">
+            <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0"
+                   autocomplete="off" placeholder="Enter your email" v-model="forgetData.email">
+            <div class="error-report" v-if="error != null && error.email !== undefined"> {{error.email[0]}} </div>
         </div>
         <div class="d-flex justify-content-between align-items-center">
 
-            <button type="submit" class="btn btn-outline-theme width-170 height-45 rounded-0" @click="tab = 'reset'">
+            <button type="submit" class="btn btn-theme width-170 height-45 rounded-0" v-if="!forgetLoading">
                 Forget Password
+            </button>
+            <button type="button" class="btn btn-theme width-170 height-45 rounded-0" v-if="forgetLoading">
+                Loading
             </button>
 
             <router-link :to="{name: 'login'}" class="text-decoration-none text-light-gray-hover">
@@ -26,7 +30,7 @@
         </div>
     </form>
 
-    <form class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'reset'">
+    <form @submit.prevent="reset()" class="w-100 shadow bg-white p-4 p-sm-5 fw-medium" v-if="tab === 'reset'">
         <div class="mb-4 text-center">
             <img :src="`/images/logo.webp`" class="width-100" alt="logo">
         </div>
@@ -38,29 +42,40 @@
         </div>
         <div class="form-group mb-3">
             <label for="email" class="form-label">Email</label>
-            <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0" required
-                   autocomplete="new-email" placeholder="Enter your email" v-model="resetData.email">
+            <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0"
+                   autocomplete="off" placeholder="Enter your email" v-model="resetData.email">
+            <div class="error-report" v-if="error != null && error.email !== undefined"> {{error.email[0]}} </div>
         </div>
         <div class="form-group mb-3">
             <label for="code" class="form-label mb-0">Code</label>
             <div class="small text-secondary mb-2 fw-normal"> Please code collect from your email</div>
-            <input id="code" type="text" name="code" class="form-control px-3 height-45 border shadow-none rounded-0" required
-                   autocomplete="new-code" placeholder="Enter your code" v-model="resetData.code">
+            <input id="code" type="text" name="code" class="form-control px-3 height-45 border shadow-none rounded-0"
+                   autocomplete="off" placeholder="Enter your code" v-model="resetData.code">
+            <div class="error-report" v-if="error != null && error.code !== undefined"> {{error.code[0]}} </div>
         </div>
         <div class="form-group mb-3">
             <label for="password" class="form-label">Password</label>
-            <input id="password" type="password" name="password" class="form-control px-3 height-45 border shadow-none rounded-0"
-                   required autocomplete="new-password" placeholder="Enter your new password" v-model="resetData.password">
+            <input id="password" type="password" name="password"
+                   class="form-control px-3 height-45 border shadow-none rounded-0"
+                   autocomplete="off" placeholder="Enter your new password"
+                   v-model="resetData.password">
+            <div class="error-report" v-if="error != null && error.password !== undefined"> {{error.password[0]}} </div>
         </div>
         <div class="form-group mb-3">
             <label for="confirm-password" class="form-label">Confirm Password</label>
             <input id="confirm-password" type="password" name="confirm-password"
-                   class="form-control px-3 height-45 border shadow-none rounded-0" required autocomplete="new-confirm-password" placeholder="Enter your new confirm password" v-model="resetData.confirmPassword">
+                   class="form-control px-3 height-45 border shadow-none rounded-0" required
+                   autocomplete="off" placeholder="Enter your new confirm password"
+                   v-model="resetData.password_confirmation">
+            <div class="error-report" v-if="error != null && error.password_confirmation !== undefined"> {{error.password_confirmation[0]}} </div>
         </div>
         <div class="d-flex justify-content-between align-items-center">
 
-            <button type="submit" class="btn btn-outline-theme width-120 height-45 rounded-0">
+            <button type="submit" class="btn btn-theme width-120 height-45 rounded-0" v-if="!resetLoading">
                 Reset
+            </button>
+            <button type="button" class="btn btn-theme width-170 height-45 rounded-0" v-if="resetLoading">
+                Loading
             </button>
 
             <router-link :to="{name: 'login'}" class="text-decoration-none text-light-gray-hover">
@@ -74,28 +89,64 @@
 
 <script>
 
+import routeApi from "../../../api/routeApi.js";
+import serviceApi from "../../../api/serviceApi.js";
+import axios from "axios";
+import {createToaster} from "@meforma/vue-toaster";
+const toaster = createToaster({
+    position: 'top-right',
+});
+
 export default {
     data() {
         return {
             tab: 'forget',
-
+            forgetLoading: false,
+            resetLoading: false,
+            error: null,
             forgetData: {
                 email: '',
             },
-
             resetData: {
                 email: '',
                 code: '',
                 password: '',
-                confirmPassword: '',
-            }
+                password_confirmation: '',
+            },
 
         }
     },
     mounted() {
 
     },
-    methods: {}
+    methods: {
+
+        /* Function to forget api */
+        forget() {
+            this.forgetLoading = true;
+            axios.post(routeApi.adminForget, this.forgetData, { headers: serviceApi.headerContent }).then((response) => {
+                if(response.data) {
+                    this.forgetLoading = false;
+                    this.tab = 'reset';
+                    this.resetData.email = this.forgetData.email;
+                    toaster.info('Email Send Successfully');
+                }
+            })
+        },
+
+        /* Function to reset api */
+        reset() {
+            this.resetLoading = true;
+            axios.post(routeApi.adminReset, this.resetData, { headers: serviceApi.headerContent }).then((response) => {
+                if(response.data) {
+                    this.resetLoading = false;
+                    this.$router.push({name: 'login'});
+                    toaster.info('Reset Account Successfully')
+                }
+            })
+        },
+
+    }
 }
 
 </script>

@@ -11,11 +11,11 @@ export default {
         }
     },
     mounted() {
-        if(this.UserInfo === null) {
-            this.$router.push({name: 'login'});
+        if(this.UserInfo === null || this.UserInfo === undefined) {
+            this.$router.push( {name: 'login'} )
         }
     },
-    methods: {}
+    methods: {  }
 }
 
 </script>

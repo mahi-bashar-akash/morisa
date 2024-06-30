@@ -1,4 +1,26 @@
 <template>
+
+    <!-- breadcrumb -->
+    <section class="w-100 py-5">
+        <div class="container">
+            <div class="position-relative">
+                <img :src="`/images/breadcrumb.webp`" class="img-fluid object-fit-cover height-320 w-100" alt="breadcrumb">
+                <div class="position-absolute start-0 top-0 w-100 h-100 text-center d-flex justify-content-center align-items-center flex-column">
+                    <div class="fs-1 mb-3"> Profile Details </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <router-link :to="{name: 'home'}" class="text-decoration-none text-secondary">
+                            Home
+                        </router-link>
+                        <div class="mx-3"> -</div>
+                        <router-link :to="{name: 'details'}" class="text-decoration-none text-theme">
+                            Profile Details
+                        </router-link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-5 w-100">
 
         <div class="container">
@@ -11,36 +33,24 @@
                 </div>
 
                 <div class="row px-2">
-                    <div class="col-12 border border-bottom-0 p-3">
-                        <div class="mb-2 fw-medium">
-                            Name:
-                        </div>
-                        <div class="text-secondary">
-                            Mahi Bashar Akash
-                        </div>
-                    </div>
-                    <div class="col-12 border border-bottom-0 p-3">
-                        <div class="mb-2 fw-medium">
-                            Email:
-                        </div>
-                        <div class="text-secondary">
-                            mahibashar2023@gmail.com
+                    <div class="col-md-6 mb-3 px-1">
+                        <div class="border p-3">
+                            <div class="mb-2 fw-medium">
+                                Name:
+                            </div>
+                            <div class="text-secondary">
+                                {{profileData?.name}}
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 border border-bottom-0 p-3">
-                        <div class="mb-2 fw-medium">
-                            Mobile Number:
-                        </div>
-                        <div class="text-secondary">
-                            01400125289
-                        </div>
-                    </div>
-                    <div class="col-12 border p-3">
-                        <div class="mb-2 fw-medium">
-                            Preset Address:
-                        </div>
-                        <div class="text-secondary">
-                            Mollapara, Bashtolla, Ideal Public School and College, Jessore Sadar
+                    <div class="col-md-6 mb-3 px-1">
+                        <div class="border p-3">
+                            <div class="mb-2 fw-medium">
+                                Email:
+                            </div>
+                            <div class="text-secondary">
+                                {{profileData?.email}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,6 +171,10 @@
 
 <script>
 
+import axios from "axios";
+import routeApi from "../../../../api/routeApi.js";
+import serviceApi from "../../../../api/serviceApi.js";
+
 export default {
     data() {
         return {
@@ -171,16 +185,36 @@ export default {
                 {id: '3', name: 'Coconut', price: '30', quantity: '3', status: 3},
                 {id: '4', name: 'Pine Apple', price: '40', quantity: '4', status: 2},
                 {id: '5', name: 'Strawberry', price: '50', quantity: '5', status: 1},
-            ]
+            ],
+            profileData: null,
+            profileLoading: false,
+            UserInfo: window.core.UserInfo,
         }
     },
     mounted() {
+        if(this.UserInfo !== null) {
+            this.profileDetails();
+        }
     },
     methods: {
 
-        /* Function to change tab */
-        changeTab(tab) {
-            this.tab = tab
+        /* Function to profile details api */
+        profileDetails() {
+            this.profileLoading = true;
+            axios.get(routeApi.userDetails, this.profileData, {headers: serviceApi.headerContent}).then((response) => {
+                if(response) {
+                    this.profileLoading = false;
+                    this.profileData = response?.data?.data
+                }
+            }).catch(err => {
+                this.loading = false;
+                let res = err?.response;
+                if (res?.data?.errors !== undefined) {
+                    this.error = res?.data?.errors;
+                } else {
+                    toaster.error('Service error!');
+                }
+            })
         }
 
     }

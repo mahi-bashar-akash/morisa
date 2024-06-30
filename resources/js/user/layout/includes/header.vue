@@ -135,7 +135,9 @@ export default {
             loading: false,
         }
     },
-    mounted() {  },
+    mounted() {
+
+    },
     methods: {
 
         /* Function to collapse in navbar responsive */

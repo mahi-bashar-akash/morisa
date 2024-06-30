@@ -9,6 +9,7 @@
                 Access to our dashboard
             </div>
         </div>
+        <div class="alert alert-danger rounded-3 mb-3 text-center" v-if="error !== null && error.error !== undefined" v-text="error.error"></div>
         <div class="form-group mb-3">
             <label for="email" class="form-label">Email</label>
             <input id="email" type="email" name="email" class="form-control px-3 height-45 border shadow-none rounded-0"
@@ -81,7 +82,7 @@ export default {
             axios.post(routeApi.adminLogin, this.loginParam, { headers: serviceApi.headerContent }).then((response) => {
                 if (response.data) {
                     this.loading = false;
-                    this.$router.push({name: 'dashboard'});
+                    window.location.reload();
                     toaster.info('Login Successfully');
                 }
             }).catch(err => {

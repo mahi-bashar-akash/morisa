@@ -25,8 +25,8 @@
     <div class="py-5">
         <div class="container">
             <div class="row justify-content-center p-3">
-
                 <form @submit.prevent="login()" class="authentication p-5 border">
+                    <div class="alert alert-danger rounded-3 mb-3 text-center" v-if="error !== null && error.error !== undefined" v-text="error.error"></div>
                     <div class="form-group mb-3">
                         <label for="email" class="form-label">Email or Username</label>
                         <input type="email" name="email" id="email" class="form-control border shadow-none p-3" autocomplete="off" v-model="loginParam.email">
@@ -43,9 +43,9 @@
                                 <input type="checkbox" name="remember-me" id="remember-me" class="form-checkbox me-2">
                                 Remember me
                             </label>
-                            <a href="javascript:void(0)" class="text-decoration-none text-theme">
+                            <router-link :to="{name: 'forget'}" class="text-decoration-none text-theme">
                                 Lost your password?
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                     <div class="w-100">
