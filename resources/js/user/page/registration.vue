@@ -21,39 +21,31 @@
         </div>
     </section>
 
-    <!-- login -->
+    <!-- registration -->
     <div class="py-5">
         <div class="container">
             <div class="row justify-content-center p-3">
 
-                <form class="authentication p-5 border">
+                <form @submit.prevent="registration()" class="authentication p-5 border">
                     <div class="form-group mb-3">
-                        <label for="first-name" class="form-label"> First Name </label>
-                        <input type="text" name="first-name" id="first-name" class="form-control border shadow-none p-3" placeholder="First Name (Required)" required autocomplete="new-first-name">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="last-name" class="form-label"> Last Name </label>
-                        <input type="text" name="last-name" id="last-name" class="form-control border shadow-none p-3" placeholder="Last Name" autocomplete="new-last-name">
+                        <label for="name" class="form-label"> Full Name </label>
+                        <input type="text" name="name" id="name" class="form-control border shadow-none p-3" placeholder="Full Name (Required)" autocomplete="off" v-model="registrationParam.name">
+                        <div class="error-report" v-if="error != null && error.name !== undefined"> {{error.name[0]}} </div>
                     </div>
                     <div class="form-group mb-3">
                         <label for="email" class="form-label"> Email or Username </label>
-                        <input type="email" name="email" id="email" class="form-control border shadow-none p-3" placeholder="Username or Email (Required)" required autocomplete="new-email">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="phone-number" class="form-label"> Phone number </label>
-                        <input type="text" name="phone-number" id="phone-number" class="form-control border shadow-none p-3" placeholder="Phone Number (Required)" required autocomplete="new-phone-number">
+                        <input type="email" name="email" id="email" class="form-control border shadow-none p-3" placeholder="Username or Email (Required)" autocomplete="off" v-model="registrationParam.email">
+                        <div class="error-report" v-if="error != null && error.email !== undefined"> {{error.email[0]}} </div>
                     </div>
                     <div class="form-group mb-3">
                         <label for="new-password" class="form-label"> New password </label>
-                        <input type="password" name="new-password" id="new-password" class="form-control border shadow-none p-3" placeholder="New Password (Required)" required autocomplete="new-password">
+                        <input type="password" name="new-password" id="new-password" class="form-control border shadow-none p-3" placeholder="New Password (Required)" autocomplete="off" v-model="registrationParam.password">
+                        <div class="error-report" v-if="error != null && error.password !== undefined"> {{error.password[0]}} </div>
                     </div>
                     <div class="form-group mb-3">
                         <label for="confirm-password" class="form-label"> Confirm password </label>
-                        <input type="password" name="confirm-password" id="confirm-password" class="form-control border shadow-none p-3" placeholder="Confirm Password (Required)" required autocomplete="new-confirm-password">
-                    </div>
-                    <div class="form-group mb-3">
-                        <label for="present-address" class="form-label"> Present Address </label>
-                        <input type="text" name="present-address" id="present-address" class="form-control border shadow-none p-3" placeholder="Present Address" autocomplete="new-present-address">
+                        <input type="password" name="confirm-password" id="confirm-password" class="form-control border shadow-none p-3" placeholder="Confirm Password (Required)" autocomplete="off" v-model="registrationParam.password_confirmation">
+                        <div class="error-report" v-if="error != null && error.password_confirmation !== undefined"> {{error.password_confirmation[0]}} </div>
                     </div>
                     <div class="form-group mb-3">
                         <label for="remember-me" class="form-check-label">
@@ -61,9 +53,12 @@
                             I agree <a href="javascript:void(0)" class="text-decoration-none text-theme"> Terms & Condition </a>
                         </label>
                     </div>
-                    <div class="col">
-                        <button type="submit" class="btn btn-outline-theme py-3 width-120 d-flex justify-content-center rounded-0">
+                    <div class="w-100">
+                        <button type="submit" class="btn btn-outline-theme py-3 width-140 d-flex justify-content-center rounded-0" v-if="!loading">
                             Registration
+                        </button>
+                        <button type="button" class="btn btn-outline-theme py-3 width-140 d-flex justify-content-center rounded-0" v-if="loading">
+                            Loading
                         </button>
                     </div>
                 </form>
@@ -76,13 +71,53 @@
 
 <script>
 
+import serviceApi from "../../api/serviceApi.js";
+import routeApi from "../../api/routeApi.js";
+import axios from "axios";
+import {createToaster} from "@meforma/vue-toaster";
+const toaster = createToaster({
+    position: 'top-right',
+});
+
 export default {
     data(){
-        return{  }
+        return{
+            loading: false,
+            error: null,
+            registrationParam: {
+                name: '',
+                email: '',
+                password: '',
+                password_confirmation: '',
+            }
+        }
     },
     mounted() {
     },
-    methods: {  }
+    methods: {
+
+        /* Function to registration api */
+        registration() {
+            serviceApi.ClearErrorHandler();
+            this.loading = true;
+            axios.post(routeApi.userRegistration, this.registrationParam, { headers: serviceApi.headerContent }).then((response) => {
+                if (response.data) {
+                    this.loading = false;
+                    this.$router.push({name: 'login'});
+                    toaster.info('Registration Successfully');
+                }
+            }).catch(err => {
+                this.loading = false;
+                let res = err?.response;
+                if (res?.data?.errors !== undefined) {
+                    this.error = res?.data?.errors;
+                } else {
+                    toaster.error('Service error!');
+                }
+            });
+        },
+
+    }
 }
 
 </script>

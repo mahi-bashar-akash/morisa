@@ -56,7 +56,7 @@ Route::group(
 */
 
 Route::group(
-    ['middleware' => ['userAuth'], ['prefix' => 'auth']],
+    ['middleware' => 'userAuth', 'prefix' => 'auth'],
     function () {
         Route::post('/user/login', [AuthController::class, 'user_login'])->name('User.Auth.Login');
         Route::post('/user/register', [AuthController::class, 'user_register'])->name('User.Auth.Register');
@@ -70,7 +70,7 @@ Route::group(
 */
 
 Route::group(
-    ['middleware' => ['userAuthReq'], 'prefix' => 'profile'],
+    ['middleware' => 'userAuthReq', 'prefix' => 'profile'],
     function () {
         Route::get('/user/details', [AuthController::class, 'user_profile_details'])->name('User.Profile.Details');
         Route::patch('/user/update', [AuthController::class, 'user_profile_update'])->name('User.Profile.Update');

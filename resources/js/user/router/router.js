@@ -39,7 +39,7 @@ const routes = [
             { path: ROOT_URL + 'cart', name: 'cart', component: cart, meta: { title: TITLE + ' - Cart' } },
             { path: ROOT_URL + 'checkout', name: 'checkout', component: checkout, meta: { title: TITLE + ' - Checkout' } },
             {
-                path: ROOT_URL, name: 'profileLayout', component: profileLayout, requiresAuth: true,
+                path: ROOT_URL, name: 'profileLayout', component: profileLayout,
                 children: [
                     { path: ROOT_URL + 'details', name: 'details', component: details, meta: { title: TITLE + ' - Details' } },
                     { path: ROOT_URL + 'settings', name: 'settings', component: settings, meta: { title: TITLE + ' - Settings' } },
@@ -63,23 +63,5 @@ const router = createRouter({
         }
     }
 })
-
-const checkAuthMiddleware = (to, from, next) => {
-    const userInfo = window.core.UserInfo;
-    const requiresAuth = to.matched.some(route => route.meta.requiresAuth);
-
-    if (requiresAuth && !userInfo) {
-        // Redirect unauthenticated users to the sign-in page
-        next({name: 'Sign-In'});
-    } else if (to.name === 'Sign-In' && userInfo) {
-        // Prevent authenticated users from accessing the Sign-In page
-        next({name: 'Profile'});
-    } else {
-        // Proceed to the requested route
-        next();
-    }
-};
-
-router.beforeEach(checkAuthMiddleware);
 
 export default router;

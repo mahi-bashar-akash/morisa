@@ -30,10 +30,10 @@ const apiRoutes = {
     |---- * ---- * ---- * ---- * ---- * ---- * ---- * ----|
     */
 
-    userLogin: apiVersion + 'user/auth/login',
-    userRegistration: apiVersion + 'user/auth/register',
-    userForget: apiVersion + 'user/auth/forget',
-    userReset: apiVersion + 'user/auth/reset',
+    userLogin: apiVersion + 'auth/user/login',
+    userRegistration: apiVersion + 'auth/user/register',
+    userForget: apiVersion + 'auth/user/forget',
+    userReset: apiVersion + 'auth/user/reset',
 
     /*
     |---- * ---- * ---- * ---- * ---- * ---- * ---- * ----|
@@ -41,10 +41,10 @@ const apiRoutes = {
     |---- * ---- * ---- * ---- * ---- * ---- * ---- * ----|
     */
 
-    userDetails: apiVersion + 'user/profile/details',
-    userDetailsUpdate: apiVersion + 'user/profile/update',
-    userPasswordUpdate: apiVersion + 'user/profile/update/password',
-    userLogout: apiVersion + 'user/profile/logout',
+    userDetails: apiVersion + 'profile/user/details',
+    userDetailsUpdate: apiVersion + 'profile/user/update',
+    userPasswordUpdate: apiVersion + 'profile/user/update/password',
+    userLogout: apiVersion + 'profile/user/logout',
 
 }
 

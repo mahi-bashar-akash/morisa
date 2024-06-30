@@ -72,32 +72,35 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Profile
                         </a>
-                        <ul class="dropdown-menu">
-                            <li class="mb-1" v-if="!userInfo">
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li class="mb-1" v-if="UserInfo === null">
                                 <router-link :to="{name: 'login'}" class="dropdown-item">
                                     Login
                                 </router-link>
                             </li>
-                            <li v-if="!userInfo">
+                            <li v-if="UserInfo === null">
                                 <router-link :to="{name: 'registration'}" class="dropdown-item">
                                     Registration
                                 </router-link>
                             </li>
-                            <li class="mb-1" v-if="userInfo">
+                            <li class="mb-1" v-if="UserInfo !== null">
                                 <router-link :to="{name: 'details'}" class="dropdown-item">
-                                    Details
+                                    {{UserInfo.name}}
                                 </router-link>
                             </li>
-                            <li class="mb-1" v-if="userInfo">
+                            <li class="mb-1" v-if="UserInfo !== null">
                                 <router-link :to="{name: 'settings'}" class="dropdown-item">
                                     Settings
                                 </router-link>
                             </li>
-                            <li v-if="userInfo">
-                                <button type="button" class="dropdown-item">
+                            <li v-if="UserInfo !== null">
+                                <button type="button" class="dropdown-item" @click="profileLogout()" v-if="!loading">
+                                    Logout
+                                </button>
+                                <button type="button" class="dropdown-item" v-if="loading">
                                     Logout
                                 </button>
                             </li>
@@ -117,10 +120,19 @@
 
 <script>
 
+import serviceApi from "../../../api/serviceApi.js";
+import routeApi from "../../../api/routeApi.js";
+import axios from "axios";
+import {createToaster} from "@meforma/vue-toaster";
+const toaster = createToaster({
+    position: 'top-right',
+});
+
 export default {
     data() {
         return {
-            userInfo: true
+            UserInfo: window.core.UserInfo,
+            loading: false,
         }
     },
     mounted() {  },
@@ -136,6 +148,27 @@ export default {
                     navbarCollapse.classList.add('show');
                 }
             }
+        },
+
+        /* Function of profile logout */
+        profileLogout() {
+            serviceApi.ClearErrorHandler();
+            this.loading = true;
+            axios.get(routeApi.userLogout, null, { headers: serviceApi.headerContent }).then((response) => {
+                if (response.data) {
+                    this.loading = false;
+                    toaster.info('Logout Successfully');
+                    this.$router.push({name: 'login'});
+                }
+            }).catch(err => {
+                this.loading = false;
+                let res = err?.response;
+                if (res?.data?.errors !== undefined) {
+                    this.error = res?.data?.errors;
+                } else {
+                    toaster.error('Service error!');
+                }
+            });
         },
 
     }
