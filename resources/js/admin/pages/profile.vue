@@ -93,6 +93,14 @@
 
 <script>
 
+import serviceApi from "../../api/serviceApi.js";
+import routeApi from "../../api/routeApi.js";
+import axios from "axios";
+import {createToaster} from "@meforma/vue-toaster";
+const toaster = createToaster({
+    position: 'top-right',
+});
+
 export default {
     data() {
         return {
@@ -107,15 +115,36 @@ export default {
                 password: '',
                 confirmPassword: '',
             },
+            profileData: null,
         }
     },
-    mounted() {  },
+    mounted() {
+        this.profileDetails();
+    },
     methods: {
 
         /* --- --- --- set tab --- --- --- */
         setTab(tab) {
             this.tab = tab
-        }
+        },
+
+        /* Function of profile details */
+        profileDetails() {
+            serviceApi.ClearErrorHandler();
+            axios.get(routeApi.adminDetails, this.profileData, { headers: serviceApi.headerContent }).then((response) => {
+                if (response.data) {
+                    this.profileData = response?.data?.data
+                }
+            }).catch(err => {
+                let res = err?.response;
+                if (res?.data?.errors !== undefined) {
+                    this.error = res?.data?.errors;
+                } else {
+                    toaster.error('Service error!');
+                }
+            });
+        },
+
     }
 }
 

@@ -25,6 +25,11 @@
     <script>
 
         window.core = {
+            @if(\Illuminate\Support\Facades\Auth::guard('admins')->check())
+                UserInfo: {!! \Illuminate\Support\Facades\Auth::guard('admins')->user() !!},
+            @else
+                UserInfo: null,
+            @endif
             APP_NAME: 'Mimosa',
             APP_URL: '{{env('APP_URL')}}'
         };

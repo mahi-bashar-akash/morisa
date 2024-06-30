@@ -214,16 +214,19 @@
                                 <router-link :to="{name: 'profile'}" class="dropdown-item">
                                     <i class="bi bi-person"></i>
                                     <span class="ms-2">
-                                        Profile
+                                        {{UserInfo.name}}
                                     </span>
                                 </router-link>
                             </li>
                             <li>
-                                <button type="button" class="dropdown-item">
+                                <button type="button" class="dropdown-item" @click="profileLogout()" v-if="!loading">
                                     <i class="bi bi-box-arrow-in-right"></i>
                                     <span class="ms-2">
                                         Logout
                                     </span>
+                                </button>
+                                <button type="button" class="dropdown-item" @click="profileLogout()" v-if="loading">
+                                    Loading
                                 </button>
                             </li>
                         </ul>
@@ -246,14 +249,24 @@
 
 <script>
 
+import serviceApi from "../../api/serviceApi.js";
+import routeApi from "../../api/routeApi.js";
+import axios from "axios";
+import {createToaster} from "@meforma/vue-toaster";
+const toaster = createToaster({
+    position: 'top-right',
+});
+
 export default {
     data() {
         return {
             isActiveSidebar: false,
+            loading: false,
+            UserInfo: window.core.UserInfo
         }
     },
     mounted() {
-
+        console.log(this.UserInfo)
     },
     methods: {
 
@@ -288,6 +301,27 @@ export default {
                     document.webkitCancelFullScreen();
                 }
             }
+        },
+
+        /* Function of profile logout */
+        profileLogout() {
+            serviceApi.ClearErrorHandler();
+            this.loading = true;
+            axios.get(routeApi.adminLogout, null, { headers: serviceApi.headerContent }).then((response) => {
+                if (response.data) {
+                    this.loading = false;
+                    toaster.info('Logout Successfully');
+                    this.$router.push({name: 'login'});
+                }
+            }).catch(err => {
+                this.loading = false;
+                let res = err?.response;
+                if (res?.data?.errors !== undefined) {
+                    this.error = res?.data?.errors;
+                } else {
+                    toaster.error('Service error!');
+                }
+            });
         },
 
     }

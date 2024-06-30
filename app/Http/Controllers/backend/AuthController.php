@@ -69,7 +69,6 @@ class AuthController extends BaseController
             $user->name = $request->name;
             $user->email = $request->email;
             $user->password = bcrypt($request->password);
-            $user->avatar = null;
             $user->save();
             return response()->json(['message' => 'Registration has been completed successfully.']);
         } catch (\Exception $e) {
@@ -184,7 +183,6 @@ class AuthController extends BaseController
             $user = $model::where('id', Auth::guard($guard)->id())->first();
             $user->name = $request->name;
             $user->email = $request->email;
-            $user->avatar = $request->avatar ?? null;
             $user->save();
             return response()->json(['message' => 'Profile updated successfully']);
         } catch (\Exception $e) {
