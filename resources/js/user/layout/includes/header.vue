@@ -157,8 +157,8 @@ export default {
             axios.get(routeApi.userLogout, null, { headers: serviceApi.headerContent }).then((response) => {
                 if (response.data) {
                     this.loading = false;
+                    window.location.reload();
                     toaster.info('Logout Successfully');
-                    this.$router.push({name: 'login'});
                 }
             }).catch(err => {
                 this.loading = false;

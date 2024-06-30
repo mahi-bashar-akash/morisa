@@ -89,10 +89,14 @@ export default {
                 email: '',
                 password: '',
                 password_confirmation: '',
-            }
+            },
+            UserInfo: window.core.UserInfo,
         }
     },
     mounted() {
+        if(this.UserInfo !== null ) {
+            this.$router.push('details');
+        }
     },
     methods: {
 

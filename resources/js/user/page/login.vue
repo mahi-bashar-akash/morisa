@@ -82,10 +82,15 @@ export default {
             loginParam: {
                 email: '',
                 password: '',
-            }
+            },
+            UserInfo: window.core.UserInfo,
         }
     },
-    mounted() {  },
+    mounted() {
+        if(this.UserInfo !== null ) {
+            this.$router.push('details')
+        }
+    },
     methods: {
 
         /* Function to login api */
@@ -95,7 +100,7 @@ export default {
             axios.post(routeApi.userLogin, this.loginParam, { headers: serviceApi.headerContent }).then((response) => {
                 if (response.data) {
                     this.loading = false;
-                    this.$router.push({name: 'details'});
+                    window.location.reload();
                     toaster.info('Login Successfully');
                 }
             }).catch(err => {
