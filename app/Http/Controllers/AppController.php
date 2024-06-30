@@ -16,4 +16,8 @@ class AppController extends BaseController
         return view('app.admin');
     }
 
+    public function emailTemplate() {
+        return view('emails.forget');
+    }
+
 }

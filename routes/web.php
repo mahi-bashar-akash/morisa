@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user/', [\App\Http\Controllers\AppController::class, 'user'])->where('any', '.*')->name('lvs.user');
 Route::get('/user/{any}', [\App\Http\Controllers\AppController::class, 'user'])->where('any', '.*')->name('lvs.user.any');
 Route::get('/', function () { return redirect()->route('lvs.user.any', 'home'); } );
+Route::get('/email-template', [\App\Http\Controllers\AppController::class, 'emailTemplate']);
 
 /* ----------------- Web Route Admin Portal ----------------- */
 
