@@ -124,15 +124,15 @@ class AuthController extends BaseController
                 'code' => 'required',
                 'password' => 'required|min:6|confirmed'
             ]);
-            if ($validator->fails()) {
-                return response()->json(['status' => 500, 'errors' => $validator->errors()], 500);
+            if($validator->fails()) {
+                return response()->json(['errors' => $validator->errors()], 500);
             }
-            $userInfo = $model::where(['email' => $input['email'], 'reset_code' => $input['code']])->first();
-            if ($userInfo == null) {
-                return response()->json(['status' => 500, 'error' => ['code' => ['Invalid request. Kindly check your reset code please.']]]);
+            $userInfo = User::where(['email' => $input['email'], 'reset_code' => $input['reset_code']])->first();
+            if($userInfo === null) {
+                return response()->json(['status' => 500, 'error' => 'invalid request. Check your reset code']);
             }
-            if (Hash::check($input['password'], $userInfo['password'])) {
-                return response()->json(['status' => 500, 'error' => ['password' => ['Password repetition is not allowed. Please try another password']]]);
+            if(Hash::check($input['password'], $userInfo['password'])) {
+                return response()->json(['errors' => ['password' => ['Please kindly use another password']]], 500);
             }
             $userInfo->password = bcrypt($input['password']);
             $userInfo->reset_code = null;
