@@ -265,9 +265,7 @@ export default {
             UserInfo: window.core.UserInfo
         }
     },
-    mounted() {
-        console.log(this.UserInfo)
-    },
+    mounted() {  },
     methods: {
 
         /* --- --- --- sidebar open --- --- --- */
