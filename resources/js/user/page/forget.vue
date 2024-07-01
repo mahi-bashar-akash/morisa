@@ -66,11 +66,11 @@
                     <div class="error-report" v-if="resetError != null && resetError.email !== undefined"> {{resetError.email[0]}} </div>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="code" class="form-label mb-0">Code</label>
+                    <label for="reset_code" class="form-label mb-0">Code</label>
                     <div class="small text-secondary mb-2 fw-normal"> Please code collect from your email</div>
-                    <input id="code" type="text" name="code" class="form-control px-3 height-45 border shadow-none rounded-0"
-                           autocomplete="off" placeholder="Enter your code" v-model="resetData.code">
-                    <div class="error-report" v-if="resetError != null && resetError.code !== undefined"> {{resetError.code[0]}} </div>
+                    <input id="reset_code" type="text" name="reset_code" class="form-control px-3 height-45 border shadow-none rounded-0"
+                           autocomplete="off" placeholder="Enter your code" v-model="resetData.reset_code">
+                    <div class="error-report" v-if="resetError != null && resetError.reset_code !== undefined"> {{resetError.reset_code[0]}} </div>
                 </div>
                 <div class="form-group mb-3">
                     <label for="password" class="form-label">Password</label>
@@ -83,7 +83,7 @@
                 <div class="form-group mb-3">
                     <label for="confirm-password" class="form-label">Confirm Password</label>
                     <input id="confirm-password" type="password" name="confirm-password"
-                           class="form-control px-3 height-45 border shadow-none rounded-0" required
+                           class="form-control px-3 height-45 border shadow-none rounded-0"
                            autocomplete="off" placeholder="Enter your new confirm password"
                            v-model="resetData.password_confirmation">
                     <div class="error-report" v-if="resetError != null && resetError.password_confirmation !== undefined"> {{resetError.password_confirmation[0]}} </div>
@@ -133,7 +133,7 @@ export default {
             },
             resetData: {
                 email: '',
-                code: '',
+                reset_code: '',
                 password: '',
                 password_confirmation: '',
             },

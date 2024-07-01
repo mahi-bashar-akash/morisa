@@ -124,13 +124,13 @@ class AuthController extends BaseController
             $input = $request->input();
             $validator = Validator::make($input, [
                 'email' => 'required|email',
-                'code' => 'required',
+                'reset_code' => 'required',
                 'password' => 'required|min:6|confirmed'
             ]);
             if($validator->fails()) {
                 return response()->json(['errors' => $validator->errors()], 500);
             }
-            $userInfo = User::where(['email' => $input['email'], 'reset_code' => $input['reset_code']])->first();
+            $userInfo = $model::where(['email' => $input['email'], 'reset_code' => $input['reset_code']])->first();
             if($userInfo === null) {
                 return response()->json(['status' => 500, 'error' => 'invalid request. Check your reset code']);
             }
