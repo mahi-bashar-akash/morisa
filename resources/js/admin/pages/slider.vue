@@ -7,7 +7,7 @@
     </div>
 
     <div class="height-calc-200 scrollbar px-4">
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 row-cols-xl-3 row-cols-xxl-3">
 
             <!-- Slider card -->
             <div class="mb-3">

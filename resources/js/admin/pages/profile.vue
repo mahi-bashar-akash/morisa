@@ -9,15 +9,11 @@
                 <div
                     class="card-header d-flex justify-content-start align-items-center gap-3 p-4 bg-white rounded-0 border-0">
 
-                    <button type="button"
-                            class="width-35 height-35 d-flex justify-content-center align-items-center border-0 shadow-sm rounded-circle"
-                            :class="{ 'bg-light' : tab !== 1, 'bg-theme' : tab === 1 }" @click="setTab(1)">
+                    <button type="button" class="width-35 height-35 d-flex justify-content-center align-items-center border-0 shadow-sm rounded-circle" @click="openEditProfileModal()">
                         <i class="bi bi-person-fill"></i>
                     </button>
 
-                    <button type="button"
-                            class="width-35 height-35 d-flex justify-content-center align-items-center border-0 shadow-sm rounded-circle"
-                            :class="{ 'bg-light' : tab !== 2, 'bg-theme' : tab === 2 }" @click="setTab(2)">
+                    <button type="button" class="width-35 height-35 d-flex justify-content-center align-items-center border-0 shadow-sm rounded-circle" @click="openChangePasswordModal()">
                         <i class="bi bi-shield-fill"></i>
                     </button>
 
@@ -25,61 +21,15 @@
 
                 <div class="card-body p-4 border-0">
 
-                    <template v-if="tab === 1">
-                        <div class="form-group mb-3">
-                            <div class="d-flex justify-content-center">
-                                <label for="upload-file"
-                                       class="width-200 height-200 rounded-circle cursor-pointer d-flex justify-content-center align-items-center shadow fs-1 text-light-gray">
-                                    MBA
-                                    <input type="file" name="upload-file" id="upload-file" hidden="hidden">
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="full-name" class="form-label">Full Name</label>
-                            <input id="full-name" type="text" name="full-name"
-                                   class="form-control p-3 shadow-none rounded-0" required autocomplete="new-full-name"
-                                   v-model="profileParam.full_name">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input id="email" type="email" name="email" class="form-control p-3 shadow-none rounded-0"
-                                   required autocomplete="new-email" v-model="profileParam.email">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="phone-number" class="form-label">Phone Number</label>
-                            <input id="phone-number" type="text" name="phone-number"
-                                   class="form-control p-3 shadow-none rounded-0" required
-                                   autocomplete="new-phone-number" v-model="profileParam.phone_number">
-                        </div>
-                        <button type="submit" class="btn btn-theme rounded-0 py-2 width-120">
-                            SUBMIT
-                        </button>
-                    </template>
+                    <div class="mb-3">
+                        <div class="d-block fw-bold"> Name: </div>
+                        <div class="fw-medium d-block"> {{profileData?.name}} </div>
+                    </div>
 
-                    <template v-if="tab === 2">
-                        <div class="form-group mb-3">
-                            <label for="old-password" class="form-label">Old Password</label>
-                            <input id="old-password" type="password" name="old-password"
-                                   class="form-control p-3 shadow-none rounded-0" required
-                                   autocomplete="new-old-password" v-model="passwordParam.oldPassword">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="password" class="form-label">New Password</label>
-                            <input id="password" type="password" name="password"
-                                   class="form-control p-3 shadow-none rounded-0" required autocomplete="new-password"
-                                   v-model="passwordParam.password">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="confirm-password" class="form-label">Confirm Password</label>
-                            <input id="confirm-password" type="password" name="confirm-password"
-                                   class="form-control p-3 shadow-none rounded-0" required
-                                   autocomplete="new-confirm-password" v-model="passwordParam.confirmPassword">
-                        </div>
-                        <button type="submit" class="btn btn-theme py-2 width-120 rounded-0">
-                            SUBMIT
-                        </button>
-                    </template>
+                    <div class="mb-3">
+                        <div class="d-block fw-bold"> Email: </div>
+                        <div class="fw-medium d-block"> {{profileData?.email}} </div>
+                    </div>
 
                 </div>
 
@@ -87,6 +37,87 @@
 
         </div>
 
+    </div>
+
+    <!-- edit profile modal -->
+    <div class="modal fade" id="editProfile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form @submit.prevent="profileUpdate()" class="modal-content p-4 rounded-0 shadow-none border-0">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Edit Profile
+                    </h1>
+                    <button type="button" class="btn-close shadow-none" @click="closeEditProfileModal()"></button>
+                </div>
+                <div class="modal-body border-0">
+                    <div class="form-group mb-3">
+                        <label for="full-name" class="form-label">Full Name</label>
+                        <input id="full-name" type="text" name="full-name" class="form-control p-3 shadow-none rounded-0"
+                               autocomplete="off" v-model="profileParam.name">
+                        <div class="error-report" v-if="error != null && error.name !== undefined"> {{error.name[0]}} </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input id="email" type="email" name="email" class="form-control p-3 shadow-none rounded-0"
+                               autocomplete="off" v-model="profileParam.email">
+                        <div class="error-report" v-if="error != null && error.email !== undefined"> {{error.email[0]}} </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary width-96 rounded-0" @click="closeEditProfileModal()">
+                        Close
+                    </button>
+                    <button type="submit" class="btn btn-theme width-96 rounded-0">
+                        Update
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- change password modal -->
+    <div class="modal fade" id="changePassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <form @submit.prevent="passwordUpdate()" class="modal-content p-4 rounded-0 shadow-none border-0">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Change Password
+                    </h1>
+                    <button type="button" class="btn-close shadow-none" @click="closeChangePasswordModal()"></button>
+                </div>
+                <div class="modal-body border-0">
+                    <div class="form-group mb-3">
+                        <label for="current_password" class="form-label">Current Password</label>
+                        <input id="current_password" type="password" name="current_password"
+                               class="form-control p-3 shadow-none rounded-0"
+                               autocomplete="off" v-model="passwordParam.current_password">
+                        <div class="error-report" v-if="error != null && error.current_password !== undefined"> {{error.current_password[0]}} </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label">New Password</label>
+                        <input id="password" type="password" name="password"
+                               class="form-control p-3 shadow-none rounded-0" autocomplete="off"
+                               v-model="passwordParam.password">
+                        <div class="error-report" v-if="error != null && error.password !== undefined"> {{error.password[0]}} </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password_confirmation" class="form-label">Password Confirmation</label>
+                        <input id="password_confirmation" type="password" name="password_confirmation"
+                               class="form-control p-3 shadow-none rounded-0"
+                               autocomplete="off" v-model="passwordParam.password_confirmation">
+                        <div class="error-report" v-if="error != null && error.password_confirmation !== undefined"> {{error.password_confirmation[0]}} </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary width-96 rounded-0" @click="closeChangePasswordModal()">
+                        Close
+                    </button>
+                    <button type="submit" class="btn btn-theme width-96 rounded-0">
+                        Update
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
 </template>
@@ -104,16 +135,15 @@ const toaster = createToaster({
 export default {
     data() {
         return {
-            tab: 1,
+            error: null,
             profileParam: {
-                full_name: '',
+                name: '',
                 email: '',
-                phone_number: '',
             },
             passwordParam: {
-                oldPassword: '',
+                current_Password: '',
                 password: '',
-                confirmPassword: '',
+                password_confirmation: '',
             },
             profileData: null,
         }
@@ -123,17 +153,13 @@ export default {
     },
     methods: {
 
-        /* --- --- --- set tab --- --- --- */
-        setTab(tab) {
-            this.tab = tab
-        },
-
         /* Function of profile details */
         profileDetails() {
             serviceApi.ClearErrorHandler();
             axios.get(routeApi.adminDetails, this.profileData, { headers: serviceApi.headerContent }).then((response) => {
                 if (response.data) {
                     this.profileData = response?.data?.data
+                    this.profileParam = this.profileData
                 }
             }).catch(err => {
                 let res = err?.response;
@@ -143,6 +169,72 @@ export default {
                     toaster.error('Service error!');
                 }
             });
+        },
+
+        /* --- --- --- open edit profile model --- --- --- */
+        openEditProfileModal() {
+            const myModal = new bootstrap.Modal("#editProfile", {keyboard: false});
+            myModal.show();
+        },
+
+        /* --- --- --- close edit profile modal --- --- --- */
+        closeEditProfileModal() {
+            let myModalEl = document.getElementById('editProfile');
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
+        },
+
+        /* --- --- --- open change password model --- --- --- */
+        openChangePasswordModal() {
+            const myModal = new bootstrap.Modal("#changePassword", {keyboard: false});
+            myModal.show();
+        },
+
+        /* --- --- --- close change password modal --- --- --- */
+        closeChangePasswordModal() {
+            let myModalEl = document.getElementById('changePassword');
+            let modal = bootstrap.Modal.getInstance(myModalEl)
+            modal.hide();
+        },
+
+        /* Function to profile update api */
+        profileUpdate() {
+            this.profileUpdateLoading = true;
+            axios.patch(routeApi.adminDetailsUpdate, this.profileParam, {headers: serviceApi.headerContent}).then((response) => {
+                if(response) {
+                    this.profileUpdateLoading = false;
+                    this.profileParam = this.profileData;
+                    toaster.info('Profile Update Successfully');
+                }
+            }).catch(err => {
+                this.profileUpdateLoading = false;
+                let res = err?.response;
+                if(res?.data?.errors !== undefined) {
+                    this.error = res?.data?.errors;
+                }else {
+                    toaster.error('Service error!');
+                }
+            })
+        },
+
+        /* Function to profile update api */
+        passwordUpdate() {
+            this.passwordUpdateLoading = true;
+            axios.patch(routeApi.adminPasswordUpdate, this.passwordParam, {headers: serviceApi.headerContent}).then((response) => {
+                if(response) {
+                    this.passwordUpdateLoading = false;
+                    this.passwordParam = null;
+                    toaster.info('Password Update Successfully');
+                }
+            }).catch(err => {
+                this.passwordUpdateLoading = false;
+                let res = err?.response;
+                if(res?.data?.errors !== undefined) {
+                    this.error = res?.data?.errors;
+                }else {
+                    toaster.error('Service error!');
+                }
+            })
         },
 
     }
