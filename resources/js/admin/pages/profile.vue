@@ -146,6 +146,8 @@ export default {
                 password_confirmation: '',
             },
             profileData: null,
+            profileUpdateLoading: false,
+            passwordUpdateLoading: false,
         }
     },
     mounted() {
@@ -159,7 +161,7 @@ export default {
             axios.get(routeApi.adminDetails, this.profileData, { headers: serviceApi.headerContent }).then((response) => {
                 if (response.data) {
                     this.profileData = response?.data?.data
-                    this.profileParam = this.profileData
+                    this.profileParam = JSON.parse(JSON.stringify(response?.data?.data));
                 }
             }).catch(err => {
                 let res = err?.response;
@@ -204,6 +206,7 @@ export default {
                 if(response) {
                     this.profileUpdateLoading = false;
                     this.profileParam = this.profileData;
+                    this.closeEditProfileModal();
                     toaster.info('Profile Update Successfully');
                 }
             }).catch(err => {
@@ -224,6 +227,7 @@ export default {
                 if(response) {
                     this.passwordUpdateLoading = false;
                     this.passwordParam = null;
+                    this.closeChangePasswordModal();
                     toaster.info('Password Update Successfully');
                 }
             }).catch(err => {
