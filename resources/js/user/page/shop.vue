@@ -422,7 +422,7 @@
                                     <i class="bi bi-search"></i>
                                 </div>
                                 <input type="text" name="keyword" class="form-control border shadow-none p-3 ps-5"
-                                       placeholder="Blog search here . . ." required autocomplete="new-keyword">
+                                       placeholder="Product search here . . ." required autocomplete="new-keyword">
                             </div>
                         </div>
                         <div class="px-2 py-3">
@@ -430,7 +430,7 @@
                                 <div class="col-6">
                                     <label for="min-price" class="form-label"> Min </label>
                                     <div class="position-relative">
-                                        <input id="min-price" type="text" name="min-price" class="form-control border shadow-none p-3">
+                                        <input id="min-price" type="text" name="min-price" class="form-control border shadow-none p-3" value="0">
                                         <div class="position-absolute top-50 end-0 translate-middle-y pe-3">
                                             $
                                         </div>
@@ -439,7 +439,7 @@
                                 <div class="col-6">
                                     <label for="max-price" class="form-label"> Max </label>
                                     <div class="position-relative">
-                                        <input id="max-price" type="text" name="max-price" class="form-control border shadow-none p-3">
+                                        <input id="max-price" type="text" name="max-price" class="form-control border shadow-none p-3" value="10000">
                                         <div class="position-absolute top-50 end-0 translate-middle-y pe-3">
                                             $
                                         </div>
