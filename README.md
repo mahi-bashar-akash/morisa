@@ -7,7 +7,15 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-<p class="text-center"> project link <br> <a href="https://github.com/laravel/framework/actions"> Mimosa Project link </a> </p>
+<br><br>
+
+<p class="center"> project link <br><br> <a href="https://morisa.thethemeai.com/"> User Panel </a> </p>
+
+<br><br><br>
+
+<p class="center"> project link <br><br> <a href="https://morisa.thethemeai.com/admin"> Admin Panel </a> </p>
+
+<br><br>
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # mimosa
